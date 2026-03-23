@@ -2,6 +2,6 @@
   "name": "open-source-network",
   "private": true,
   "scripts": {
-    "build": "cd website && npm ci && npm run build"
+    "build": "cd website && npm install && npm run build"
   }
 }
