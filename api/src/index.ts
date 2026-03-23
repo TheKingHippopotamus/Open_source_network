@@ -1,5 +1,5 @@
 /**
- * OSS Neural Match — Cloudflare Worker API Gateway
+ * Open Source Network — Cloudflare Worker API Gateway
  * =================================================
  * Serves the tool database as a REST API with:
  *   - Rate limiting via D1 (free: 100/hr anon, 100/hr free-tier key, 1000/hr pro)
@@ -710,7 +710,7 @@ async function dispatch(
     const limitPro = parseInt(env.RATE_LIMIT_PRO ?? "1000", 10);
     return okResponse(
       {
-        name: "OSS Neural Match API",
+        name: "Open Source Network API",
         version: "1.0.0",
         endpoints: [
           "GET /api/v1/search?q=<query>&limit=10&category=<cat>&max_ram=<mb>",

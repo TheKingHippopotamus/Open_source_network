@@ -1,10 +1,10 @@
-name = "oss-neural-match-api"
+name = "open-source-network-api"
 main = "src/index.ts"
 compatibility_date = "2024-01-01"
 
 [[d1_databases]]
 binding = "DB"
-database_name = "oss-neural-match"
+database_name = "open-source-network"
 database_id = "placeholder-replace-after-creation"
 
 [vars]

@@ -1,6 +1,6 @@
 # data/
 
-This directory holds all runtime data files for OSS Neural Match.
+This directory holds all runtime data files for Open Source Network.
 
 ## Files
 

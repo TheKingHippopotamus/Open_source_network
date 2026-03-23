@@ -1,5 +1,5 @@
 """
-Shared pytest fixtures for the OSS Neural Match test suite.
+Shared pytest fixtures for the Open Source Network test suite.
 """
 
 import json

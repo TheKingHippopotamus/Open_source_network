@@ -41,7 +41,7 @@
 #       font-src 'self' https://fonts.gstatic.com
 #                                   — Google Fonts CDN if used; remove if
 #                                     self-hosting fonts
-#       connect-src 'self' https://api.oss-neural-match.dev
+#       connect-src 'self' https://api.open-source-network.dev
 #                                   — only allow fetch/XHR to own origin and
 #                                     the production API domain
 #       frame-ancestors 'none'      — belt-and-suspenders with X-Frame-Options
@@ -68,7 +68,7 @@
   X-Content-Type-Options: nosniff
   X-Frame-Options: SAMEORIGIN
   Strict-Transport-Security: max-age=31536000; includeSubDomains
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://api.oss-neural-match.dev; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://api.open-source-network.dev; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
 

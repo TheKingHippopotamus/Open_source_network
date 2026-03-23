@@ -1,5 +1,5 @@
 """
-OSS Neural Match — Hybrid Scoring Engine
+Open Source Network — Hybrid Scoring Engine
 =========================================
 Replaces the TF-IDF cosine scorer in server.py with a production-grade
 hybrid pipeline:

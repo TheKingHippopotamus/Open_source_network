@@ -1,12 +1,14 @@
 """
-OSS Neural Match — MCP Server for Claude Code
+Open Source Network — MCP Server for Claude Code
 ===============================================
 A 244-tool open-source intelligence engine.
 Claude Code (Max plan) connects via stdio and gets full semantic search,
 filtering, stack building, and graph traversal capabilities.
 
+Author: KingHippo (https://github.com/TheKingHippopotamus)
+
 Usage with Claude Code:
-  claude mcp add oss-neural-match -- python /path/to/server.py
+  claude mcp add open-source-network -- python /path/to/server.py
 """
 
 import json
@@ -62,7 +64,7 @@ except ImportError:
 # INIT
 # ============================================================
 
-mcp = FastMCP("oss_neural_match_mcp")
+mcp = FastMCP("open_source_network_mcp")
 
 DB_PATH = Path(__file__).parent / "db.json"
 DB: List[Dict[str, Any]] = []
@@ -796,7 +798,7 @@ async def oss_list_categories(params: ListCategoriesInput) -> str:
     Provides an overview of the entire 244-tool database organized by category
     and sub-category, useful for understanding what's available before searching.
     """
-    lines = [f"# OSS Neural Match Database \u2014 {len(DB)} tools\n"]
+    lines = [f"# Open Source Network Database \u2014 {len(DB)} tools\n"]
     cat_counts: Dict[str, Dict[str, List[str]]] = defaultdict(lambda: defaultdict(list))
     for t in DB:
         cat_counts[t["category"]][t["sub_category"]].append(t["name"])
@@ -888,7 +890,7 @@ class StatsInput(BaseModel):
     annotations={"title": "Database Statistics", "readOnlyHint": True, "openWorldHint": False},
 )
 async def oss_stats(params: StatsInput) -> str:
-    """Get comprehensive statistics about the OSS Neural Match database.
+    """Get comprehensive statistics about the Open Source Network database.
 
     Returns total tools, fields per tool, graph edges, tag counts,
     problem domain counts, and category distribution.
@@ -906,7 +908,7 @@ async def oss_stats(params: StatsInput) -> str:
     engine_status = "hybrid BM25" if _ENGINE_AVAILABLE and SCORING is not None else "legacy TF-IDF"
 
     lines = [
-        "# OSS Neural Match Database Stats\n",
+        "# Open Source Network Database Stats\n",
         f"- **Total tools**: {len(DB)}",
         f"- **Fields per tool**: {len(DB[0]) if DB else 0}",
         f"- **Total data points**: {len(DB) * (len(DB[0]) if DB else 0):,}",

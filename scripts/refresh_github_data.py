@@ -51,7 +51,7 @@ def _build_opener() -> urllib.request.OpenerDirector:
     opener.addheaders = [
         ("Accept", "application/vnd.github+json"),
         ("X-GitHub-Api-Version", "2022-11-28"),
-        ("User-Agent", "oss-neural-match-refresh/1.0"),
+        ("User-Agent", "open-source-network-refresh/1.0"),
     ]
     if _token:
         opener.addheaders.append(("Authorization", f"Bearer {_token}"))

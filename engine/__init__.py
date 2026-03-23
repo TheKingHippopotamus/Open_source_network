@@ -1,7 +1,7 @@
 """
-OSS Neural Match — Engine Module
+Open Source Network — Engine Module
 =================================
-Modular intelligence layer for the OSS Neural Match MCP server.
+Modular intelligence layer for the Open Source Network MCP server.
 
 Components:
 - scoring: BM25 + dense hybrid search scoring

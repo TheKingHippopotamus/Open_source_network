@@ -1,5 +1,5 @@
 /**
- * OSS Neural Match API — Authentication & Rate Limiting
+ * Open Source Network API — Authentication & Rate Limiting
  * =======================================================
  * Runs inside Cloudflare Workers with D1 (SQLite) as the backing store.
  *

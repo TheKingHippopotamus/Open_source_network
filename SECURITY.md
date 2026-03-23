@@ -2,11 +2,11 @@
 
 ## Reporting Vulnerabilities
 
-If you discover a security vulnerability in OSS Neural Match, please report it responsibly.
+If you discover a security vulnerability in Open Source Network, please report it responsibly.
 
 **Do not open a public GitHub issue for security vulnerabilities.**
 
-Send a detailed report to: security@oss-neural-match.dev
+Send a detailed report to: security@open-source-network.dev
 
 Include in your report:
 - A description of the vulnerability and its potential impact
@@ -82,7 +82,7 @@ Every API response includes the following headers:
 
 ## Data Handling
 
-OSS Neural Match indexes publicly available open-source software metadata. The database contains no private or proprietary data.
+Open Source Network indexes publicly available open-source software metadata. The database contains no private or proprietary data.
 
 **What we store:**
 
@@ -146,4 +146,4 @@ The following are **out of scope**:
 
 ## Compliance Posture
 
-OSS Neural Match is not subject to HIPAA (no health data) or PCI-DSS (payment data is handled exclusively by Stripe; no cardholder data transits our systems). We apply GDPR data minimisation principles to all data we collect, regardless of jurisdictional requirements.
+Open Source Network is not subject to HIPAA (no health data) or PCI-DSS (payment data is handled exclusively by Stripe; no cardholder data transits our systems). We apply GDPR data minimisation principles to all data we collect, regardless of jurisdictional requirements.
