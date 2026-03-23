@@ -1,0 +1,7 @@
+{
+  "name": "open-source-network",
+  "private": true,
+  "scripts": {
+    "build": "cd website && npm ci && npm run build"
+  }
+}
