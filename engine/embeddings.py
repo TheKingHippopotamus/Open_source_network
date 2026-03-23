@@ -1,5 +1,5 @@
 """
-Optional dense embedding layer for OSS Neural Match.
+Optional dense embedding layer for Open Source Network.
 
 Uses pre-computed numpy arrays for tool embeddings.
 Gracefully degrades if numpy or embedding files are not available.
@@ -493,7 +493,7 @@ if __name__ == "__main__":
     _default_out = _repo_root / "data"
 
     parser = argparse.ArgumentParser(
-        description="OSS Neural Match — embedding management CLI",
+        description="Open Source Network — embedding management CLI",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=(
             "Examples:\n"

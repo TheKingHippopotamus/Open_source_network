@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate SEO metadata for all pages of the OSS Neural Match website.
+Generate SEO metadata for all pages of the Open Source Network website.
 
 Pages covered:
   - /tools/{slug}              — one page per tool (244 pages)
@@ -25,8 +25,8 @@ DB_PATH = REPO_ROOT / "db.json"
 DATA_DIR = REPO_ROOT / "website" / "src" / "data"
 OUTPUT_PATH = DATA_DIR / "seo.json"
 
-SITE_URL = "https://oss.neuralatch.com"  # update to actual domain if different
-SITE_NAME = "OSS Neural Match"
+SITE_URL = "https://opensourcenetwork.com"
+SITE_NAME = "Open Source Network"
 
 
 # ---------------------------------------------------------------------------
@@ -394,14 +394,14 @@ def _homepage(db: list[dict]) -> dict:
 
     return {
         "path": "/",
-        "title": f"OSS Neural Match — Find & Compare 244 Self-Hosted Open-Source Tools",
+        "title": f"Open Source Network — Find & Compare 244 Self-Hosted Open-Source Tools",
         "description": _truncate(
             f"Discover and compare {len(db)} open-source tools you can self-host. "
             f"Semantic search, stack builder, and side-by-side comparisons. "
             f"Popular: {', '.join(tool_names[:4])}.",
             160,
         ),
-        "og_title": "OSS Neural Match — Open-Source Tool Intelligence",
+        "og_title": "Open Source Network — Open-Source Tool Intelligence",
         "og_description": _truncate(
             f"The definitive database of {len(db)} self-hostable open-source tools. "
             f"Build your perfect stack, compare alternatives, and escape SaaS lock-in.",

@@ -1,5 +1,5 @@
 -- =============================================================================
--- OSS Neural Match API — D1 Database Schema
+-- Open Source Network API — D1 Database Schema
 -- =============================================================================
 -- Security design principles applied:
 --   1. Raw API keys are NEVER stored. Only SHA-256 hashes are persisted.

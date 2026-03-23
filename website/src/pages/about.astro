@@ -6,24 +6,24 @@ const categories = getCategories();
 ---
 
 <Base
-  title="About OSS Neural Match"
-  description="OSS Neural Match is an MCP server that gives Claude Code deep knowledge of 244 open-source tools and their relationships."
+  title="About Open Source Network"
+  description="Open Source Network is an MCP server that gives Claude Code deep knowledge of 244 open-source tools and their relationships."
 >
   <div class="container" style="padding-top: 2rem; padding-bottom: 4rem; max-width: 840px;">
-    <h1 style="margin-bottom: 1rem;">About OSS Neural Match</h1>
+    <h1 style="margin-bottom: 1rem;">About Open Source Network</h1>
     <p style="font-size: 1.125rem; color: var(--text-secondary); margin-bottom: 3rem;">
-      OSS Neural Match is a Model Context Protocol (MCP) server that gives Claude Code structured knowledge of
+      Open Source Network is a Model Context Protocol (MCP) server that gives Claude Code structured knowledge of
       {tools.length} open-source tools — enabling intelligent stack recommendations, tradeoff analysis, and ecosystem navigation.
     </p>
 
     <div class="section">
       <h2 class="section-title">What it does</h2>
       <p>
-        When you add OSS Neural Match to Claude Code, you unlock a curated database that Claude can query when you ask
+        When you add Open Source Network to Claude Code, you unlock a curated database that Claude can query when you ask
         questions like <em>"what's the best message queue for a Python microservice?"</em> or <em>"compare Prometheus vs Datadog for a 10-person startup."</em>
       </p>
       <p>
-        Unlike generic web search, OSS Neural Match provides structured, consistent data across {tools.length} tools
+        Unlike generic web search, Open Source Network provides structured, consistent data across {tools.length} tools
         with 51 fields each — RAM requirements, scaling patterns, ecosystem relationships, anti-patterns, and more.
       </p>
     </div>
@@ -34,7 +34,7 @@ const categories = getCategories();
         <div class="install-label">
           <span>One-line install</span>
         </div>
-        <pre><code>claude mcp add oss-neural-match npx oss-neural-match-mcp</code></pre>
+        <pre><code>claude mcp add open-source-network npx open-source-network-mcp</code></pre>
       </div>
       <p style="margin-top: 1rem; font-size: 0.875rem;">
         That's it. No API keys, no configuration, no network requests at query time. Pure local JSON.
@@ -88,13 +88,22 @@ const categories = getCategories();
     </div>
 
     <div class="section">
+      <h2 class="section-title">Creator</h2>
+      <p>
+        Open Source Network is created and maintained by
+        <a href="https://github.com/TheKingHippopotamus" target="_blank" rel="noopener noreferrer"><strong>KingHippo</strong></a>
+        — a full-stack developer and financial markets researcher building data-driven systems.
+      </p>
+    </div>
+
+    <div class="section">
       <h2 class="section-title">Contributing</h2>
       <p>
-        OSS Neural Match is fully open source. To add or update a tool, open a pull request on GitHub
+        Open Source Network is fully open source. To add or update a tool, open a pull request on GitHub
         and edit <code>db.json</code>. Follow the existing schema — all 51 fields should be populated.
       </p>
       <div style="margin-top: 1.5rem;">
-        <a href="https://github.com/yourusername/oss-neural-match-mcp" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+        <a href="https://github.com/TheKingHippopotamus/open_source_network" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
           View on GitHub &rarr;
         </a>
       </div>

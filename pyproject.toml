@@ -1,8 +1,11 @@
 [project]
-name = "oss-neural-match-mcp"
+name = "open-source-network-mcp"
 version = "2.0.0"
 description = "244-tool open-source intelligence engine for Claude Code"
 requires-python = ">=3.11"
+authors = [
+    { name = "KingHippo", email = "king.hippopotamus@yahoo.com" },
+]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

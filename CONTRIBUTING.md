@@ -1,4 +1,4 @@
-# Contributing to OSS Neural Match
+# Contributing to Open Source Network
 
 Thanks for helping improve this project. Contributions are small and targeted — no massive PRs, please.
 

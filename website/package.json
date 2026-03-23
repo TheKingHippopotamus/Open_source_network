@@ -1,7 +1,8 @@
 {
-  "name": "oss-neural-match-website",
+  "name": "open-source-network-website",
   "type": "module",
   "version": "1.0.0",
+  "author": "KingHippo (https://github.com/TheKingHippopotamus)",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

@@ -1,5 +1,5 @@
 """
-OSS Neural Match — Health Scorer
+Open Source Network — Health Scorer
 =================================
 Computes a multi-dimensional health score for each open-source tool using
 only the fields present in db.json.  No external API calls are made.

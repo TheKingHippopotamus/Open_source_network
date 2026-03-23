@@ -17,9 +17,9 @@ const {
   schema,
 } = Astro.props;
 
-const fullTitle = title.includes('OSS Neural Match')
+const fullTitle = title.includes('Open Source Network')
   ? title
-  : `${title} — OSS Neural Match`;
+  : `${title} — Open Source Network`;
 
 const currentPath = Astro.url.pathname;
 const isActive = (path: string) =>
@@ -53,7 +53,7 @@ const navLinks = [
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={new URL(ogImage, Astro.site).href} />
-    <meta property="og:site_name" content="OSS Neural Match" />
+    <meta property="og:site_name" content="Open Source Network" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -73,14 +73,14 @@ const navLinks = [
     <script is:inline type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "OSS Neural Match",
-      "url": "https://ossneuralmatch.com",
+      "name": "Open Source Network",
+      "url": "https://opensourcenetwork.com",
       "description": "The open-source stack advisor inside Claude Code — 244 tools, 919 edges, 20 categories",
       "potentialAction": {
         "@type": "SearchAction",
         "target": {
           "@type": "EntryPoint",
-          "urlTemplate": "https://ossneuralmatch.com/tools?q={search_term_string}"
+          "urlTemplate": "https://opensourcenetwork.com/tools?q={search_term_string}"
         },
         "query-input": "required name=search_term_string"
       }
@@ -91,8 +91,8 @@ const navLinks = [
     <header class="site-header">
       <div class="container">
         <a href="/" class="site-logo">
-          <span class="logo-icon" aria-hidden="true">NM</span>
-          <span>OSS Neural Match</span>
+          <span class="logo-icon" aria-hidden="true">OS</span>
+          <span>Open Source Network</span>
         </a>
 
         <nav aria-label="Primary navigation">
@@ -110,7 +110,7 @@ const navLinks = [
             ))}
             <li>
               <a
-                href="https://github.com/yourusername/oss-neural-match-mcp"
+                href="https://github.com/TheKingHippopotamus/open_source_network"
                 class="btn btn-secondary"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -133,8 +133,8 @@ const navLinks = [
         <div class="footer-grid">
           <div class="footer-brand">
             <a href="/" class="site-logo" style="margin-bottom: 0.75rem; display: inline-flex;">
-              <span class="logo-icon" aria-hidden="true">NM</span>
-              <span>OSS Neural Match</span>
+              <span class="logo-icon" aria-hidden="true">OS</span>
+              <span>Open Source Network</span>
             </a>
             <p>The open-source stack advisor inside Claude Code. 244 curated tools across 20 categories.</p>
           </div>
@@ -162,14 +162,14 @@ const navLinks = [
             <h4>Project</h4>
             <ul>
               <li><a href="/about">About</a></li>
-              <li><a href="https://github.com/yourusername/oss-neural-match-mcp" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+              <li><a href="https://github.com/TheKingHippopotamus/open_source_network" target="_blank" rel="noopener noreferrer">GitHub</a></li>
             </ul>
           </div>
         </div>
 
         <div class="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} OSS Neural Match. Open source under MIT license.</p>
-          <p>Built with <a href="https://astro.build" target="_blank" rel="noopener noreferrer">Astro</a> &middot; Data from <a href="https://github.com/yourusername/oss-neural-match-mcp" target="_blank" rel="noopener noreferrer">oss-neural-match-mcp</a></p>
+          <p>&copy; {new Date().getFullYear()} Open Source Network. Open source under MIT license.</p>
+          <p>Created by <a href="https://github.com/TheKingHippopotamus" target="_blank" rel="noopener noreferrer">KingHippo</a> &middot; Built with <a href="https://astro.build" target="_blank" rel="noopener noreferrer">Astro</a> &middot; Data from <a href="https://github.com/TheKingHippopotamus/open_source_network" target="_blank" rel="noopener noreferrer">open-source-network-mcp</a></p>
         </div>
       </div>
     </footer>

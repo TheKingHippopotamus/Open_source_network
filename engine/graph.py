@@ -1,5 +1,5 @@
 """
-OSS Neural Match — Graph Intelligence Engine
+Open Source Network — Graph Intelligence Engine
 =============================================
 Pure-stdlib graph algorithms over the 244-tool ecosystem graph.
 

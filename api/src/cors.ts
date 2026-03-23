@@ -1,5 +1,5 @@
 /**
- * OSS Neural Match API — CORS & Security Headers
+ * Open Source Network API — CORS & Security Headers
  * ================================================
  * Applied to every response by the Worker fetch handler.
  *

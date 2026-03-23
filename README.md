@@ -1,4 +1,4 @@
-# OSS Neural Match — MCP Server
+# Open Source Network — MCP Server
 
 A 244-tool open-source intelligence engine that plugs into Claude Code.
 Ask natural language questions, get ranked tool stacks with compatibility analysis.
@@ -8,14 +8,14 @@ Ask natural language questions, get ranked tool stacks with compatibility analys
 ### 1. Install dependencies
 
 ```bash
-cd oss-neural-match-mcp
+cd open-source-network-mcp
 pip install -r requirements.txt
 ```
 
 ### 2. Register with Claude Code
 
 ```bash
-claude mcp add oss-neural-match -- python /full/path/to/oss-neural-match-mcp/server.py
+claude mcp add open-source-network -- python /full/path/to/open-source-network-mcp/server.py
 ```
 
 ### 3. Use it
@@ -98,9 +98,21 @@ oss_compare(["qdrant","milvus","chroma","weaviate"])
 ## File Structure
 
 ```
-oss-neural-match-mcp/
+open-source-network-mcp/
 ├── server.py          # MCP server (FastMCP, 8 tools, TF-IDF engine)
 ├── db.json            # 244-tool database (51 fields each)
 ├── requirements.txt   # Python dependencies
 └── README.md          # This file
 ```
+
+## Creator
+
+Created and maintained by **KingHippo** ([@TheKingHippopotamus](https://github.com/TheKingHippopotamus))
+
+## License
+
+MIT — see [LICENSE](LICENSE) for details.
+
+## Creator
+
+Created and maintained by **[KingHippo](https://github.com/TheKingHippopotamus)**.
