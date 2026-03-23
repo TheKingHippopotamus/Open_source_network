@@ -521,7 +521,6 @@ class GraphEngine:
             "shared_neighbors": int}`` sorted by *score* descending.
         """
         nodes = list(self._slugs)
-        n = len(nodes)
 
         # Filter to nodes that have at least one positive-edge neighbour
         # (isolated nodes would always score 0 — skip for efficiency)

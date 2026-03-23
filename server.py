@@ -13,7 +13,6 @@ Usage with Claude Code:
 
 import json
 import math
-import os
 import re
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -289,7 +288,7 @@ def _format_tool_full(t: Dict) -> str:
     sections.append(f"Stars: {t.get('github_stars', 0)} | Contributors: {t.get('contributors_count', 0)}")
     sections.append(f"Backing: {t.get('backing_org', 'Community')} ({t.get('funding_model', 'community')})")
     sections.append(f"Maturity: {t.get('maturity', 'stable')} | Docs: {t.get('docs_quality', 'good')}")
-    sections.append(f"\n## Technical")
+    sections.append("\n## Technical")
     sections.append(f"Min RAM: {t['min_ram_mb']}MB | CPU: {t.get('min_cpu_cores', 1)} cores")
     sections.append(f"Scaling: {t.get('scaling_pattern', 'single_node')}")
     sections.append(f"Deploy: {', '.join(t.get('deployment_methods', []))}")
@@ -300,7 +299,7 @@ def _format_tool_full(t: Dict) -> str:
     )
     sections.append(f"API: {', '.join(t.get('api_type', []))}")
     sections.append(f"SDKs: {', '.join(t.get('sdk_languages', []))}")
-    sections.append(f"\n## Ecosystem")
+    sections.append("\n## Ecosystem")
     if t.get('integrates_with'):
         sections.append(f"Integrates with: {', '.join(t['integrates_with'])}")
     if t.get('complements'):
@@ -311,18 +310,18 @@ def _format_tool_full(t: Dict) -> str:
         sections.append(f"\u26a0\ufe0f Conflicts with: {', '.join(t['conflicts_with'])}")
     if t.get('replaces'):
         sections.append(f"Replaces: {', '.join(t['replaces'])}")
-    sections.append(f"\n## Matching Profile")
+    sections.append("\n## Matching Profile")
     sections.append(f"Complexity: {t.get('complexity_level', 'intermediate')}")
     sections.append(f"Team fit: {', '.join(t.get('team_size_fit', []))}")
     sections.append(f"Industries: {', '.join(t.get('industry_verticals', []))}")
     sections.append(f"Performance: {t.get('performance_tier', 'medium')}")
     sections.append(f"Stack layers: {', '.join(t.get('stack_layer', []))}")
     sections.append(f"Tags: {', '.join(t.get('tags', []))}")
-    sections.append(f"\n## Use Cases")
+    sections.append("\n## Use Cases")
     for uc in t.get('use_cases_detailed', []):
         sections.append(f"- {uc}")
     if t.get('anti_patterns'):
-        sections.append(f"\n## \u26a0\ufe0f Anti-Patterns (when NOT to use)")
+        sections.append("\n## \u26a0\ufe0f Anti-Patterns (when NOT to use)")
         for ap in t['anti_patterns']:
             sections.append(f"- {ap}")
     return "\n".join(sections)
@@ -557,7 +556,7 @@ async def oss_find_stack(params: FindStackInput) -> str:
         connections, cohesion, warnings = _inline_stack_cohesion(stack)
 
     # ---- Format output ----
-    lines = [f"# Recommended Stack\n"]
+    lines = ["# Recommended Stack\n"]
     lines.append(
         f"*Team: {params.team_size} | RAM budget: {params.max_ram_mb}MB | "
         f"Max complexity: {params.max_complexity}*\n"
@@ -578,7 +577,7 @@ async def oss_find_stack(params: FindStackInput) -> str:
             lines.append(f"  Alternatives: {', '.join(item['alternatives'])}")
         lines.append("")
 
-    lines.append(f"## Stack Summary")
+    lines.append("## Stack Summary")
     lines.append(
         f"- Total RAM: **{total_ram}MB** / {params.max_ram_mb}MB "
         f"({total_ram * 100 // params.max_ram_mb}% of budget)"
@@ -587,7 +586,7 @@ async def oss_find_stack(params: FindStackInput) -> str:
     lines.append(f"- Compatibility connections: {connections} ({cohesion:.0f}% cohesion)")
 
     if warnings:
-        lines.append(f"\n## \u26a0\ufe0f Warnings")
+        lines.append("\n## \u26a0\ufe0f Warnings")
         for w in warnings:
             lines.append(f"- {w}")
 
@@ -698,7 +697,7 @@ async def oss_find_compatible(params: CompatibleInput) -> str:
             lines.append(f"- **{r['name']}** ({r['category']}) \u2014 {r['tagline']}")
 
     if results["conflicts"]:
-        lines.append(f"\n## \u26a0\ufe0f Conflicts (avoid combining)")
+        lines.append("\n## \u26a0\ufe0f Conflicts (avoid combining)")
         for r in results["conflicts"]:
             lines.append(f"- **{r['name']}** \u2014 {r['tagline']}")
 
@@ -766,12 +765,12 @@ async def oss_compare(params: CompareInput) -> str:
         lines.append(row)
 
     # Key tags comparison
-    lines.append(f"\n## Tags")
+    lines.append("\n## Tags")
     for t in tools:
         lines.append(f"**{t['name']}**: {', '.join(t.get('tags', [])[:10])}")
 
     # Anti-patterns
-    lines.append(f"\n## \u26a0\ufe0f Anti-patterns")
+    lines.append("\n## \u26a0\ufe0f Anti-patterns")
     for t in tools:
         aps = t.get("anti_patterns", [])
         if aps:
@@ -1139,7 +1138,7 @@ def _format_scoring_explanation(detail: Dict, t: Dict) -> str:
     lines.append(f"**Query**: {detail.get('query', '')}")
     lines.append(f"**Expanded tokens**: {', '.join(detail.get('tokens', []))}\n")
 
-    lines.append(f"## Score Breakdown")
+    lines.append("## Score Breakdown")
     lines.append(f"- BM25 (normalised):  {detail.get('bm25_normalised', 0):.4f}")
     lines.append(f"- Exact match bonus:  {detail.get('exact_bonus', 0):.4f}")
     lines.append(f"- Dense similarity:   {detail.get('dense_score', 0):.4f}"
@@ -1149,14 +1148,14 @@ def _format_scoring_explanation(detail: Dict, t: Dict) -> str:
 
     top_terms = detail.get("top_bm25_terms", [])
     if top_terms:
-        lines.append(f"## Top BM25 Terms")
+        lines.append("## Top BM25 Terms")
         for term, score in top_terms:
             lines.append(f"  - `{term}`: {score:.4f}")
         lines.append("")
 
     exact_hits = detail.get("exact_hits", [])
     if exact_hits:
-        lines.append(f"## Exact Match Signals")
+        lines.append("## Exact Match Signals")
         for hit in exact_hits:
             tok = hit.get("token", "")
             reasons = []
@@ -1175,7 +1174,7 @@ def _format_scoring_explanation(detail: Dict, t: Dict) -> str:
     integrates = t.get("integrates_with", [])
     complements = t.get("complements", [])
     if integrates or complements:
-        lines.append(f"## Ecosystem Fit")
+        lines.append("## Ecosystem Fit")
         if integrates:
             lines.append(f"  Integrates with: {', '.join(integrates[:5])}")
         if complements:
@@ -1196,7 +1195,7 @@ def _explain_from_metadata(query: str, t: Dict) -> str:
     """Pure metadata explanation when no engine is available."""
     lines = [f"# Why {t['name']} was recommended\n"]
     lines.append(f"**Query**: {query}")
-    lines.append(f"*(Detailed scoring unavailable — showing metadata signals)*\n")
+    lines.append("*(Detailed scoring unavailable — showing metadata signals)*\n")
 
     q_lower = query.lower()
     q_words = set(re.sub(r'[^a-z0-9 ]', '', q_lower).split())
@@ -1207,12 +1206,12 @@ def _explain_from_metadata(query: str, t: Dict) -> str:
 
     matching_tags = [tag for tag in all_terms if any(w in tag or tag in w for w in q_words)]
     if matching_tags:
-        lines.append(f"## Matching Tags / Domains")
+        lines.append("## Matching Tags / Domains")
         for tag in matching_tags[:10]:
             lines.append(f"  - {tag}")
         lines.append("")
 
-    lines.append(f"## Tool Profile")
+    lines.append("## Tool Profile")
     lines.append(f"  - Category: {t.get('category')} / {t.get('sub_category')}")
     lines.append(f"  - Tagline: {t.get('tagline')}")
     lines.append(f"  - Maturity: {t.get('maturity')} | Complexity: {t.get('complexity_level')}")

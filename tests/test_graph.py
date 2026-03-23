@@ -15,7 +15,6 @@ Tests for engine/graph.py:
 import sys
 from pathlib import Path
 
-import pytest
 
 _REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(_REPO_ROOT))
@@ -356,7 +355,7 @@ class TestPredictLinks:
 
     def test_sorted_descending_by_score(self, graph_engine):
         links = graph_engine.predict_links(limit=20)
-        scores = [l["score"] for l in links]
+        scores = [link["score"] for link in links]
         assert scores == sorted(scores, reverse=True)
 
     def test_respects_limit(self, graph_engine):

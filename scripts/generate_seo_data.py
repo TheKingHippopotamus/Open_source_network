@@ -271,7 +271,7 @@ def _alternative_pages(alternatives: dict, slug_index: dict) -> dict[str, dict]:
             ),
             (
                 f"Is there a free alternative to {name}?",
-                f"Yes. {', '.join(alt_names[:3])} are free, open-source alternatives to {name}." if alt_names else f"Yes, there are open-source alternatives available.",
+                f"Yes. {', '.join(alt_names[:3])} are free, open-source alternatives to {name}." if alt_names else "Yes, there are open-source alternatives available.",
             ),
         ]
 
@@ -390,11 +390,10 @@ def _category_pages(db: list[dict]) -> dict[str, dict]:
 def _homepage(db: list[dict]) -> dict:
     top_tools = sorted(db, key=lambda t: -t.get("github_stars", 0))[:6]
     tool_names = [t["name"] for t in top_tools]
-    cats = sorted(set(t["category"] for t in db))
 
     return {
         "path": "/",
-        "title": f"Open Source Network — Find & Compare 244 Self-Hosted Open-Source Tools",
+        "title": "Open Source Network — Find & Compare 244 Self-Hosted Open-Source Tools",
         "description": _truncate(
             f"Discover and compare {len(db)} open-source tools you can self-host. "
             f"Semantic search, stack builder, and side-by-side comparisons. "
@@ -443,7 +442,7 @@ def generate() -> None:
 
     # Homepage
     seo["home"] = {"index": _homepage(db)}
-    print(f"  homepage: 1 page")
+    print("  homepage: 1 page")
 
     # Tool pages
     tool_pages = _tool_pages(db)
