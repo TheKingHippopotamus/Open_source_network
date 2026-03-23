@@ -23,7 +23,6 @@ import asyncio
 import sys
 from pathlib import Path
 
-import pytest
 
 _REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(_REPO_ROOT))
@@ -404,7 +403,7 @@ class TestOssListCategories:
         result = run(oss_list_categories(ListCategoriesInput()))
         # Embeddable has 47 tools — most tools — should appear near top
         lines = result.split("\n")
-        embed_line = next((i for i, l in enumerate(lines) if "Embeddable" in l), None)
+        embed_line = next((i for i, line in enumerate(lines) if "Embeddable" in line), None)
         assert embed_line is not None, "Embeddable category not found"
 
 

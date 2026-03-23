@@ -394,8 +394,7 @@ class RecommendationExplainer:
         anti_patterns = tool.get("anti_patterns", [])
         use_cases = tool.get("use_cases_detailed", [])
         funding_model = tool.get("funding_model", "community")
-        tags = tool.get("tags", [])
-        problem_domains = tool.get("problem_domains", [])
+
 
         lines: List[str] = []
 
@@ -415,8 +414,8 @@ class RecommendationExplainer:
 
         # Score breakdown
         lines.append("### Relevance Score Breakdown")
-        lines.append(f"| Component | Score |")
-        lines.append(f"|---|---|")
+        lines.append("| Component | Score |")
+        lines.append("|---|---|")
         lines.append(f"| Semantic similarity (TF-IDF cosine) | {cosine:.3f} |")
         lines.append(f"| Exact tag / domain match bonus | {exact:.3f} |")
         lines.append(f"| **Total relevance** | **{total:.3f}** |")
@@ -627,7 +626,7 @@ class RecommendationExplainer:
         lines.append("### How These Tools Work Together")
         lines.append("")
         tool_map = {t.get("slug", t.get("name", "")): t for _, t in pairs}
-        tool_names = {t.get("slug", t.get("name", "")): t.get("name", "") for _, t in pairs}
+
         connections_found: List[str] = []
         conflicts_found: List[str] = []
 
@@ -727,9 +726,6 @@ class RecommendationExplainer:
         license_name = tool.get("license", "")
         performance_tier = tool.get("performance_tier", "medium")
         funding_model = tool.get("funding_model", "community")
-        conflicts = tool.get("conflicts_with", [])
-        team_fit = tool.get("team_size_fit", [])
-        maturity = tool.get("maturity", "stable")
 
         # Score to assess fit
         breakdown = self._get_score_breakdown(query, tool)

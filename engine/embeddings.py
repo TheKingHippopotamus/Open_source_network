@@ -471,7 +471,7 @@ def _cli_info(data_dir: Path, tools_path: Path) -> None:
 
     engine = EmbeddingEngine(data_dir=data_dir, tools=tools)
 
-    print(f"Embedding status")
+    print("Embedding status")
     print(f"  numpy available    : {_NUMPY_AVAILABLE}")
     print(f"  engine enabled     : {engine.enabled}")
     print(f"  data directory     : {data_dir.resolve()}")

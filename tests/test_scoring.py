@@ -12,7 +12,6 @@ Covers: basic queries, synonym expansion, exact tag bonuses,
         filtered search, explain_score, and edge cases.
 """
 
-import json
 import sys
 from pathlib import Path
 
@@ -178,7 +177,6 @@ class TestBM25Scorer:
     def test_score_with_weighted_terms(self, db):
         scorer = BM25Scorer(db)
         # Tags are weighted x3; a tool's own tag term should produce a strong BM25 score
-        tool = next(t for t in db if t["slug"] == "postgresql")
         # "relational" is a postgresql tag
         score = scorer.score(["relational"], "postgresql")
         assert score > 0.0

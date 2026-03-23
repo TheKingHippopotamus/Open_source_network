@@ -25,8 +25,6 @@ sys.path.insert(0, str(_REPO_ROOT))
 from engine.health import (
     HealthScorer,
     WEIGHTS,
-    GRADE_THRESHOLDS,
-    RISK_BANDS,
     _assign_grade,
     _assign_risk_band,
     _clamp,
@@ -318,7 +316,7 @@ class TestCompareHealth:
         slugs = ["qdrant", "postgresql", "redis", "milvus"]
         result = health_scorer.compare_health(slugs)
         # Parse rank column: first mentioned slug should have higher overall
-        lines = [l for l in result.split("\n") if l.startswith("| 1 ")]
+        lines = [line for line in result.split("\n") if line.startswith("| 1 ")]
         assert len(lines) == 1, "Expected exactly one rank-1 row"
 
     def test_unknown_slugs_skipped(self, health_scorer):
