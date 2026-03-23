@@ -1,0 +1,3772 @@
+[
+  {
+    "slugs": [
+      "pytorch",
+      "tensorflow"
+    ],
+    "names": [
+      "PyTorch",
+      "TensorFlow"
+    ],
+    "category": "AI / ML",
+    "priority": 27,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "milvus",
+      "qdrant"
+    ],
+    "names": [
+      "Milvus",
+      "Qdrant"
+    ],
+    "category": "LLMs & AI Infra",
+    "priority": 27,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "milvus",
+      "weaviate"
+    ],
+    "names": [
+      "Milvus",
+      "Weaviate"
+    ],
+    "category": "LLMs & AI Infra",
+    "priority": 27,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "chroma",
+      "milvus"
+    ],
+    "names": [
+      "Chroma",
+      "Milvus"
+    ],
+    "category": "LLMs & AI Infra",
+    "priority": 27,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "qdrant",
+      "weaviate"
+    ],
+    "names": [
+      "Qdrant",
+      "Weaviate"
+    ],
+    "category": "LLMs & AI Infra",
+    "priority": 27,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "chroma",
+      "qdrant"
+    ],
+    "names": [
+      "Chroma",
+      "Qdrant"
+    ],
+    "category": "LLMs & AI Infra",
+    "priority": 27,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "chroma",
+      "weaviate"
+    ],
+    "names": [
+      "Chroma",
+      "Weaviate"
+    ],
+    "category": "LLMs & AI Infra",
+    "priority": 27,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "llama",
+      "qwen"
+    ],
+    "names": [
+      "Llama (Meta)",
+      "Qwen3"
+    ],
+    "category": "LLMs & AI Infra",
+    "priority": 27,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "llama",
+      "mistral"
+    ],
+    "names": [
+      "Llama (Meta)",
+      "Mistral"
+    ],
+    "category": "LLMs & AI Infra",
+    "priority": 27,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "deepseek",
+      "llama"
+    ],
+    "names": [
+      "DeepSeek V3",
+      "Llama (Meta)"
+    ],
+    "category": "LLMs & AI Infra",
+    "priority": 27,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "deepseek",
+      "qwen"
+    ],
+    "names": [
+      "DeepSeek V3",
+      "Qwen3"
+    ],
+    "category": "LLMs & AI Infra",
+    "priority": 27,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "mistral",
+      "qwen"
+    ],
+    "names": [
+      "Mistral",
+      "Qwen3"
+    ],
+    "category": "LLMs & AI Infra",
+    "priority": 27,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "mysql",
+      "postgresql"
+    ],
+    "names": [
+      "MySQL",
+      "PostgreSQL"
+    ],
+    "category": "Databases",
+    "priority": 27,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "meilisearch",
+      "typesense"
+    ],
+    "names": [
+      "Meilisearch",
+      "Typesense"
+    ],
+    "category": "Databases",
+    "priority": 27,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "nagios",
+      "zabbix"
+    ],
+    "names": [
+      "Nagios Core",
+      "Zabbix"
+    ],
+    "category": "Monitoring",
+    "priority": 27,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "dolibarr",
+      "erpnext"
+    ],
+    "names": [
+      "Dolibarr",
+      "ERPNext"
+    ],
+    "category": "CRM & ERP",
+    "priority": 27,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "erpnext",
+      "odoo"
+    ],
+    "names": [
+      "ERPNext",
+      "Odoo Community"
+    ],
+    "category": "CRM & ERP",
+    "priority": 27,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "dolibarr",
+      "odoo"
+    ],
+    "names": [
+      "Dolibarr",
+      "Odoo Community"
+    ],
+    "category": "CRM & ERP",
+    "priority": 27,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "bigbluebutton",
+      "jitsi-meet"
+    ],
+    "names": [
+      "BigBlueButton",
+      "Jitsi Meet"
+    ],
+    "category": "Communication",
+    "priority": 27,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "outline",
+      "wiki-js"
+    ],
+    "names": [
+      "Outline",
+      "Wiki.js"
+    ],
+    "category": "Knowledge & Docs",
+    "priority": 27,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "bookstack",
+      "wiki-js"
+    ],
+    "names": [
+      "BookStack",
+      "Wiki.js"
+    ],
+    "category": "Knowledge & Docs",
+    "priority": 27,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "pocketbase",
+      "supabase"
+    ],
+    "names": [
+      "PocketBase",
+      "Supabase"
+    ],
+    "category": "Low-Code",
+    "priority": 27,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "appwrite",
+      "supabase"
+    ],
+    "names": [
+      "Appwrite",
+      "Supabase"
+    ],
+    "category": "Low-Code",
+    "priority": 27,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "appwrite",
+      "pocketbase"
+    ],
+    "names": [
+      "Appwrite",
+      "PocketBase"
+    ],
+    "category": "Low-Code",
+    "priority": 27,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "plausible",
+      "umami"
+    ],
+    "names": [
+      "Plausible",
+      "Umami"
+    ],
+    "category": "Analytics",
+    "priority": 27,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "authentik",
+      "keycloak"
+    ],
+    "names": [
+      "authentik",
+      "Keycloak"
+    ],
+    "category": "Security & Auth",
+    "priority": 27,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "ghost",
+      "wordpress"
+    ],
+    "names": [
+      "Ghost",
+      "WordPress"
+    ],
+    "category": "Web & CMS",
+    "priority": 27,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "focalboard",
+      "wekan"
+    ],
+    "names": [
+      "Focalboard",
+      "WeKan"
+    ],
+    "category": "Project Mgmt",
+    "priority": 27,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "codemirror",
+      "monaco-editor"
+    ],
+    "names": [
+      "CodeMirror",
+      "Monaco Editor"
+    ],
+    "category": "Embeddable",
+    "priority": 27,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "imagemagick",
+      "sharp"
+    ],
+    "names": [
+      "ImageMagick",
+      "Sharp"
+    ],
+    "category": "Embeddable",
+    "priority": 27,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "freertos",
+      "zephyr-rtos"
+    ],
+    "names": [
+      "FreeRTOS",
+      "Zephyr RTOS"
+    ],
+    "category": "Embeddable",
+    "priority": 27,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "jax",
+      "tensorflow"
+    ],
+    "names": [
+      "JAX",
+      "TensorFlow"
+    ],
+    "category": "AI / ML",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "jax",
+      "pytorch"
+    ],
+    "names": [
+      "JAX",
+      "PyTorch"
+    ],
+    "category": "AI / ML",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "huggingface-transformers",
+      "spacy"
+    ],
+    "names": [
+      "Hugging Face Transformers",
+      "spaCy"
+    ],
+    "category": "AI / ML",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "detectron2",
+      "opencv"
+    ],
+    "names": [
+      "Detectron2",
+      "OpenCV"
+    ],
+    "category": "AI / ML",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "gradio",
+      "streamlit"
+    ],
+    "names": [
+      "Gradio",
+      "Streamlit"
+    ],
+    "category": "AI / ML",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "ollama",
+      "vllm"
+    ],
+    "names": [
+      "Ollama",
+      "vLLM"
+    ],
+    "category": "LLMs & AI Infra",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "ollama",
+      "text-generation-inference"
+    ],
+    "names": [
+      "Ollama",
+      "Text Generation Inference"
+    ],
+    "category": "LLMs & AI Infra",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "text-generation-inference",
+      "vllm"
+    ],
+    "names": [
+      "Text Generation Inference",
+      "vLLM"
+    ],
+    "category": "LLMs & AI Infra",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "sglang",
+      "vllm"
+    ],
+    "names": [
+      "SGLang",
+      "vLLM"
+    ],
+    "category": "LLMs & AI Infra",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "autogen",
+      "langchain"
+    ],
+    "names": [
+      "AutoGen",
+      "LangChain"
+    ],
+    "category": "LLMs & AI Infra",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "crewai",
+      "langchain"
+    ],
+    "names": [
+      "CrewAI",
+      "LangChain"
+    ],
+    "category": "LLMs & AI Infra",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "autogen",
+      "crewai"
+    ],
+    "names": [
+      "AutoGen",
+      "CrewAI"
+    ],
+    "category": "LLMs & AI Infra",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "continue-dev",
+      "tabby"
+    ],
+    "names": [
+      "Continue",
+      "Tabby"
+    ],
+    "category": "LLMs & AI Infra",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "mariadb",
+      "postgresql"
+    ],
+    "names": [
+      "MariaDB",
+      "PostgreSQL"
+    ],
+    "category": "Databases",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "mariadb",
+      "mysql"
+    ],
+    "names": [
+      "MariaDB",
+      "MySQL"
+    ],
+    "category": "Databases",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "keydb",
+      "redis"
+    ],
+    "names": [
+      "KeyDB",
+      "Redis"
+    ],
+    "category": "Databases",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "dragonfly",
+      "redis"
+    ],
+    "names": [
+      "Dragonfly",
+      "Redis"
+    ],
+    "category": "Databases",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "ferretdb",
+      "mongodb"
+    ],
+    "names": [
+      "FerretDB",
+      "MongoDB"
+    ],
+    "category": "Databases",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "couchdb",
+      "mongodb"
+    ],
+    "names": [
+      "CouchDB",
+      "MongoDB"
+    ],
+    "category": "Databases",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "clickhouse",
+      "duckdb"
+    ],
+    "names": [
+      "ClickHouse",
+      "DuckDB"
+    ],
+    "category": "Databases",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "elasticsearch",
+      "meilisearch"
+    ],
+    "names": [
+      "Elasticsearch",
+      "Meilisearch"
+    ],
+    "category": "Databases",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "elasticsearch",
+      "typesense"
+    ],
+    "names": [
+      "Elasticsearch",
+      "Typesense"
+    ],
+    "category": "Databases",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "elasticsearch",
+      "opensearch"
+    ],
+    "names": [
+      "Elasticsearch",
+      "OpenSearch"
+    ],
+    "category": "Databases",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "meilisearch",
+      "opensearch"
+    ],
+    "names": [
+      "Meilisearch",
+      "OpenSearch"
+    ],
+    "category": "Databases",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "influxdb",
+      "timescaledb"
+    ],
+    "names": [
+      "InfluxDB",
+      "TimescaleDB"
+    ],
+    "category": "Databases",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "dragonfly",
+      "keydb"
+    ],
+    "names": [
+      "Dragonfly",
+      "KeyDB"
+    ],
+    "category": "Databases",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "cassandra",
+      "scylladb"
+    ],
+    "names": [
+      "Apache Cassandra",
+      "ScyllaDB"
+    ],
+    "category": "Databases",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "docker",
+      "podman"
+    ],
+    "names": [
+      "Docker (Moby)",
+      "Podman"
+    ],
+    "category": "DevOps & Infra",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "k3s",
+      "kubernetes"
+    ],
+    "names": [
+      "K3s",
+      "Kubernetes"
+    ],
+    "category": "DevOps & Infra",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "opentofu",
+      "pulumi"
+    ],
+    "names": [
+      "OpenTofu",
+      "Pulumi"
+    ],
+    "category": "DevOps & Infra",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "jenkins",
+      "woodpecker-ci"
+    ],
+    "names": [
+      "Jenkins",
+      "Woodpecker CI"
+    ],
+    "category": "DevOps & Infra",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "gitea",
+      "gitlab-ce"
+    ],
+    "names": [
+      "Gitea",
+      "GitLab CE"
+    ],
+    "category": "DevOps & Infra",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "infisical",
+      "vault"
+    ],
+    "names": [
+      "Infisical",
+      "Vault"
+    ],
+    "category": "DevOps & Infra",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "grafana",
+      "kibana"
+    ],
+    "names": [
+      "Grafana",
+      "Kibana"
+    ],
+    "category": "Monitoring",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "jaeger",
+      "signoz"
+    ],
+    "names": [
+      "Jaeger",
+      "SigNoz"
+    ],
+    "category": "Monitoring",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "espocrm",
+      "twenty"
+    ],
+    "names": [
+      "EspoCRM",
+      "Twenty"
+    ],
+    "category": "CRM & ERP",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "suitecrm",
+      "twenty"
+    ],
+    "names": [
+      "SuiteCRM",
+      "Twenty"
+    ],
+    "category": "CRM & ERP",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "espocrm",
+      "suitecrm"
+    ],
+    "names": [
+      "EspoCRM",
+      "SuiteCRM"
+    ],
+    "category": "CRM & ERP",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "mattermost",
+      "zulip"
+    ],
+    "names": [
+      "Mattermost",
+      "Zulip"
+    ],
+    "category": "Communication",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "mattermost",
+      "rocket-chat"
+    ],
+    "names": [
+      "Mattermost",
+      "Rocket.Chat"
+    ],
+    "category": "Communication",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "rocket-chat",
+      "zulip"
+    ],
+    "names": [
+      "Rocket.Chat",
+      "Zulip"
+    ],
+    "category": "Communication",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "plane",
+      "taiga"
+    ],
+    "names": [
+      "Plane",
+      "Taiga"
+    ],
+    "category": "Project Mgmt",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "huly",
+      "plane"
+    ],
+    "names": [
+      "Huly",
+      "Plane"
+    ],
+    "category": "Project Mgmt",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "openproject",
+      "plane"
+    ],
+    "names": [
+      "OpenProject",
+      "Plane"
+    ],
+    "category": "Project Mgmt",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "openproject",
+      "taiga"
+    ],
+    "names": [
+      "OpenProject",
+      "Taiga"
+    ],
+    "category": "Project Mgmt",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "docmost",
+      "outline"
+    ],
+    "names": [
+      "Docmost",
+      "Outline"
+    ],
+    "category": "Knowledge & Docs",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "bookstack",
+      "outline"
+    ],
+    "names": [
+      "BookStack",
+      "Outline"
+    ],
+    "category": "Knowledge & Docs",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "affine",
+      "appflowy"
+    ],
+    "names": [
+      "AFFiNE",
+      "AppFlowy"
+    ],
+    "category": "Knowledge & Docs",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "docmost",
+      "wiki-js"
+    ],
+    "names": [
+      "Docmost",
+      "Wiki.js"
+    ],
+    "category": "Knowledge & Docs",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "n8n",
+      "node-red"
+    ],
+    "names": [
+      "n8n",
+      "Node-RED"
+    ],
+    "category": "Automation",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "activepieces",
+      "n8n"
+    ],
+    "names": [
+      "Activepieces",
+      "n8n"
+    ],
+    "category": "Automation",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "activepieces",
+      "node-red"
+    ],
+    "names": [
+      "Activepieces",
+      "Node-RED"
+    ],
+    "category": "Automation",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "airflow",
+      "temporal"
+    ],
+    "names": [
+      "Apache Airflow",
+      "Temporal"
+    ],
+    "category": "Automation",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "airflow",
+      "prefect"
+    ],
+    "names": [
+      "Apache Airflow",
+      "Prefect"
+    ],
+    "category": "Automation",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "matomo",
+      "plausible"
+    ],
+    "names": [
+      "Matomo",
+      "Plausible"
+    ],
+    "category": "Analytics",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "matomo",
+      "umami"
+    ],
+    "names": [
+      "Matomo",
+      "Umami"
+    ],
+    "category": "Analytics",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "redash",
+      "superset"
+    ],
+    "names": [
+      "Redash",
+      "Apache Superset"
+    ],
+    "category": "Analytics",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "keila",
+      "listmonk"
+    ],
+    "names": [
+      "Keila",
+      "Listmonk"
+    ],
+    "category": "Email Marketing",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "payload-cms",
+      "strapi"
+    ],
+    "names": [
+      "Payload CMS",
+      "Strapi"
+    ],
+    "category": "Web & CMS",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "medusa",
+      "saleor"
+    ],
+    "names": [
+      "Medusa",
+      "Saleor"
+    ],
+    "category": "Web & CMS",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "astro",
+      "nextjs"
+    ],
+    "names": [
+      "Astro",
+      "Next.js"
+    ],
+    "category": "Web & CMS",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "astro",
+      "hugo"
+    ],
+    "names": [
+      "Astro",
+      "Hugo"
+    ],
+    "category": "Web & CMS",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "immich",
+      "photoprism"
+    ],
+    "names": [
+      "Immich",
+      "PhotoPrism"
+    ],
+    "category": "Media & Files",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "caddy",
+      "traefik"
+    ],
+    "names": [
+      "Caddy",
+      "Traefik"
+    ],
+    "category": "DNS & Networking",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "caddy",
+      "nginx"
+    ],
+    "names": [
+      "Caddy",
+      "Nginx"
+    ],
+    "category": "DNS & Networking",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "nginx",
+      "traefik"
+    ],
+    "names": [
+      "Nginx",
+      "Traefik"
+    ],
+    "category": "DNS & Networking",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "kafka",
+      "rabbitmq"
+    ],
+    "names": [
+      "Apache Kafka",
+      "RabbitMQ"
+    ],
+    "category": "DNS & Networking",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "kafka",
+      "nats"
+    ],
+    "names": [
+      "Apache Kafka",
+      "NATS"
+    ],
+    "category": "DNS & Networking",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "nats",
+      "rabbitmq"
+    ],
+    "names": [
+      "NATS",
+      "RabbitMQ"
+    ],
+    "category": "DNS & Networking",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "adguard-home",
+      "pihole"
+    ],
+    "names": [
+      "AdGuard Home",
+      "Pi-hole"
+    ],
+    "category": "DNS & Networking",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "kedro",
+      "metaflow"
+    ],
+    "names": [
+      "Kedro",
+      "Metaflow"
+    ],
+    "category": "AI / ML",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "sglang",
+      "text-generation-inference"
+    ],
+    "names": [
+      "SGLang",
+      "Text Generation Inference"
+    ],
+    "category": "LLMs & AI Infra",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "budibase",
+      "tooljet"
+    ],
+    "names": [
+      "Budibase",
+      "ToolJet"
+    ],
+    "category": "Low-Code",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "formbricks",
+      "heyform"
+    ],
+    "names": [
+      "Formbricks",
+      "Heyform"
+    ],
+    "category": "Low-Code",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "vscode",
+      "zed"
+    ],
+    "names": [
+      "VS Code (Code-OSS)",
+      "Zed"
+    ],
+    "category": "Dev Tools",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "bun",
+      "deno"
+    ],
+    "names": [
+      "Bun",
+      "Deno"
+    ],
+    "category": "Dev Tools",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "biome",
+      "ruff"
+    ],
+    "names": [
+      "Biome",
+      "Ruff"
+    ],
+    "category": "Dev Tools",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "lexical",
+      "tiptap"
+    ],
+    "names": [
+      "Lexical",
+      "Tiptap"
+    ],
+    "category": "Embeddable",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "slate",
+      "tiptap"
+    ],
+    "names": [
+      "Slate",
+      "Tiptap"
+    ],
+    "category": "Embeddable",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "quill",
+      "tiptap"
+    ],
+    "names": [
+      "Quill",
+      "Tiptap"
+    ],
+    "category": "Embeddable",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "lexical",
+      "slate"
+    ],
+    "names": [
+      "Lexical",
+      "Slate"
+    ],
+    "category": "Embeddable",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "lexical",
+      "quill"
+    ],
+    "names": [
+      "Lexical",
+      "Quill"
+    ],
+    "category": "Embeddable",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "prosemirror",
+      "slate"
+    ],
+    "names": [
+      "ProseMirror",
+      "Slate"
+    ],
+    "category": "Embeddable",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "chatwoot",
+      "tiledesk"
+    ],
+    "names": [
+      "Chatwoot",
+      "Tiledesk"
+    ],
+    "category": "Embeddable",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "chartjs",
+      "d3"
+    ],
+    "names": [
+      "Chart.js",
+      "D3.js"
+    ],
+    "category": "Embeddable",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "chartjs",
+      "echarts"
+    ],
+    "names": [
+      "Chart.js",
+      "ECharts"
+    ],
+    "category": "Embeddable",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "d3",
+      "echarts"
+    ],
+    "names": [
+      "D3.js",
+      "ECharts"
+    ],
+    "category": "Embeddable",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "leaflet",
+      "maplibre"
+    ],
+    "names": [
+      "Leaflet",
+      "MapLibre GL JS"
+    ],
+    "category": "Embeddable",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "plyr",
+      "videojs"
+    ],
+    "names": [
+      "Plyr",
+      "Video.js"
+    ],
+    "category": "Embeddable",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "excalidraw",
+      "mermaid"
+    ],
+    "names": [
+      "Excalidraw",
+      "Mermaid"
+    ],
+    "category": "Embeddable",
+    "priority": 26,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "cockroachdb",
+      "postgresql"
+    ],
+    "names": [
+      "CockroachDB",
+      "PostgreSQL"
+    ],
+    "category": "Databases",
+    "priority": 24,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "arangodb",
+      "mongodb"
+    ],
+    "names": [
+      "ArangoDB",
+      "MongoDB"
+    ],
+    "category": "Databases",
+    "priority": 24,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "arangodb",
+      "neo4j"
+    ],
+    "names": [
+      "ArangoDB",
+      "Neo4j Community"
+    ],
+    "category": "Databases",
+    "priority": 24,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "cachet",
+      "uptime-kuma"
+    ],
+    "names": [
+      "Cachet",
+      "Uptime Kuma"
+    ],
+    "category": "Monitoring",
+    "priority": 24,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "appflowy",
+      "siyuan"
+    ],
+    "names": [
+      "AppFlowy",
+      "SiYuan"
+    ],
+    "category": "Knowledge & Docs",
+    "priority": 24,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "joplin",
+      "siyuan"
+    ],
+    "names": [
+      "Joplin",
+      "SiYuan"
+    ],
+    "category": "Knowledge & Docs",
+    "priority": 24,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "baserow",
+      "nocodb"
+    ],
+    "names": [
+      "Baserow",
+      "NocoDB"
+    ],
+    "category": "Low-Code",
+    "priority": 24,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "appsmith",
+      "budibase"
+    ],
+    "names": [
+      "Appsmith",
+      "Budibase"
+    ],
+    "category": "Low-Code",
+    "priority": 24,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "appsmith",
+      "tooljet"
+    ],
+    "names": [
+      "Appsmith",
+      "ToolJet"
+    ],
+    "category": "Low-Code",
+    "priority": 24,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "lightdash",
+      "metabase"
+    ],
+    "names": [
+      "Lightdash",
+      "Metabase"
+    ],
+    "category": "Analytics",
+    "priority": 24,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "metabase",
+      "superset"
+    ],
+    "names": [
+      "Metabase",
+      "Apache Superset"
+    ],
+    "category": "Low-Code",
+    "priority": 24,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "metabase",
+      "redash"
+    ],
+    "names": [
+      "Metabase",
+      "Redash"
+    ],
+    "category": "Low-Code",
+    "priority": 24,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "listmonk",
+      "mautic"
+    ],
+    "names": [
+      "Listmonk",
+      "Mautic"
+    ],
+    "category": "Email Marketing",
+    "priority": 24,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "keycloak",
+      "supertokens"
+    ],
+    "names": [
+      "Keycloak",
+      "SuperTokens"
+    ],
+    "category": "Security & Auth",
+    "priority": 24,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "directus",
+      "strapi"
+    ],
+    "names": [
+      "Directus",
+      "Strapi"
+    ],
+    "category": "Low-Code",
+    "priority": 24,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "directus",
+      "payload-cms"
+    ],
+    "names": [
+      "Directus",
+      "Payload CMS"
+    ],
+    "category": "Low-Code",
+    "priority": 24,
+    "reason": "mutual similar_to"
+  },
+  {
+    "slugs": [
+      "llama",
+      "phi4"
+    ],
+    "names": [
+      "Llama (Meta)",
+      "Phi-4 (Microsoft)"
+    ],
+    "category": "LLMs & AI Infra",
+    "priority": 7,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "axelor",
+      "erpnext"
+    ],
+    "names": [
+      "Axelor",
+      "ERPNext"
+    ],
+    "category": "CRM & ERP",
+    "priority": 7,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "axelor",
+      "odoo"
+    ],
+    "names": [
+      "Axelor",
+      "Odoo Community"
+    ],
+    "category": "CRM & ERP",
+    "priority": 7,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "postgresql",
+      "sqlite"
+    ],
+    "names": [
+      "PostgreSQL",
+      "SQLite"
+    ],
+    "category": "Databases",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "mysql",
+      "sqlite"
+    ],
+    "names": [
+      "MySQL",
+      "SQLite"
+    ],
+    "category": "Databases",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "gitea",
+      "jenkins"
+    ],
+    "names": [
+      "Gitea",
+      "Jenkins"
+    ],
+    "category": "DevOps & Infra",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "gitlab-ce",
+      "jenkins"
+    ],
+    "names": [
+      "GitLab CE",
+      "Jenkins"
+    ],
+    "category": "DevOps & Infra",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "huly",
+      "taiga"
+    ],
+    "names": [
+      "Huly",
+      "Taiga"
+    ],
+    "category": "Project Mgmt",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "appflowy",
+      "joplin"
+    ],
+    "names": [
+      "AppFlowy",
+      "Joplin"
+    ],
+    "category": "Knowledge & Docs",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "affine",
+      "outline"
+    ],
+    "names": [
+      "AFFiNE",
+      "Outline"
+    ],
+    "category": "Knowledge & Docs",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "airflow",
+      "n8n"
+    ],
+    "names": [
+      "Apache Airflow",
+      "n8n"
+    ],
+    "category": "Automation",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "kubeflow",
+      "mlflow"
+    ],
+    "names": [
+      "Kubeflow",
+      "MLflow"
+    ],
+    "category": "AI / ML",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "metaflow",
+      "mlflow"
+    ],
+    "names": [
+      "Metaflow",
+      "MLflow"
+    ],
+    "category": "AI / ML",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "kedro",
+      "mlflow"
+    ],
+    "names": [
+      "Kedro",
+      "MLflow"
+    ],
+    "category": "AI / ML",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "clickhouse",
+      "druid"
+    ],
+    "names": [
+      "ClickHouse",
+      "Apache Druid"
+    ],
+    "category": "Databases",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "druid",
+      "duckdb"
+    ],
+    "names": [
+      "Apache Druid",
+      "DuckDB"
+    ],
+    "category": "Databases",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "gitlab-ce",
+      "woodpecker-ci"
+    ],
+    "names": [
+      "GitLab CE",
+      "Woodpecker CI"
+    ],
+    "category": "DevOps & Infra",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "gitea",
+      "woodpecker-ci"
+    ],
+    "names": [
+      "Gitea",
+      "Woodpecker CI"
+    ],
+    "category": "DevOps & Infra",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "espocrm",
+      "yetiforce"
+    ],
+    "names": [
+      "EspoCRM",
+      "YetiForce"
+    ],
+    "category": "CRM & ERP",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "suitecrm",
+      "yetiforce"
+    ],
+    "names": [
+      "SuiteCRM",
+      "YetiForce"
+    ],
+    "category": "CRM & ERP",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "krayin",
+      "twenty"
+    ],
+    "names": [
+      "Krayin",
+      "Twenty"
+    ],
+    "category": "CRM & ERP",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "espocrm",
+      "krayin"
+    ],
+    "names": [
+      "EspoCRM",
+      "Krayin"
+    ],
+    "category": "CRM & ERP",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "corteza",
+      "twenty"
+    ],
+    "names": [
+      "Corteza",
+      "Twenty"
+    ],
+    "category": "CRM & ERP",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "corteza",
+      "suitecrm"
+    ],
+    "names": [
+      "Corteza",
+      "SuiteCRM"
+    ],
+    "category": "CRM & ERP",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "erpnext",
+      "metasfresh"
+    ],
+    "names": [
+      "ERPNext",
+      "metasfresh"
+    ],
+    "category": "CRM & ERP",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "metasfresh",
+      "odoo"
+    ],
+    "names": [
+      "metasfresh",
+      "Odoo Community"
+    ],
+    "category": "CRM & ERP",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "leantime",
+      "taiga"
+    ],
+    "names": [
+      "Leantime",
+      "Taiga"
+    ],
+    "category": "Project Mgmt",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "leantime",
+      "plane"
+    ],
+    "names": [
+      "Leantime",
+      "Plane"
+    ],
+    "category": "Project Mgmt",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "bookstack",
+      "docmost"
+    ],
+    "names": [
+      "BookStack",
+      "Docmost"
+    ],
+    "category": "Knowledge & Docs",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "prefect",
+      "temporal"
+    ],
+    "names": [
+      "Prefect",
+      "Temporal"
+    ],
+    "category": "Automation",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "n8n",
+      "windmill"
+    ],
+    "names": [
+      "n8n",
+      "Windmill"
+    ],
+    "category": "Automation",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "airflow",
+      "windmill"
+    ],
+    "names": [
+      "Apache Airflow",
+      "Windmill"
+    ],
+    "category": "Automation",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "lightdash",
+      "superset"
+    ],
+    "names": [
+      "Lightdash",
+      "Apache Superset"
+    ],
+    "category": "Analytics",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "keila",
+      "mailtrain"
+    ],
+    "names": [
+      "Keila",
+      "Mailtrain"
+    ],
+    "category": "Email Marketing",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "listmonk",
+      "mailtrain"
+    ],
+    "names": [
+      "Listmonk",
+      "Mailtrain"
+    ],
+    "category": "Email Marketing",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "opencart",
+      "saleor"
+    ],
+    "names": [
+      "OpenCart",
+      "Saleor"
+    ],
+    "category": "Web & CMS",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "medusa",
+      "opencart"
+    ],
+    "names": [
+      "Medusa",
+      "OpenCart"
+    ],
+    "category": "Web & CMS",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "inkscape",
+      "penpot"
+    ],
+    "names": [
+      "Inkscape",
+      "Penpot"
+    ],
+    "category": "Media & Files",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "quill",
+      "slate"
+    ],
+    "names": [
+      "Quill",
+      "Slate"
+    ],
+    "category": "Embeddable",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "editorjs",
+      "lexical"
+    ],
+    "names": [
+      "Editor.js",
+      "Lexical"
+    ],
+    "category": "Embeddable",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "editorjs",
+      "tiptap"
+    ],
+    "names": [
+      "Editor.js",
+      "Tiptap"
+    ],
+    "category": "Embeddable",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "tesseract",
+      "tesseractjs"
+    ],
+    "names": [
+      "Tesseract OCR",
+      "Tesseract.js"
+    ],
+    "category": "Embeddable",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "lucia",
+      "passportjs"
+    ],
+    "names": [
+      "Lucia",
+      "Passport.js"
+    ],
+    "category": "Embeddable",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "bullmq",
+      "celery"
+    ],
+    "names": [
+      "BullMQ",
+      "Celery"
+    ],
+    "category": "Embeddable",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "sonic",
+      "tantivy"
+    ],
+    "names": [
+      "Sonic",
+      "Tantivy"
+    ],
+    "category": "Embeddable",
+    "priority": 6,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "chatwoot",
+      "zammad"
+    ],
+    "names": [
+      "Chatwoot",
+      "Zammad"
+    ],
+    "category": "Embeddable",
+    "priority": 5,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "duckdb",
+      "sqlite"
+    ],
+    "names": [
+      "DuckDB",
+      "SQLite"
+    ],
+    "category": "Databases",
+    "priority": 4,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "prometheus",
+      "zabbix"
+    ],
+    "names": [
+      "Prometheus",
+      "Zabbix"
+    ],
+    "category": "Monitoring",
+    "priority": 4,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "influxdb",
+      "prometheus"
+    ],
+    "names": [
+      "InfluxDB",
+      "Prometheus"
+    ],
+    "category": "Databases",
+    "priority": 4,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "elasticsearch",
+      "loki"
+    ],
+    "names": [
+      "Elasticsearch",
+      "Loki"
+    ],
+    "category": "Databases",
+    "priority": 4,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "element",
+      "mattermost"
+    ],
+    "names": [
+      "Element / Matrix",
+      "Mattermost"
+    ],
+    "category": "Communication",
+    "priority": 4,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "matomo",
+      "posthog"
+    ],
+    "names": [
+      "Matomo",
+      "PostHog"
+    ],
+    "category": "Analytics",
+    "priority": 4,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "oneuptime",
+      "signoz"
+    ],
+    "names": [
+      "OneUptime",
+      "SigNoz"
+    ],
+    "category": "Monitoring",
+    "priority": 4,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "focalboard",
+      "plane"
+    ],
+    "names": [
+      "Focalboard",
+      "Plane"
+    ],
+    "category": "Project Mgmt",
+    "priority": 4,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "plane",
+      "wekan"
+    ],
+    "names": [
+      "Plane",
+      "WeKan"
+    ],
+    "category": "Project Mgmt",
+    "priority": 4,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "nocobase",
+      "nocodb"
+    ],
+    "names": [
+      "NocoBase",
+      "NocoDB"
+    ],
+    "category": "Low-Code",
+    "priority": 4,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "appsmith",
+      "nocobase"
+    ],
+    "names": [
+      "Appsmith",
+      "NocoBase"
+    ],
+    "category": "Low-Code",
+    "priority": 4,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "keila",
+      "mautic"
+    ],
+    "names": [
+      "Keila",
+      "Mautic"
+    ],
+    "category": "Email Marketing",
+    "priority": 4,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "authentik",
+      "supertokens"
+    ],
+    "names": [
+      "authentik",
+      "SuperTokens"
+    ],
+    "category": "Security & Auth",
+    "priority": 4,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "gimp",
+      "inkscape"
+    ],
+    "names": [
+      "GIMP",
+      "Inkscape"
+    ],
+    "category": "Media & Files",
+    "priority": 4,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "kong",
+      "traefik"
+    ],
+    "names": [
+      "Kong",
+      "Traefik"
+    ],
+    "category": "Dev Tools",
+    "priority": 4,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "llama-cpp",
+      "ollama"
+    ],
+    "names": [
+      "llama.cpp",
+      "Ollama"
+    ],
+    "category": "Embeddable",
+    "priority": 4,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "excalidraw",
+      "penpot"
+    ],
+    "names": [
+      "Excalidraw",
+      "Penpot"
+    ],
+    "category": "Embeddable",
+    "priority": 4,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "lucia",
+      "supertokens"
+    ],
+    "names": [
+      "Lucia",
+      "SuperTokens"
+    ],
+    "category": "Embeddable",
+    "priority": 4,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "passportjs",
+      "supertokens"
+    ],
+    "names": [
+      "Passport.js",
+      "SuperTokens"
+    ],
+    "category": "Embeddable",
+    "priority": 4,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "sonic",
+      "typesense"
+    ],
+    "names": [
+      "Sonic",
+      "Typesense"
+    ],
+    "category": "Embeddable",
+    "priority": 4,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "meilisearch",
+      "sonic"
+    ],
+    "names": [
+      "Meilisearch",
+      "Sonic"
+    ],
+    "category": "Databases",
+    "priority": 4,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "localai",
+      "vllm"
+    ],
+    "names": [
+      "LocalAI",
+      "vLLM"
+    ],
+    "category": "Embeddable",
+    "priority": 4,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "localai",
+      "ollama"
+    ],
+    "names": [
+      "LocalAI",
+      "Ollama"
+    ],
+    "category": "Embeddable",
+    "priority": 4,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "haystack",
+      "langchain"
+    ],
+    "names": [
+      "Haystack",
+      "LangChain"
+    ],
+    "category": "Embeddable",
+    "priority": 4,
+    "reason": "similar_to"
+  },
+  {
+    "slugs": [
+      "deepseek",
+      "mistral"
+    ],
+    "names": [
+      "DeepSeek V3",
+      "Mistral"
+    ],
+    "category": "LLMs & AI Infra",
+    "priority": 3,
+    "reason": "same sub-category: Open LLM"
+  },
+  {
+    "slugs": [
+      "deepseek",
+      "phi4"
+    ],
+    "names": [
+      "DeepSeek V3",
+      "Phi-4 (Microsoft)"
+    ],
+    "category": "LLMs & AI Infra",
+    "priority": 3,
+    "reason": "same sub-category: Open LLM"
+  },
+  {
+    "slugs": [
+      "phi4",
+      "qwen"
+    ],
+    "names": [
+      "Phi-4 (Microsoft)",
+      "Qwen3"
+    ],
+    "category": "LLMs & AI Infra",
+    "priority": 3,
+    "reason": "same sub-category: Open LLM"
+  },
+  {
+    "slugs": [
+      "mistral",
+      "phi4"
+    ],
+    "names": [
+      "Mistral",
+      "Phi-4 (Microsoft)"
+    ],
+    "category": "LLMs & AI Infra",
+    "priority": 3,
+    "reason": "same sub-category: Open LLM"
+  },
+  {
+    "slugs": [
+      "scikit-learn",
+      "tensorflow"
+    ],
+    "names": [
+      "scikit-learn",
+      "TensorFlow"
+    ],
+    "category": "AI / ML",
+    "priority": 2,
+    "reason": "same sub-category: ML Framework"
+  },
+  {
+    "slugs": [
+      "keras",
+      "tensorflow"
+    ],
+    "names": [
+      "Keras",
+      "TensorFlow"
+    ],
+    "category": "AI / ML",
+    "priority": 2,
+    "reason": "same sub-category: ML Framework"
+  },
+  {
+    "slugs": [
+      "pytorch",
+      "scikit-learn"
+    ],
+    "names": [
+      "PyTorch",
+      "scikit-learn"
+    ],
+    "category": "AI / ML",
+    "priority": 2,
+    "reason": "same sub-category: ML Framework"
+  },
+  {
+    "slugs": [
+      "keras",
+      "pytorch"
+    ],
+    "names": [
+      "Keras",
+      "PyTorch"
+    ],
+    "category": "AI / ML",
+    "priority": 2,
+    "reason": "same sub-category: ML Framework"
+  },
+  {
+    "slugs": [
+      "jax",
+      "scikit-learn"
+    ],
+    "names": [
+      "JAX",
+      "scikit-learn"
+    ],
+    "category": "AI / ML",
+    "priority": 2,
+    "reason": "same sub-category: ML Framework"
+  },
+  {
+    "slugs": [
+      "keras",
+      "scikit-learn"
+    ],
+    "names": [
+      "Keras",
+      "scikit-learn"
+    ],
+    "category": "AI / ML",
+    "priority": 2,
+    "reason": "same sub-category: ML Framework"
+  },
+  {
+    "slugs": [
+      "jax",
+      "keras"
+    ],
+    "names": [
+      "JAX",
+      "Keras"
+    ],
+    "category": "AI / ML",
+    "priority": 2,
+    "reason": "same sub-category: ML Framework"
+  },
+  {
+    "slugs": [
+      "kubeflow",
+      "metaflow"
+    ],
+    "names": [
+      "Kubeflow",
+      "Metaflow"
+    ],
+    "category": "AI / ML",
+    "priority": 2,
+    "reason": "same sub-category: ML Pipeline"
+  },
+  {
+    "slugs": [
+      "kedro",
+      "kubeflow"
+    ],
+    "names": [
+      "Kedro",
+      "Kubeflow"
+    ],
+    "category": "AI / ML",
+    "priority": 2,
+    "reason": "same sub-category: ML Pipeline"
+  },
+  {
+    "slugs": [
+      "ollama",
+      "sglang"
+    ],
+    "names": [
+      "Ollama",
+      "SGLang"
+    ],
+    "category": "LLMs & AI Infra",
+    "priority": 2,
+    "reason": "same sub-category: LLM Serving"
+  },
+  {
+    "slugs": [
+      "mariadb",
+      "sqlite"
+    ],
+    "names": [
+      "MariaDB",
+      "SQLite"
+    ],
+    "category": "Databases",
+    "priority": 2,
+    "reason": "same sub-category: Relational"
+  },
+  {
+    "slugs": [
+      "couchdb",
+      "ferretdb"
+    ],
+    "names": [
+      "CouchDB",
+      "FerretDB"
+    ],
+    "category": "Databases",
+    "priority": 2,
+    "reason": "same sub-category: Document"
+  },
+  {
+    "slugs": [
+      "opensearch",
+      "typesense"
+    ],
+    "names": [
+      "OpenSearch",
+      "Typesense"
+    ],
+    "category": "Databases",
+    "priority": 2,
+    "reason": "same sub-category: Search"
+  },
+  {
+    "slugs": [
+      "ansible",
+      "opentofu"
+    ],
+    "names": [
+      "Ansible",
+      "OpenTofu"
+    ],
+    "category": "DevOps & Infra",
+    "priority": 2,
+    "reason": "same sub-category: IaC"
+  },
+  {
+    "slugs": [
+      "ansible",
+      "pulumi"
+    ],
+    "names": [
+      "Ansible",
+      "Pulumi"
+    ],
+    "category": "DevOps & Infra",
+    "priority": 2,
+    "reason": "same sub-category: IaC"
+  },
+  {
+    "slugs": [
+      "argocd",
+      "jenkins"
+    ],
+    "names": [
+      "ArgoCD",
+      "Jenkins"
+    ],
+    "category": "DevOps & Infra",
+    "priority": 2,
+    "reason": "same sub-category: CD"
+  },
+  {
+    "slugs": [
+      "argocd",
+      "gitlab-ce"
+    ],
+    "names": [
+      "ArgoCD",
+      "GitLab CE"
+    ],
+    "category": "DevOps & Infra",
+    "priority": 2,
+    "reason": "same sub-category: CD"
+  },
+  {
+    "slugs": [
+      "argocd",
+      "gitea"
+    ],
+    "names": [
+      "ArgoCD",
+      "Gitea"
+    ],
+    "category": "DevOps & Infra",
+    "priority": 2,
+    "reason": "same sub-category: CD"
+  },
+  {
+    "slugs": [
+      "argocd",
+      "woodpecker-ci"
+    ],
+    "names": [
+      "ArgoCD",
+      "Woodpecker CI"
+    ],
+    "category": "DevOps & Infra",
+    "priority": 2,
+    "reason": "same sub-category: CD"
+  },
+  {
+    "slugs": [
+      "twenty",
+      "yetiforce"
+    ],
+    "names": [
+      "Twenty",
+      "YetiForce"
+    ],
+    "category": "CRM & ERP",
+    "priority": 2,
+    "reason": "same sub-category: CRM"
+  },
+  {
+    "slugs": [
+      "krayin",
+      "suitecrm"
+    ],
+    "names": [
+      "Krayin",
+      "SuiteCRM"
+    ],
+    "category": "CRM & ERP",
+    "priority": 2,
+    "reason": "same sub-category: CRM"
+  },
+  {
+    "slugs": [
+      "corteza",
+      "espocrm"
+    ],
+    "names": [
+      "Corteza",
+      "EspoCRM"
+    ],
+    "category": "CRM & ERP",
+    "priority": 2,
+    "reason": "same sub-category: CRM"
+  },
+  {
+    "slugs": [
+      "krayin",
+      "yetiforce"
+    ],
+    "names": [
+      "Krayin",
+      "YetiForce"
+    ],
+    "category": "CRM & ERP",
+    "priority": 2,
+    "reason": "same sub-category: CRM"
+  },
+  {
+    "slugs": [
+      "corteza",
+      "yetiforce"
+    ],
+    "names": [
+      "Corteza",
+      "YetiForce"
+    ],
+    "category": "CRM & ERP",
+    "priority": 2,
+    "reason": "same sub-category: CRM"
+  },
+  {
+    "slugs": [
+      "corteza",
+      "krayin"
+    ],
+    "names": [
+      "Corteza",
+      "Krayin"
+    ],
+    "category": "CRM & ERP",
+    "priority": 2,
+    "reason": "same sub-category: CRM"
+  },
+  {
+    "slugs": [
+      "axelor",
+      "dolibarr"
+    ],
+    "names": [
+      "Axelor",
+      "Dolibarr"
+    ],
+    "category": "CRM & ERP",
+    "priority": 2,
+    "reason": "same sub-category: ERP"
+  },
+  {
+    "slugs": [
+      "dolibarr",
+      "metasfresh"
+    ],
+    "names": [
+      "Dolibarr",
+      "metasfresh"
+    ],
+    "category": "CRM & ERP",
+    "priority": 2,
+    "reason": "same sub-category: ERP"
+  },
+  {
+    "slugs": [
+      "axelor",
+      "metasfresh"
+    ],
+    "names": [
+      "Axelor",
+      "metasfresh"
+    ],
+    "category": "CRM & ERP",
+    "priority": 2,
+    "reason": "same sub-category: ERP"
+  },
+  {
+    "slugs": [
+      "discourse",
+      "element"
+    ],
+    "names": [
+      "Discourse",
+      "Element / Matrix"
+    ],
+    "category": "Communication",
+    "priority": 2,
+    "reason": "same sub-category: Forum"
+  },
+  {
+    "slugs": [
+      "huly",
+      "openproject"
+    ],
+    "names": [
+      "Huly",
+      "OpenProject"
+    ],
+    "category": "Project Mgmt",
+    "priority": 2,
+    "reason": "same sub-category: Project Tracker"
+  },
+  {
+    "slugs": [
+      "huly",
+      "leantime"
+    ],
+    "names": [
+      "Huly",
+      "Leantime"
+    ],
+    "category": "Project Mgmt",
+    "priority": 2,
+    "reason": "same sub-category: Project Tracker"
+  },
+  {
+    "slugs": [
+      "leantime",
+      "openproject"
+    ],
+    "names": [
+      "Leantime",
+      "OpenProject"
+    ],
+    "category": "Project Mgmt",
+    "priority": 2,
+    "reason": "same sub-category: Project Tracker"
+  },
+  {
+    "slugs": [
+      "appflowy",
+      "outline"
+    ],
+    "names": [
+      "AppFlowy",
+      "Outline"
+    ],
+    "category": "Knowledge & Docs",
+    "priority": 2,
+    "reason": "same sub-category:  Notes"
+  },
+  {
+    "slugs": [
+      "joplin",
+      "outline"
+    ],
+    "names": [
+      "Joplin",
+      "Outline"
+    ],
+    "category": "Knowledge & Docs",
+    "priority": 2,
+    "reason": "same sub-category:  Notes"
+  },
+  {
+    "slugs": [
+      "appflowy",
+      "wiki-js"
+    ],
+    "names": [
+      "AppFlowy",
+      "Wiki.js"
+    ],
+    "category": "Knowledge & Docs",
+    "priority": 2,
+    "reason": "same sub-category:  Notes"
+  },
+  {
+    "slugs": [
+      "appflowy",
+      "docmost"
+    ],
+    "names": [
+      "AppFlowy",
+      "Docmost"
+    ],
+    "category": "Knowledge & Docs",
+    "priority": 2,
+    "reason": "same sub-category:  Notes"
+  },
+  {
+    "slugs": [
+      "appflowy",
+      "bookstack"
+    ],
+    "names": [
+      "AppFlowy",
+      "BookStack"
+    ],
+    "category": "Knowledge & Docs",
+    "priority": 2,
+    "reason": "same sub-category:  Notes"
+  },
+  {
+    "slugs": [
+      "affine",
+      "joplin"
+    ],
+    "names": [
+      "AFFiNE",
+      "Joplin"
+    ],
+    "category": "Knowledge & Docs",
+    "priority": 2,
+    "reason": "same sub-category:  Notes"
+  },
+  {
+    "slugs": [
+      "affine",
+      "wiki-js"
+    ],
+    "names": [
+      "AFFiNE",
+      "Wiki.js"
+    ],
+    "category": "Knowledge & Docs",
+    "priority": 2,
+    "reason": "same sub-category:  Notes"
+  },
+  {
+    "slugs": [
+      "affine",
+      "docmost"
+    ],
+    "names": [
+      "AFFiNE",
+      "Docmost"
+    ],
+    "category": "Knowledge & Docs",
+    "priority": 2,
+    "reason": "same sub-category:  Notes"
+  },
+  {
+    "slugs": [
+      "affine",
+      "bookstack"
+    ],
+    "names": [
+      "AFFiNE",
+      "BookStack"
+    ],
+    "category": "Knowledge & Docs",
+    "priority": 2,
+    "reason": "same sub-category:  Notes"
+  },
+  {
+    "slugs": [
+      "joplin",
+      "wiki-js"
+    ],
+    "names": [
+      "Joplin",
+      "Wiki.js"
+    ],
+    "category": "Knowledge & Docs",
+    "priority": 2,
+    "reason": "same sub-category:  Notes"
+  },
+  {
+    "slugs": [
+      "docmost",
+      "joplin"
+    ],
+    "names": [
+      "Docmost",
+      "Joplin"
+    ],
+    "category": "Knowledge & Docs",
+    "priority": 2,
+    "reason": "same sub-category:  Notes"
+  },
+  {
+    "slugs": [
+      "bookstack",
+      "joplin"
+    ],
+    "names": [
+      "BookStack",
+      "Joplin"
+    ],
+    "category": "Knowledge & Docs",
+    "priority": 2,
+    "reason": "same sub-category:  Notes"
+  },
+  {
+    "slugs": [
+      "n8n",
+      "temporal"
+    ],
+    "names": [
+      "n8n",
+      "Temporal"
+    ],
+    "category": "Automation",
+    "priority": 2,
+    "reason": "same sub-category: Workflow"
+  },
+  {
+    "slugs": [
+      "n8n",
+      "prefect"
+    ],
+    "names": [
+      "n8n",
+      "Prefect"
+    ],
+    "category": "Automation",
+    "priority": 2,
+    "reason": "same sub-category: Workflow"
+  },
+  {
+    "slugs": [
+      "activepieces",
+      "airflow"
+    ],
+    "names": [
+      "Activepieces",
+      "Apache Airflow"
+    ],
+    "category": "Automation",
+    "priority": 2,
+    "reason": "same sub-category: Workflow"
+  },
+  {
+    "slugs": [
+      "activepieces",
+      "temporal"
+    ],
+    "names": [
+      "Activepieces",
+      "Temporal"
+    ],
+    "category": "Automation",
+    "priority": 2,
+    "reason": "same sub-category: Workflow"
+  },
+  {
+    "slugs": [
+      "activepieces",
+      "prefect"
+    ],
+    "names": [
+      "Activepieces",
+      "Prefect"
+    ],
+    "category": "Automation",
+    "priority": 2,
+    "reason": "same sub-category: Workflow"
+  },
+  {
+    "slugs": [
+      "activepieces",
+      "windmill"
+    ],
+    "names": [
+      "Activepieces",
+      "Windmill"
+    ],
+    "category": "Automation",
+    "priority": 2,
+    "reason": "same sub-category: Workflow"
+  },
+  {
+    "slugs": [
+      "airflow",
+      "node-red"
+    ],
+    "names": [
+      "Apache Airflow",
+      "Node-RED"
+    ],
+    "category": "Automation",
+    "priority": 2,
+    "reason": "same sub-category: Workflow"
+  },
+  {
+    "slugs": [
+      "node-red",
+      "temporal"
+    ],
+    "names": [
+      "Node-RED",
+      "Temporal"
+    ],
+    "category": "Automation",
+    "priority": 2,
+    "reason": "same sub-category: Workflow"
+  },
+  {
+    "slugs": [
+      "node-red",
+      "prefect"
+    ],
+    "names": [
+      "Node-RED",
+      "Prefect"
+    ],
+    "category": "Automation",
+    "priority": 2,
+    "reason": "same sub-category: Workflow"
+  },
+  {
+    "slugs": [
+      "node-red",
+      "windmill"
+    ],
+    "names": [
+      "Node-RED",
+      "Windmill"
+    ],
+    "category": "Automation",
+    "priority": 2,
+    "reason": "same sub-category: Workflow"
+  },
+  {
+    "slugs": [
+      "temporal",
+      "windmill"
+    ],
+    "names": [
+      "Temporal",
+      "Windmill"
+    ],
+    "category": "Automation",
+    "priority": 2,
+    "reason": "same sub-category: Workflow"
+  },
+  {
+    "slugs": [
+      "prefect",
+      "windmill"
+    ],
+    "names": [
+      "Prefect",
+      "Windmill"
+    ],
+    "category": "Automation",
+    "priority": 2,
+    "reason": "same sub-category: Workflow"
+  },
+  {
+    "slugs": [
+      "appsmith",
+      "nocodb"
+    ],
+    "names": [
+      "Appsmith",
+      "NocoDB"
+    ],
+    "category": "Low-Code",
+    "priority": 2,
+    "reason": "same sub-category:  Dashboard"
+  },
+  {
+    "slugs": [
+      "metabase",
+      "nocodb"
+    ],
+    "names": [
+      "Metabase",
+      "NocoDB"
+    ],
+    "category": "Low-Code",
+    "priority": 2,
+    "reason": "same sub-category:  Dashboard"
+  },
+  {
+    "slugs": [
+      "appsmith",
+      "metabase"
+    ],
+    "names": [
+      "Appsmith",
+      "Metabase"
+    ],
+    "category": "Low-Code",
+    "priority": 2,
+    "reason": "same sub-category:  Dashboard"
+  },
+  {
+    "slugs": [
+      "lightdash",
+      "redash"
+    ],
+    "names": [
+      "Lightdash",
+      "Redash"
+    ],
+    "category": "Analytics",
+    "priority": 2,
+    "reason": "same sub-category:  Dashboard"
+  },
+  {
+    "slugs": [
+      "nextjs",
+      "strapi"
+    ],
+    "names": [
+      "Next.js",
+      "Strapi"
+    ],
+    "category": "Web & CMS",
+    "priority": 2,
+    "reason": "same sub-category: Web Framework"
+  },
+  {
+    "slugs": [
+      "astro",
+      "strapi"
+    ],
+    "names": [
+      "Astro",
+      "Strapi"
+    ],
+    "category": "Web & CMS",
+    "priority": 2,
+    "reason": "same sub-category: Web Framework"
+  },
+  {
+    "slugs": [
+      "hugo",
+      "strapi"
+    ],
+    "names": [
+      "Hugo",
+      "Strapi"
+    ],
+    "category": "Web & CMS",
+    "priority": 2,
+    "reason": "same sub-category: Web Framework"
+  },
+  {
+    "slugs": [
+      "nextjs",
+      "payload-cms"
+    ],
+    "names": [
+      "Next.js",
+      "Payload CMS"
+    ],
+    "category": "Web & CMS",
+    "priority": 2,
+    "reason": "same sub-category: Web Framework"
+  },
+  {
+    "slugs": [
+      "astro",
+      "payload-cms"
+    ],
+    "names": [
+      "Astro",
+      "Payload CMS"
+    ],
+    "category": "Web & CMS",
+    "priority": 2,
+    "reason": "same sub-category: Web Framework"
+  },
+  {
+    "slugs": [
+      "hugo",
+      "payload-cms"
+    ],
+    "names": [
+      "Hugo",
+      "Payload CMS"
+    ],
+    "category": "Web & CMS",
+    "priority": 2,
+    "reason": "same sub-category: Web Framework"
+  },
+  {
+    "slugs": [
+      "hugo",
+      "nextjs"
+    ],
+    "names": [
+      "Hugo",
+      "Next.js"
+    ],
+    "category": "Web & CMS",
+    "priority": 2,
+    "reason": "same sub-category: Web Framework"
+  },
+  {
+    "slugs": [
+      "directus",
+      "nocobase"
+    ],
+    "names": [
+      "Directus",
+      "NocoBase"
+    ],
+    "category": "Low-Code",
+    "priority": 2,
+    "reason": "same sub-category: App Builder"
+  },
+  {
+    "slugs": [
+      "prosemirror",
+      "tiptap"
+    ],
+    "names": [
+      "ProseMirror",
+      "Tiptap"
+    ],
+    "category": "Embeddable",
+    "priority": 2,
+    "reason": "same sub-category: Rich Text Editor"
+  },
+  {
+    "slugs": [
+      "lexical",
+      "prosemirror"
+    ],
+    "names": [
+      "Lexical",
+      "ProseMirror"
+    ],
+    "category": "Embeddable",
+    "priority": 2,
+    "reason": "same sub-category: Rich Text Editor"
+  },
+  {
+    "slugs": [
+      "prosemirror",
+      "quill"
+    ],
+    "names": [
+      "ProseMirror",
+      "Quill"
+    ],
+    "category": "Embeddable",
+    "priority": 2,
+    "reason": "same sub-category: Rich Text Editor"
+  },
+  {
+    "slugs": [
+      "editorjs",
+      "prosemirror"
+    ],
+    "names": [
+      "Editor.js",
+      "ProseMirror"
+    ],
+    "category": "Embeddable",
+    "priority": 2,
+    "reason": "same sub-category: Rich Text Editor"
+  },
+  {
+    "slugs": [
+      "editorjs",
+      "quill"
+    ],
+    "names": [
+      "Editor.js",
+      "Quill"
+    ],
+    "category": "Embeddable",
+    "priority": 2,
+    "reason": "same sub-category: Rich Text Editor"
+  },
+  {
+    "slugs": [
+      "editorjs",
+      "slate"
+    ],
+    "names": [
+      "Editor.js",
+      "Slate"
+    ],
+    "category": "Embeddable",
+    "priority": 2,
+    "reason": "same sub-category: Rich Text Editor"
+  },
+  {
+    "slugs": [
+      "ffmpeg",
+      "imagemagick"
+    ],
+    "names": [
+      "FFmpeg",
+      "ImageMagick"
+    ],
+    "category": "Embeddable",
+    "priority": 2,
+    "reason": "same sub-category: Media Processing"
+  },
+  {
+    "slugs": [
+      "ffmpeg",
+      "sharp"
+    ],
+    "names": [
+      "FFmpeg",
+      "Sharp"
+    ],
+    "category": "Embeddable",
+    "priority": 2,
+    "reason": "same sub-category: Media Processing"
+  },
+  {
+    "slugs": [
+      "pandoc",
+      "pdfjs"
+    ],
+    "names": [
+      "Pandoc",
+      "pdf.js"
+    ],
+    "category": "Embeddable",
+    "priority": 2,
+    "reason": "same sub-category: Document Processing"
+  },
+  {
+    "slugs": [
+      "llama-cpp",
+      "whisper-cpp"
+    ],
+    "names": [
+      "llama.cpp",
+      "Whisper.cpp"
+    ],
+    "category": "Embeddable",
+    "priority": 1,
+    "reason": "shared tags: cpu, gpu, local"
+  },
+  {
+    "slugs": [
+      "freertos",
+      "micropython"
+    ],
+    "names": [
+      "FreeRTOS",
+      "MicroPython"
+    ],
+    "category": "Embeddable",
+    "priority": 1,
+    "reason": "shared tags: embedded, iot, microcontroller"
+  }
+]

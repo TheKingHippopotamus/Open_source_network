@@ -1,0 +1,53 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getComparisons, getCategoryColor } from '../../utils/db';
+
+const pairs = getComparisons();
+
+// Group by category
+const byCategory: Record<string, typeof pairs> = {};
+for (const pair of pairs) {
+  const cat = pair.toolA.category;
+  if (!byCategory[cat]) byCategory[cat] = [];
+  byCategory[cat].push(pair);
+}
+
+const sortedCats = Object.keys(byCategory).sort(
+  (a, b) => byCategory[b].length - byCategory[a].length
+);
+---
+
+<Base
+  title="Tool Comparisons — OSS Neural Match"
+  description={`Compare ${pairs.length} pairs of similar open-source tools side by side. RAM, complexity, ecosystem, and more.`}
+>
+  <div class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
+    <div style="margin-bottom: 2.5rem;">
+      <h1 style="margin-bottom: 0.5rem;">Tool Comparisons</h1>
+      <p style="margin: 0; color: var(--text-secondary);">
+        {pairs.length} side-by-side comparisons of similar tools, auto-generated from the relationship graph.
+      </p>
+    </div>
+
+    {sortedCats.map(cat => {
+      const catColor = getCategoryColor(cat);
+      return (
+        <section style="margin-bottom: 3rem;">
+          <h2 style={`font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-tertiary); border-bottom: 1px solid var(--border); padding-bottom: 0.75rem; margin-bottom: 1.25rem; border-left: 3px solid ${catColor}; padding-left: 0.75rem;`}>
+            {cat}
+          </h2>
+          <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.75rem;">
+            {byCategory[cat].map(({ slugA, slugB, toolA, toolB }) => (
+              <a href={`/compare/${slugA}--vs--${slugB}`} class="card card-link" style="padding: 1rem;">
+                <div style="font-size: 0.9375rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.25rem;">
+                  {toolA.name} vs {toolB.name}
+                </div>
+                <div style="font-size: 0.75rem; color: var(--text-tertiary);">{toolA.sub_category}</div>
+              </a>
+            ))}
+          </div>
+        </section>
+      );
+    })}
+  </div>
+</Base>

@@ -1,0 +1,103 @@
+---
+import Base from '../layouts/Base.astro';
+import { tools, getCategories } from '../utils/db';
+
+const categories = getCategories();
+---
+
+<Base
+  title="About OSS Neural Match"
+  description="OSS Neural Match is an MCP server that gives Claude Code deep knowledge of 244 open-source tools and their relationships."
+>
+  <div class="container" style="padding-top: 2rem; padding-bottom: 4rem; max-width: 840px;">
+    <h1 style="margin-bottom: 1rem;">About OSS Neural Match</h1>
+    <p style="font-size: 1.125rem; color: var(--text-secondary); margin-bottom: 3rem;">
+      OSS Neural Match is a Model Context Protocol (MCP) server that gives Claude Code structured knowledge of
+      {tools.length} open-source tools — enabling intelligent stack recommendations, tradeoff analysis, and ecosystem navigation.
+    </p>
+
+    <div class="section">
+      <h2 class="section-title">What it does</h2>
+      <p>
+        When you add OSS Neural Match to Claude Code, you unlock a curated database that Claude can query when you ask
+        questions like <em>"what's the best message queue for a Python microservice?"</em> or <em>"compare Prometheus vs Datadog for a 10-person startup."</em>
+      </p>
+      <p>
+        Unlike generic web search, OSS Neural Match provides structured, consistent data across {tools.length} tools
+        with 51 fields each — RAM requirements, scaling patterns, ecosystem relationships, anti-patterns, and more.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Installation</h2>
+      <div class="install-block">
+        <div class="install-label">
+          <span>One-line install</span>
+        </div>
+        <pre><code>claude mcp add oss-neural-match npx oss-neural-match-mcp</code></pre>
+      </div>
+      <p style="margin-top: 1rem; font-size: 0.875rem;">
+        That's it. No API keys, no configuration, no network requests at query time. Pure local JSON.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">The data model</h2>
+      <p>Each tool in the database has 51 structured fields:</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.5rem; margin-top: 1.5rem;">
+        {[
+          'name, slug, tagline', 'description', 'category + sub_category',
+          'language, framework', 'api_type, protocols', 'min_ram_mb, min_cpu_cores',
+          'scaling_pattern', 'data_model', 'deployment_methods',
+          'self_hostable, k8s_native', 'offline_capable', 'integrates_with',
+          'complements, similar_to', 'conflicts_with, replaces', 'sdk_languages',
+          'plugin_ecosystem', 'github_stars, contributors', 'commit_frequency',
+          'first_release_year', 'latest_version, backing_org', 'funding_model',
+          'docs_quality, maturity', 'complexity_level', 'team_size_fit',
+          'industry_verticals', 'performance_tier', 'vendor_lockin_risk',
+          'pricing_model', 'tags, problem_domains', 'use_cases_detailed',
+          'anti_patterns', 'stack_layer',
+        ].map(f => (
+          <div style="background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius); padding: 0.5rem 0.75rem; font-size: 0.8rem; font-family: var(--font-mono); color: var(--text-secondary);">
+            {f}
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Coverage</h2>
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-label">Tools</div>
+          <div class="stat-value">{tools.length}</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Categories</div>
+          <div class="stat-value">{categories.length}</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Fields / tool</div>
+          <div class="stat-value">51</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">License</div>
+          <div class="stat-value">MIT</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Contributing</h2>
+      <p>
+        OSS Neural Match is fully open source. To add or update a tool, open a pull request on GitHub
+        and edit <code>db.json</code>. Follow the existing schema — all 51 fields should be populated.
+      </p>
+      <div style="margin-top: 1.5rem;">
+        <a href="https://github.com/yourusername/oss-neural-match-mcp" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          View on GitHub &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+</Base>

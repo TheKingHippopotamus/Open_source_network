@@ -1,0 +1,214 @@
+---
+import Base from '../layouts/Base.astro';
+import { tools, getCategories, getToolsByCategory, getCategoryColor } from '../utils/db';
+
+const categories = getCategories();
+const totalTools = tools.length;
+
+// Build unique edge count from similar_to
+const seen = new Set<string>();
+let edgeCount = 0;
+for (const t of tools) {
+  for (const s of t.similar_to ?? []) {
+    const key = [t.slug, s].sort().join('___');
+    if (!seen.has(key)) { seen.add(key); edgeCount++; }
+  }
+}
+
+const categoryCount = categories.length;
+
+// Category icons mapping
+const CATEGORY_ICONS: Record<string, string> = {
+  'AI / ML': '🤖',
+  'LLMs & AI Infra': '🧠',
+  'Databases': '🗄',
+  'DevOps & Infra': '⚙️',
+  'Monitoring': '📊',
+  'CRM & ERP': '🏢',
+  'Communication': '💬',
+  'Project Mgmt': '📋',
+  'Knowledge & Docs': '📚',
+  'Automation': '⚡',
+  'Low-Code': '🎨',
+  'Analytics': '📈',
+  'Email Marketing': '📧',
+  'Security & Auth': '🔒',
+  'Web & CMS': '🌐',
+  'Media & Files': '📁',
+  'Scheduling': '📅',
+  'Dev Tools': '🛠',
+  'DNS & Networking': '🔌',
+  'Embeddable': '🧩',
+};
+
+// Top featured comparisons — pick well-known pairs
+const featuredComparisons = [
+  { a: 'pytorch', b: 'tensorflow', label: 'PyTorch vs TensorFlow' },
+  { a: 'postgres', b: 'mysql', label: 'PostgreSQL vs MySQL' },
+  { a: 'redis', b: 'memcached', label: 'Redis vs Memcached' },
+  { a: 'grafana', b: 'kibana', label: 'Grafana vs Kibana' },
+  { a: 'react', b: 'vue', label: 'React vs Vue' },
+  { a: 'docker', b: 'podman', label: 'Docker vs Podman' },
+].filter(({ a, b }) =>
+  tools.some(t => t.slug === a) && tools.some(t => t.slug === b)
+);
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "OSS Neural Match",
+  "url": "https://ossneuralmatch.com",
+  "description": "The open-source stack advisor inside Claude Code. 244 curated tools, intelligent comparisons, and recommendation graphs.",
+};
+---
+
+<Base
+  title="OSS Neural Match — The open-source stack advisor inside Claude Code"
+  description="244 curated open-source tools across 20 categories. Find the right stack, compare alternatives, and get AI-powered recommendations inside Claude Code."
+  schema={schema}
+>
+  <!-- Hero -->
+  <section class="page-hero" style="border-bottom: none; margin-bottom: 0; background: radial-gradient(ellipse at 50% 0%, rgba(124,58,237,0.08) 0%, transparent 70%);">
+    <div class="container">
+      <div class="hero-eyebrow">
+        <span class="badge badge-purple">MCP Server</span>
+        <span style="font-size: 0.8rem; color: var(--text-tertiary);">Model Context Protocol</span>
+      </div>
+      <h1 class="hero-title">The open-source stack<br />advisor inside Claude Code</h1>
+      <p class="hero-sub">
+        OSS Neural Match is an MCP server that gives Claude Code deep knowledge of
+        {totalTools} open-source tools — their relationships, tradeoffs, and when to use each one.
+      </p>
+      <div class="hero-actions">
+        <a href="/tools" class="btn btn-primary">Browse Tools</a>
+        <a href="/categories" class="btn btn-secondary">Explore Categories</a>
+        <a href="/about" class="btn btn-ghost">How it works</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats bar -->
+  <section style="border-bottom: 1px solid var(--border); border-top: 1px solid var(--border); padding: 2rem 0; margin-bottom: 4rem; background: var(--bg-surface);">
+    <div class="container">
+      <div class="stats-bar">
+        <div class="stats-item">
+          <span class="stats-number">{totalTools}</span>
+          <span class="stats-desc">Open-source tools</span>
+        </div>
+        <div class="stats-item">
+          <span class="stats-number">{edgeCount * 2 + 491}</span>
+          <span class="stats-desc">Relationship edges</span>
+        </div>
+        <div class="stats-item">
+          <span class="stats-number">{categoryCount}</span>
+          <span class="stats-desc">Categories</span>
+        </div>
+        <div class="stats-item">
+          <span class="stats-number">51</span>
+          <span class="stats-desc">Fields per tool</span>
+        </div>
+        <div class="stats-item">
+          <span class="stats-number">Free</span>
+          <span class="stats-desc">Open source, MIT</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How to install -->
+  <section style="margin-bottom: 4rem;">
+    <div class="container">
+      <h2 style="margin-bottom: 1rem;">Install in 30 seconds</h2>
+      <p style="margin-bottom: 1.5rem; max-width: 560px;">
+        Add OSS Neural Match to Claude Code with a single command. Works with any Claude Code installation.
+      </p>
+      <div class="install-block" style="max-width: 640px;">
+        <div class="install-label">
+          <span>Terminal</span>
+        </div>
+        <pre><code>claude mcp add oss-neural-match npx oss-neural-match-mcp</code></pre>
+      </div>
+      <p style="margin-top: 1rem; font-size: 0.8rem; color: var(--text-tertiary);">
+        Then ask Claude: <em style="color: var(--text-secondary);">"What's the best vector database for a startup with 5 engineers?"</em>
+      </p>
+    </div>
+  </section>
+
+  <!-- Category grid -->
+  <section style="margin-bottom: 4rem;">
+    <div class="container">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 0.5rem;">
+        <h2>Browse by category</h2>
+        <a href="/categories" class="btn btn-ghost" style="font-size: 0.875rem;">View all &rarr;</a>
+      </div>
+      <div class="categories-grid">
+        {categories.map((cat) => {
+          const count = getToolsByCategory(cat).length;
+          const color = getCategoryColor(cat);
+          const icon = CATEGORY_ICONS[cat] ?? '📦';
+          const slug = cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+          return (
+            <a href={`/categories/${slug}`} class="category-card">
+              <div class="category-card-icon" style={`background: ${color}20; color: ${color};`}>
+                {icon}
+              </div>
+              <div>
+                <div class="category-card-name">{cat}</div>
+                <p class="category-card-count">{count} tool{count !== 1 ? 's' : ''}</p>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured comparisons -->
+  {featuredComparisons.length > 0 && (
+    <section style="margin-bottom: 4rem;">
+      <div class="container">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 0.5rem;">
+          <h2>Popular comparisons</h2>
+          <a href="/compare" class="btn btn-ghost" style="font-size: 0.875rem;">All comparisons &rarr;</a>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.75rem;">
+          {featuredComparisons.map(({ a, b, label }) => (
+            <a href={`/compare/${a}--vs--${b}`} class="card card-link" style="padding: 1rem 1.25rem;">
+              <div style="font-size: 0.9375rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.25rem;">{label}</div>
+              <div style="font-size: 0.8rem; color: var(--text-tertiary);">Side-by-side comparison &rarr;</div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- What it does -->
+  <section style="margin-bottom: 4rem; background: var(--bg-surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 4rem 0;">
+    <div class="container">
+      <h2 style="margin-bottom: 2rem; max-width: 480px;">Everything Claude needs to recommend your stack</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
+        <div class="card" style="border: none; background: var(--bg-elevated);">
+          <div style="font-size: 1.5rem; margin-bottom: 0.75rem;">🔍</div>
+          <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Tool recommendations</h3>
+          <p style="font-size: 0.875rem;">51 structured fields per tool — RAM requirements, scaling patterns, team size fit, and more.</p>
+        </div>
+        <div class="card" style="border: none; background: var(--bg-elevated);">
+          <div style="font-size: 1.5rem; margin-bottom: 0.75rem;">🕸</div>
+          <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Relationship graph</h3>
+          <p style="font-size: 0.875rem;">Knows which tools integrate, complement, compete, or conflict with each other.</p>
+        </div>
+        <div class="card" style="border: none; background: var(--bg-elevated);">
+          <div style="font-size: 1.5rem; margin-bottom: 0.75rem;">⚡</div>
+          <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Zero latency</h3>
+          <p style="font-size: 0.875rem;">Pure local JSON database. No API calls, no rate limits, no network dependency.</p>
+        </div>
+        <div class="card" style="border: none; background: var(--bg-elevated);">
+          <div style="font-size: 1.5rem; margin-bottom: 0.75rem;">🔄</div>
+          <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Constantly updated</h3>
+          <p style="font-size: 0.875rem;">Open source and community-maintained. Submit PRs to add or update tools.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

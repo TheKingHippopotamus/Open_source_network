@@ -1,0 +1,471 @@
+---
+import Base from '../../layouts/Base.astro';
+import { tools, getToolBySlug, formatNumber, formatRam, getCategoryColor } from '../../utils/db';
+import type { Tool } from '../../utils/db';
+
+export function getStaticPaths() {
+  return tools.map((tool) => ({
+    params: { slug: tool.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const tool = getToolBySlug(slug) as Tool;
+
+if (!tool) return Astro.redirect('/tools');
+
+const categorySlug = tool.category
+  .toLowerCase()
+  .replace(/[^a-z0-9]+/g, '-')
+  .replace(/^-|-$/g, '');
+
+const categoryColor = getCategoryColor(tool.category);
+
+// Resolve similar_to slugs to tool names
+const similarTools = tool.similar_to
+  .map((s) => tools.find((t) => t.slug === s))
+  .filter(Boolean) as Tool[];
+
+const integratesWith = tool.integrates_with
+  .map((s) => tools.find((t) => t.slug === s))
+  .filter(Boolean) as Tool[];
+
+const complements = tool.complements
+  .map((s) => tools.find((t) => t.slug === s))
+  .filter(Boolean) as Tool[];
+
+const conflictsWith = tool.conflicts_with
+  .map((s) => tools.find((t) => t.slug === s))
+  .filter(Boolean) as Tool[];
+
+function maturityColor(m: string) {
+  if (m === 'mature') return 'badge-green';
+  if (m === 'stable') return 'badge-blue';
+  if (m === 'growing') return 'badge-orange';
+  return 'badge-gray';
+}
+
+function boolIcon(v: boolean) {
+  return v ? '✓' : '✕';
+}
+
+function boolClass(v: boolean) {
+  return v ? 'color: #56d364;' : 'color: #ff7b72;';
+}
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": tool.name,
+  "description": tool.description,
+  "url": tool.website,
+  "applicationCategory": tool.category,
+  "operatingSystem": "Cross-platform",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "softwareVersion": tool.latest_version,
+  "datePublished": `${tool.first_release_year}-01-01`,
+  "author": {
+    "@type": "Organization",
+    "name": tool.backing_org || "Open Source Community"
+  },
+  "codeRepository": tool.repo_url,
+  "license": `https://opensource.org/licenses/${tool.license}`,
+  "programmingLanguage": tool.language,
+};
+---
+
+<Base
+  title={`${tool.name} — ${tool.tagline}`}
+  description={`${tool.description} Explore integrations, comparisons, use cases, and technical specs for ${tool.name}.`}
+  schema={schema}
+>
+  <div class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="breadcrumb-sep" aria-hidden="true">/</span>
+      <a href="/tools">Tools</a>
+      <span class="breadcrumb-sep" aria-hidden="true">/</span>
+      <a href={`/categories/${categorySlug}`}>{tool.category}</a>
+      <span class="breadcrumb-sep" aria-hidden="true">/</span>
+      <span aria-current="page">{tool.name}</span>
+    </nav>
+
+    <!-- Hero -->
+    <div style="margin-bottom: 3rem;">
+      <div style="display: flex; align-items: flex-start; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+        <div style="flex: 1; min-width: 280px;">
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; flex-wrap: wrap;">
+            <span class="badge badge-category" style={`background: ${categoryColor}20; color: ${categoryColor}; border-color: ${categoryColor}40;`}>
+              {tool.category}
+            </span>
+            <span class="badge badge-sub">{tool.sub_category}</span>
+            <span class={`badge ${maturityColor(tool.maturity)}`}>{tool.maturity}</span>
+          </div>
+
+          <h1 style="margin-bottom: 0.5rem;">{tool.name}</h1>
+          <p style="font-size: 1.125rem; color: var(--text-secondary); margin: 0 0 1rem 0;">{tool.tagline}</p>
+
+          <div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
+            {tool.github_stars > 0 && (
+              <span class="stars-badge">
+                <span aria-hidden="true">★</span>
+                {formatNumber(tool.github_stars)} stars
+              </span>
+            )}
+            {tool.contributors_count > 0 && (
+              <span style="font-size: 0.8rem; color: var(--text-tertiary);">
+                {formatNumber(tool.contributors_count)} contributors
+              </span>
+            )}
+            <span style="font-size: 0.8rem; color: var(--text-tertiary);">
+              Since {tool.first_release_year}
+            </span>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 0.5rem; min-width: 160px;">
+          {tool.website && (
+            <a href={tool.website} target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              Website &rarr;
+            </a>
+          )}
+          {tool.repo_url && (
+            <a href={tool.repo_url} target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              GitHub
+            </a>
+          )}
+        </div>
+      </div>
+
+      <p style="max-width: 720px; color: var(--text-secondary); line-height: 1.7; margin: 0;">{tool.description}</p>
+    </div>
+
+    <!-- Quick specs bar -->
+    <div class="stat-grid" style="margin-bottom: 3rem;">
+      <div class="stat-item">
+        <div class="stat-label">License</div>
+        <div class="stat-value" style="font-size: 0.9375rem;">{tool.license}</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Min RAM</div>
+        <div class="stat-value" style="font-size: 0.9375rem;">{formatRam(tool.min_ram_mb)}</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Min CPUs</div>
+        <div class="stat-value" style="font-size: 0.9375rem;">{tool.min_cpu_cores} core{tool.min_cpu_cores !== 1 ? 's' : ''}</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Scaling</div>
+        <div class="stat-value" style="font-size: 0.9375rem;">{tool.scaling_pattern}</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Complexity</div>
+        <div class="stat-value" style="font-size: 0.9375rem;">{tool.complexity_level}</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Performance</div>
+        <div class="stat-value" style="font-size: 0.9375rem;">{tool.performance_tier.replace('_', ' ')}</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Self-hostable</div>
+        <div class="stat-value" style={boolClass(tool.self_hostable)}>{boolIcon(tool.self_hostable)}</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">K8s native</div>
+        <div class="stat-value" style={boolClass(tool.k8s_native)}>{boolIcon(tool.k8s_native)}</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Offline</div>
+        <div class="stat-value" style={boolClass(tool.offline_capable)}>{boolIcon(tool.offline_capable)}</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Pricing</div>
+        <div class="stat-value" style="font-size: 0.9375rem;">{tool.pricing_model.replace(/_/g, ' ')}</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Docs quality</div>
+        <div class="stat-value" style="font-size: 0.9375rem;">{tool.docs_quality}</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Vendor lock-in</div>
+        <div class="stat-value" style="font-size: 0.9375rem;">{tool.vendor_lockin_risk}</div>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 340px; gap: 3rem; align-items: start;">
+      <!-- Left column: rich details -->
+      <div>
+        <!-- Use cases -->
+        {tool.use_cases_detailed.length > 0 && (
+          <div class="section">
+            <h2 class="section-title">Use cases</h2>
+            <ul style="display: flex; flex-direction: column; gap: 0.5rem; list-style: none; padding: 0;">
+              {tool.use_cases_detailed.map((uc) => (
+                <li style="display: flex; gap: 0.75rem; align-items: flex-start; padding: 0.75rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius); font-size: 0.9rem; color: var(--text-secondary);">
+                  <span style="color: var(--accent); flex-shrink: 0; margin-top: 1px;">✓</span>
+                  {uc}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        <!-- Anti-patterns -->
+        {tool.anti_patterns.length > 0 && (
+          <div class="section">
+            <h2 class="section-title">Anti-patterns / when NOT to use</h2>
+            <ul style="display: flex; flex-direction: column; gap: 0.5rem; list-style: none; padding: 0;">
+              {tool.anti_patterns.map((ap) => (
+                <li style="display: flex; gap: 0.75rem; align-items: flex-start; padding: 0.75rem; background: rgba(218,54,51,0.05); border: 1px solid rgba(218,54,51,0.2); border-radius: var(--radius); font-size: 0.9rem; color: var(--text-secondary);">
+                  <span style="color: var(--danger); flex-shrink: 0; margin-top: 1px;">✕</span>
+                  {ap}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        <!-- Ecosystem: integrates with -->
+        {integratesWith.length > 0 && (
+          <div class="section">
+            <h2 class="section-title">Integrates with</h2>
+            <div class="tools-grid" style="grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));">
+              {integratesWith.map((t) => (
+                <a href={`/tools/${t.slug}`} class="card card-link" style="padding: 1rem;">
+                  <div style="font-size: 0.9375rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.25rem;">{t.name}</div>
+                  <div style="font-size: 0.8rem; color: var(--text-tertiary);">{t.sub_category}</div>
+                </a>
+              ))}
+              {tool.integrates_with
+                .filter(s => !tools.find(t => t.slug === s))
+                .map(s => (
+                  <div class="card" style="padding: 1rem; opacity: 0.6;">
+                    <div style="font-size: 0.9375rem; font-weight: 600; color: var(--text-primary);">{s}</div>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        )}
+
+        <!-- Complements -->
+        {complements.length > 0 && (
+          <div class="section">
+            <h2 class="section-title">Complements</h2>
+            <div class="tools-grid" style="grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));">
+              {complements.map((t) => (
+                <a href={`/tools/${t.slug}`} class="card card-link" style="padding: 1rem;">
+                  <div style="font-size: 0.9375rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.25rem;">{t.name}</div>
+                  <div style="font-size: 0.8rem; color: var(--text-tertiary);">{t.sub_category}</div>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <!-- Similar to (compare links) -->
+        {similarTools.length > 0 && (
+          <div class="section">
+            <h2 class="section-title">Compare with alternatives</h2>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+              {similarTools.map((t) => {
+                const a = tool.slug < t.slug ? tool.slug : t.slug;
+                const b = tool.slug < t.slug ? t.slug : tool.slug;
+                return (
+                  <a href={`/compare/${a}--vs--${b}`} class="card card-link" style="padding: 1rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem;">
+                    <span style="font-weight: 600; color: var(--text-primary);">{tool.name} vs {t.name}</span>
+                    <span style="font-size: 0.8rem; color: var(--text-tertiary); flex-shrink: 0;">Compare &rarr;</span>
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        <!-- Conflicts -->
+        {conflictsWith.length > 0 && (
+          <div class="section">
+            <h2 class="section-title">Conflicts with</h2>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+              {conflictsWith.map((t) => (
+                <div class="card" style="padding: 1rem; border-color: rgba(218,54,51,0.3);">
+                  <div style="font-weight: 600; color: var(--text-primary);">{t.name}</div>
+                  <div style="font-size: 0.8rem; color: var(--text-tertiary);">{t.category}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <!-- Replaces -->
+        {tool.replaces.length > 0 && (
+          <div class="section">
+            <h2 class="section-title">Replaces / alternatives to</h2>
+            <ul class="tag-list">
+              {tool.replaces.map(r => (
+                <li><span class="badge badge-gray">{r}</span></li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+
+      <!-- Right column: sidebar -->
+      <div style="display: flex; flex-direction: column; gap: 1.5rem; position: sticky; top: 80px;">
+        <!-- Technical specs -->
+        <div class="card" style="padding: 1.25rem;">
+          <h3 style="font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-tertiary); margin-bottom: 1rem;">Technical specs</h3>
+          <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+            {tool.language.length > 0 && (
+              <div>
+                <div style="font-size: 0.75rem; color: var(--text-tertiary); margin-bottom: 0.25rem;">Language</div>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.25rem;">
+                  {tool.language.map(l => <span class="badge badge-blue">{l}</span>)}
+                </div>
+              </div>
+            )}
+            {tool.api_type.length > 0 && (
+              <div>
+                <div style="font-size: 0.75rem; color: var(--text-tertiary); margin-bottom: 0.25rem;">API type</div>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.25rem;">
+                  {tool.api_type.map(a => <span class="badge badge-sub">{a}</span>)}
+                </div>
+              </div>
+            )}
+            {tool.protocols.length > 0 && (
+              <div>
+                <div style="font-size: 0.75rem; color: var(--text-tertiary); margin-bottom: 0.25rem;">Protocols</div>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.25rem;">
+                  {tool.protocols.map(p => <span class="badge badge-sub">{p}</span>)}
+                </div>
+              </div>
+            )}
+            {tool.data_model.length > 0 && (
+              <div>
+                <div style="font-size: 0.75rem; color: var(--text-tertiary); margin-bottom: 0.25rem;">Data model</div>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.25rem;">
+                  {tool.data_model.map(d => <span class="badge badge-sub">{d}</span>)}
+                </div>
+              </div>
+            )}
+            {tool.deployment_methods.length > 0 && (
+              <div>
+                <div style="font-size: 0.75rem; color: var(--text-tertiary); margin-bottom: 0.25rem;">Deployment</div>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.25rem;">
+                  {tool.deployment_methods.map(d => <span class="badge badge-sub">{d}</span>)}
+                </div>
+              </div>
+            )}
+            {tool.sdk_languages.length > 0 && (
+              <div>
+                <div style="font-size: 0.75rem; color: var(--text-tertiary); margin-bottom: 0.25rem;">SDKs</div>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.25rem;">
+                  {tool.sdk_languages.map(s => <span class="badge badge-sub">{s}</span>)}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+
+        <!-- Community -->
+        <div class="card" style="padding: 1.25rem;">
+          <h3 style="font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-tertiary); margin-bottom: 1rem;">Community</h3>
+          <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
+              <span style="color: var(--text-secondary);">GitHub stars</span>
+              <span style="font-weight: 600; color: var(--text-primary);">{formatNumber(tool.github_stars)}</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
+              <span style="color: var(--text-secondary);">Contributors</span>
+              <span style="font-weight: 600; color: var(--text-primary);">{formatNumber(tool.contributors_count)}</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
+              <span style="color: var(--text-secondary);">Commit frequency</span>
+              <span style="font-weight: 600; color: var(--text-primary);">{tool.commit_frequency}</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
+              <span style="color: var(--text-secondary);">Plugin ecosystem</span>
+              <span style="font-weight: 600; color: var(--text-primary);">{tool.plugin_ecosystem}</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
+              <span style="color: var(--text-secondary);">Backing</span>
+              <span style="font-weight: 600; color: var(--text-primary);">{tool.backing_org || '—'}</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
+              <span style="color: var(--text-secondary);">Funding</span>
+              <span style="font-weight: 600; color: var(--text-primary);">{tool.funding_model}</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Release info -->
+        <div class="card" style="padding: 1.25rem;">
+          <h3 style="font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-tertiary); margin-bottom: 1rem;">Release</h3>
+          <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
+              <span style="color: var(--text-secondary);">Latest version</span>
+              <code style="font-size: 0.8rem;">{tool.latest_version || '—'}</code>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
+              <span style="color: var(--text-secondary);">Last release</span>
+              <span style="font-weight: 600; color: var(--text-primary);">{tool.last_release_date || '—'}</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
+              <span style="color: var(--text-secondary);">Since</span>
+              <span style="font-weight: 600; color: var(--text-primary);">{tool.first_release_year}</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fit -->
+        <div class="card" style="padding: 1.25rem;">
+          <h3 style="font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-tertiary); margin-bottom: 1rem;">Best fit</h3>
+          {tool.team_size_fit.length > 0 && (
+            <div style="margin-bottom: 0.75rem;">
+              <div style="font-size: 0.75rem; color: var(--text-tertiary); margin-bottom: 0.25rem;">Team size</div>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.25rem;">
+                {tool.team_size_fit.map(t => <span class="badge badge-green">{t}</span>)}
+              </div>
+            </div>
+          )}
+          {tool.industry_verticals.length > 0 && (
+            <div>
+              <div style="font-size: 0.75rem; color: var(--text-tertiary); margin-bottom: 0.25rem;">Industries</div>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.25rem;">
+                {tool.industry_verticals.map(v => <span class="badge badge-sub">{v}</span>)}
+              </div>
+            </div>
+          )}
+        </div>
+
+        <!-- Tags -->
+        {tool.tags.length > 0 && (
+          <div class="card" style="padding: 1.25rem;">
+            <h3 style="font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-tertiary); margin-bottom: 1rem;">Tags</h3>
+            <ul class="tag-list">
+              {tool.tags.map(tag => (
+                <li><span class="badge badge-gray">{tag}</span></li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+</Base>
+
+<style>
+  @media (max-width: 900px) {
+    div[style*="grid-template-columns: 1fr 340px"] {
+      display: block !important;
+    }
+    div[style*="position: sticky"] {
+      position: static !important;
+    }
+  }
+</style>

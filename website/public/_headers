@@ -1,0 +1,90 @@
+# =============================================================================
+# Cloudflare Pages — Security Headers
+# =============================================================================
+# Applied by Cloudflare's edge network before the response reaches the browser.
+# These headers provide defence-in-depth at the CDN layer, independent of the
+# application server — they are enforced even if the origin returns no headers.
+#
+# Header-by-header rationale:
+#
+#   X-Content-Type-Options: nosniff
+#     Prevents MIME-type sniffing. A browser that sniffs a JSON response as
+#     HTML could execute injected script. Mandatory for any site serving mixed
+#     content types.
+#
+#   X-Frame-Options: SAMEORIGIN
+#     Allows the page to be framed by itself (e.g. embedded docs widgets) but
+#     blocks third-party framing. Using SAMEORIGIN rather than DENY because the
+#     website may legitimately use iframes internally (e.g. embedded demos).
+#     The API uses DENY — stricter, appropriate for a pure data endpoint.
+#
+#   Strict-Transport-Security: max-age=31536000; includeSubDomains
+#     Forces HTTPS for 1 year including all subdomains. Prevents SSL stripping
+#     and protocol downgrade attacks. preload is intentionally withheld until
+#     the domain is validated against the HSTS preload list requirements.
+#
+#   Content-Security-Policy
+#     Controls which resources the browser may load. Policy breakdown:
+#       default-src 'self'          — block everything not explicitly allowed
+#       script-src 'self' 'unsafe-inline'
+#                                   — allow own scripts + inline handlers
+#                                     (unsafe-inline accepted for the website
+#                                     since it is a marketing/docs site, not
+#                                     a sensitive app; replace with a nonce-
+#                                     based policy once a build pipeline exists)
+#       style-src 'self' 'unsafe-inline'
+#                                   — own stylesheets + inline styles (Tailwind
+#                                     generates inline styles in some configs)
+#       img-src 'self' data: https:
+#                                   — own images + data URIs + any HTTPS image
+#                                     (needed for third-party badges, avatars)
+#       font-src 'self' https://fonts.gstatic.com
+#                                   — Google Fonts CDN if used; remove if
+#                                     self-hosting fonts
+#       connect-src 'self' https://api.oss-neural-match.dev
+#                                   — only allow fetch/XHR to own origin and
+#                                     the production API domain
+#       frame-ancestors 'none'      — belt-and-suspenders with X-Frame-Options
+#       base-uri 'self'             — prevents base-tag hijacking (CWE-601)
+#       form-action 'self'          — prevents form POST to external URLs
+#       object-src 'none'           — disables Flash/Java/plugin execution
+#       upgrade-insecure-requests   — auto-upgrade HTTP sub-resource loads
+#
+#   Referrer-Policy: strict-origin-when-cross-origin
+#     Sends the full URL as referrer for same-origin navigations (useful for
+#     internal analytics) but only the origin (no path) for cross-origin
+#     requests. Prevents leaking URL parameters (e.g. search queries) to
+#     third-party domains.
+#
+#   Permissions-Policy
+#     Explicitly disables browser APIs the website does not use.
+#     camera, microphone: no AV features
+#     geolocation: no location features
+#     Following principle of least privilege at the browser capability layer.
+#
+# =============================================================================
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://api.oss-neural-match.dev; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# =============================================================================
+# Static assets — extend cache lifetime, security headers still apply
+# =============================================================================
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+
+# =============================================================================
+# API responses proxied through Pages (if applicable)
+# Stricter CSP for any /api/* path served via Pages proxy
+# =============================================================================
+/api/*
+  Content-Security-Policy: default-src 'none'
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: no-referrer

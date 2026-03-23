@@ -1,0 +1,76 @@
+---
+import Base from '../../layouts/Base.astro';
+import { tools, getCategories, getCategoryColor, formatNumber } from '../../utils/db';
+
+const categories = getCategories();
+
+// Group tools by category for counts
+const categoryCounts: Record<string, number> = {};
+for (const t of tools) {
+  categoryCounts[t.category] = (categoryCounts[t.category] ?? 0) + 1;
+}
+
+// Sort tools: by github_stars descending
+const sorted = [...tools].sort((a, b) => b.github_stars - a.github_stars);
+---
+
+<Base
+  title="All Open-Source Tools — OSS Neural Match"
+  description="Browse all 244 open-source tools in OSS Neural Match. Filter by category, complexity, and more."
+>
+  <div class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
+    <!-- Header -->
+    <div style="margin-bottom: 2.5rem;">
+      <h1 style="margin-bottom: 0.5rem;">All Tools</h1>
+      <p style="margin: 0; color: var(--text-secondary);">{tools.length} open-source tools, curated and cross-referenced.</p>
+    </div>
+
+    <!-- Category filter pills -->
+    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border);">
+      <a href="/tools" class="badge badge-purple" style="text-decoration: none; padding: 0.35em 0.75em; font-size: 0.8rem;">
+        All ({tools.length})
+      </a>
+      {categories.map(cat => {
+        const slug = cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+        const color = getCategoryColor(cat);
+        return (
+          <a
+            href={`/categories/${slug}`}
+            style={`text-decoration: none; display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.35em 0.75em; border-radius: 20px; font-size: 0.75rem; font-weight: 500; background: ${color}15; color: ${color}; border: 1px solid ${color}30;`}
+          >
+            {cat} ({categoryCounts[cat]})
+          </a>
+        );
+      })}
+    </div>
+
+    <!-- Tools grid -->
+    <div class="tools-grid">
+      {sorted.map((tool) => {
+        const color = getCategoryColor(tool.category);
+        return (
+          <a href={`/tools/${tool.slug}`} class="card card-link tool-card">
+            <div class="tool-card-header">
+              <div>
+                <div class="tool-card-title">{tool.name}</div>
+                <p class="tool-card-tagline">{tool.tagline}</p>
+              </div>
+            </div>
+            <div class="tool-card-meta">
+              <span style={`display: inline-flex; align-items: center; padding: 0.15em 0.5em; border-radius: 20px; font-size: 0.7rem; font-weight: 500; background: ${color}15; color: ${color}; border: 1px solid ${color}30;`}>
+                {tool.category}
+              </span>
+              {tool.github_stars > 0 && (
+                <span class="stars-badge">
+                  <span aria-hidden="true">★</span>
+                  {formatNumber(tool.github_stars)}
+                </span>
+              )}
+              <span style="font-size: 0.75rem; color: var(--text-tertiary);">{tool.complexity_level}</span>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+</Base>

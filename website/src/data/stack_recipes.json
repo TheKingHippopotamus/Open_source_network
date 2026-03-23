@@ -1,0 +1,2509 @@
+[
+  {
+    "id": "self-hosted-crm",
+    "name": "Self-Hosted CRM Stack",
+    "description": "Complete customer relationship management for small businesses \u2014 contacts, email campaigns, and analytics under one roof.",
+    "audience": "Small business owners and startups",
+    "use_case": "Manage customer relationships without SaaS lock-in",
+    "max_ram_mb": 4096,
+    "team_size": "small",
+    "max_complexity": "intermediate",
+    "total_ram_mb": 3088,
+    "cohesion_pct": 0.0,
+    "tools": [
+      {
+        "need": "crm",
+        "slug": "corteza",
+        "name": "Corteza",
+        "tagline": "Privacy-first low-code CRM with data sovereignty",
+        "category": "CRM & ERP",
+        "sub_category": "CRM",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 1024,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 1500,
+        "score": 2.3853,
+        "alternatives": [
+          "YetiForce",
+          "Axelor",
+          "EspoCRM"
+        ]
+      },
+      {
+        "need": "email-marketing",
+        "slug": "mautic",
+        "name": "Mautic",
+        "tagline": "Open-source marketing automation platform",
+        "category": "Email Marketing",
+        "sub_category": "Marketing Auto",
+        "license": "GPL-3.0",
+        "license_type": "copyleft",
+        "min_ram_mb": 1024,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 7000,
+        "score": 1.3857,
+        "alternatives": [
+          "Keila",
+          "Odoo Community",
+          "Zammad"
+        ]
+      },
+      {
+        "need": "analytics",
+        "slug": "metabase",
+        "name": "Metabase",
+        "tagline": "Business intelligence anyone can use",
+        "category": "Low-Code",
+        "sub_category": "BI / Dashboard",
+        "license": "AGPL-3.0",
+        "license_type": "copyleft",
+        "min_ram_mb": 1024,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 40000,
+        "score": 2.195,
+        "alternatives": [
+          "Plausible",
+          "Umami",
+          "Matomo"
+        ]
+      },
+      {
+        "need": "authentication",
+        "slug": "lucia",
+        "name": "Lucia",
+        "tagline": "Lightweight authentication library for TypeScript",
+        "category": "Embeddable",
+        "sub_category": "Auth Library",
+        "license": "MIT",
+        "license_type": "permissive",
+        "min_ram_mb": 16,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "npm"
+        ],
+        "github_stars": 10000,
+        "score": 1.777,
+        "alternatives": [
+          "SuperTokens",
+          "Passport.js",
+          "Appwrite"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ai-ml-platform",
+    "name": "AI/ML Development Platform",
+    "description": "Full stack for training, tracking, and serving ML models \u2014 from experiment to production.",
+    "audience": "Data scientists and ML engineers",
+    "use_case": "Train, version, and deploy machine-learning models at scale",
+    "max_ram_mb": 16384,
+    "team_size": "medium",
+    "max_complexity": "advanced",
+    "total_ram_mb": 6144,
+    "cohesion_pct": 16.7,
+    "tools": [
+      {
+        "need": "ml-framework",
+        "slug": "tensorflow",
+        "name": "TensorFlow",
+        "tagline": "End-to-end platform for production ML at scale",
+        "category": "AI / ML",
+        "sub_category": "ML Framework",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 2048,
+        "complexity_level": "advanced",
+        "deployment_methods": [
+          "pip",
+          "docker",
+          "binary"
+        ],
+        "github_stars": 188000,
+        "score": 1.1977,
+        "alternatives": [
+          "Immich",
+          "Metaflow",
+          "Kedro"
+        ]
+      },
+      {
+        "need": "vector-database",
+        "slug": "qdrant",
+        "name": "Qdrant",
+        "tagline": "High-performance vector similarity search engine",
+        "category": "LLMs & AI Infra",
+        "sub_category": "Vector DB",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 2048,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker",
+          "binary"
+        ],
+        "github_stars": 22000,
+        "score": 1.2559,
+        "alternatives": [
+          "Weaviate",
+          "Chroma",
+          "Milvus"
+        ]
+      },
+      {
+        "need": "model-serving",
+        "slug": "mlflow",
+        "name": "MLflow",
+        "tagline": "Open-source AI platform for agents, LLMs & ML models",
+        "category": "AI / ML",
+        "sub_category": "ML Pipeline",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 1024,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "pip",
+          "docker"
+        ],
+        "github_stars": 20000,
+        "score": 1.3492,
+        "alternatives": [
+          "vLLM",
+          "Text Generation Inference",
+          "SGLang"
+        ]
+      },
+      {
+        "need": "monitoring",
+        "slug": "zabbix",
+        "name": "Zabbix",
+        "tagline": "Enterprise-class infrastructure monitoring",
+        "category": "Monitoring",
+        "sub_category": "Infra Monitor",
+        "license": "GPL-2.0",
+        "license_type": "copyleft",
+        "min_ram_mb": 1024,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker",
+          "binary"
+        ],
+        "github_stars": 5000,
+        "score": 2.5087,
+        "alternatives": [
+          "Uptime Kuma",
+          "Prometheus",
+          "Nagios Core"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "devops-pipeline",
+    "name": "DevOps Automation Pipeline",
+    "description": "CI/CD, container orchestration, secrets management, and observability for modern engineering teams.",
+    "audience": "DevOps and platform engineers",
+    "use_case": "Automate build-test-deploy with full observability",
+    "max_ram_mb": 8192,
+    "team_size": "medium",
+    "max_complexity": "advanced",
+    "total_ram_mb": 3328,
+    "cohesion_pct": 8.3,
+    "tools": [
+      {
+        "need": "ci-cd",
+        "slug": "woodpecker-ci",
+        "name": "Woodpecker CI",
+        "tagline": "Community fork of Drone CI for container-native builds",
+        "category": "DevOps & Infra",
+        "sub_category": "CI/CD",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 256,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker",
+          "binary"
+        ],
+        "github_stars": 5000,
+        "score": 1.9243,
+        "alternatives": [
+          "GitLab CE",
+          "Docker (Moby)",
+          "Jenkins"
+        ]
+      },
+      {
+        "need": "container-orchestration",
+        "slug": "kubernetes",
+        "name": "Kubernetes",
+        "tagline": "Container orchestration platform for production workloads",
+        "category": "DevOps & Infra",
+        "sub_category": "Orchestration",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 2048,
+        "complexity_level": "advanced",
+        "deployment_methods": [
+          "docker",
+          "binary"
+        ],
+        "github_stars": 114000,
+        "score": 1.3892,
+        "alternatives": [
+          "Apache Airflow",
+          "Ansible",
+          "CrewAI"
+        ]
+      },
+      {
+        "need": "secrets-management",
+        "slug": "vault",
+        "name": "Vault",
+        "tagline": "Secrets management and data encryption platform",
+        "category": "DevOps & Infra",
+        "sub_category": "Secrets",
+        "license": "BSL",
+        "license_type": "source-available",
+        "min_ram_mb": 512,
+        "complexity_level": "advanced",
+        "deployment_methods": [
+          "docker",
+          "binary"
+        ],
+        "github_stars": 31000,
+        "score": 1.4049,
+        "alternatives": [
+          "Infisical",
+          "Metaflow",
+          "Docker (Moby)"
+        ]
+      },
+      {
+        "need": "metrics-monitoring",
+        "slug": "prometheus",
+        "name": "Prometheus",
+        "tagline": "Monitoring and alerting toolkit",
+        "category": "Monitoring",
+        "sub_category": "Metrics",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 512,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker",
+          "binary"
+        ],
+        "github_stars": 57000,
+        "score": 0.6645,
+        "alternatives": [
+          "SigNoz",
+          "Cachet",
+          "OpenTelemetry"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "self-hosted-productivity",
+    "name": "Self-Hosted Productivity Suite",
+    "description": "Documents, project management, communication, and file storage \u2014 fully self-hosted.",
+    "audience": "Remote teams and privacy-conscious organisations",
+    "use_case": "Replace Google Workspace / Microsoft 365 with owned infrastructure",
+    "max_ram_mb": 6144,
+    "team_size": "small",
+    "max_complexity": "intermediate",
+    "total_ram_mb": 4608,
+    "cohesion_pct": 0.0,
+    "tools": [
+      {
+        "need": "document-collaboration",
+        "slug": "nextcloud",
+        "name": "Nextcloud",
+        "tagline": "Self-hosted productivity platform",
+        "category": "Media & Files",
+        "sub_category": "File Storage",
+        "license": "AGPL-3.0",
+        "license_type": "copyleft",
+        "min_ram_mb": 1024,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 28000,
+        "score": 0.3694,
+        "alternatives": [
+          "CrewAI",
+          "Hoppscotch",
+          "Redash"
+        ]
+      },
+      {
+        "need": "project-management",
+        "slug": "leantime",
+        "name": "Leantime",
+        "tagline": "Project management designed for non-project-managers",
+        "category": "Project Mgmt",
+        "sub_category": "Project Tracker",
+        "license": "AGPL-3.0",
+        "license_type": "copyleft",
+        "min_ram_mb": 512,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 5000,
+        "score": 1.6377,
+        "alternatives": [
+          "AppFlowy",
+          "Huly",
+          "GitLab CE"
+        ]
+      },
+      {
+        "need": "team-chat",
+        "slug": "rocket-chat",
+        "name": "Rocket.Chat",
+        "tagline": "Open-source team-chat platform",
+        "category": "Communication",
+        "sub_category": "Team Chat",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 2048,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 42000,
+        "score": 1.3845,
+        "alternatives": [
+          "Mattermost",
+          "Huly",
+          "Zulip"
+        ]
+      },
+      {
+        "need": "file-storage",
+        "slug": "appwrite",
+        "name": "Appwrite",
+        "tagline": "Backend platform for web, mobile, and Flutter",
+        "category": "Low-Code",
+        "sub_category": "Backend-as-Service",
+        "license": "BSD-3-Clause",
+        "license_type": "permissive",
+        "min_ram_mb": 1024,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 48000,
+        "score": 1.3617,
+        "alternatives": [
+          "Supabase",
+          "Directus",
+          "Redis"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ecommerce-stack",
+    "name": "E-Commerce Stack",
+    "description": "Headless commerce engine, payments, search, and analytics for online stores.",
+    "audience": "E-commerce teams and digital agencies",
+    "use_case": "Launch and scale an online store without proprietary SaaS fees",
+    "max_ram_mb": 4096,
+    "team_size": "small",
+    "max_complexity": "intermediate",
+    "total_ram_mb": 2576,
+    "cohesion_pct": 0.0,
+    "tools": [
+      {
+        "need": "e-commerce",
+        "slug": "medusa",
+        "name": "Medusa",
+        "tagline": "Open-source headless commerce engine",
+        "category": "Web & CMS",
+        "sub_category": "E-Commerce",
+        "license": "MIT",
+        "license_type": "permissive",
+        "min_ram_mb": 1024,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker",
+          "npm"
+        ],
+        "github_stars": 28000,
+        "score": 1.9493,
+        "alternatives": [
+          "Saleor",
+          "OpenCart",
+          "WordPress"
+        ]
+      },
+      {
+        "need": "search",
+        "slug": "typesense",
+        "name": "Typesense",
+        "tagline": "Fast typo-tolerant search engine with simple API",
+        "category": "Databases",
+        "sub_category": "Search",
+        "license": "GPL-3.0",
+        "license_type": "copyleft",
+        "min_ram_mb": 512,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "docker",
+          "apt",
+          "binary"
+        ],
+        "github_stars": 22000,
+        "score": 3.9934,
+        "alternatives": [
+          "Meilisearch",
+          "Sonic",
+          "Weaviate"
+        ]
+      },
+      {
+        "need": "analytics",
+        "slug": "metabase",
+        "name": "Metabase",
+        "tagline": "Business intelligence anyone can use",
+        "category": "Low-Code",
+        "sub_category": "BI / Dashboard",
+        "license": "AGPL-3.0",
+        "license_type": "copyleft",
+        "min_ram_mb": 1024,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 40000,
+        "score": 2.195,
+        "alternatives": [
+          "Plausible",
+          "Umami",
+          "Matomo"
+        ]
+      },
+      {
+        "need": "authentication",
+        "slug": "lucia",
+        "name": "Lucia",
+        "tagline": "Lightweight authentication library for TypeScript",
+        "category": "Embeddable",
+        "sub_category": "Auth Library",
+        "license": "MIT",
+        "license_type": "permissive",
+        "min_ram_mb": 16,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "npm"
+        ],
+        "github_stars": 10000,
+        "score": 1.777,
+        "alternatives": [
+          "SuperTokens",
+          "Passport.js",
+          "Appwrite"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "content-publishing",
+    "name": "Content Publishing Platform",
+    "description": "Headless CMS, media management, search, and CDN-ready image processing.",
+    "audience": "Content teams, media companies, and digital publishers",
+    "use_case": "Publish content at scale with full editorial control",
+    "max_ram_mb": 4096,
+    "team_size": "small",
+    "max_complexity": "intermediate",
+    "total_ram_mb": 1584,
+    "cohesion_pct": 0.0,
+    "tools": [
+      {
+        "need": "cms",
+        "slug": "editorjs",
+        "name": "Editor.js",
+        "tagline": "Block-style editor with clean JSON output",
+        "category": "Embeddable",
+        "sub_category": "Rich Text Editor",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 32,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "npm"
+        ],
+        "github_stars": 29000,
+        "score": 1.3398,
+        "alternatives": [
+          "Ghost",
+          "WordPress",
+          "Payload CMS"
+        ]
+      },
+      {
+        "need": "media-management",
+        "slug": "jellyfin",
+        "name": "Jellyfin",
+        "tagline": "Free media streaming system",
+        "category": "Media & Files",
+        "sub_category": "Media Server",
+        "license": "GPL-2.0",
+        "license_type": "copyleft",
+        "min_ram_mb": 1024,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 38000,
+        "score": 0.1829,
+        "alternatives": [
+          "Penpot",
+          "Plyr",
+          "PhotoPrism"
+        ]
+      },
+      {
+        "need": "search",
+        "slug": "typesense",
+        "name": "Typesense",
+        "tagline": "Fast typo-tolerant search engine with simple API",
+        "category": "Databases",
+        "sub_category": "Search",
+        "license": "GPL-3.0",
+        "license_type": "copyleft",
+        "min_ram_mb": 512,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "docker",
+          "apt",
+          "binary"
+        ],
+        "github_stars": 22000,
+        "score": 3.9934,
+        "alternatives": [
+          "Meilisearch",
+          "Sonic",
+          "Weaviate"
+        ]
+      },
+      {
+        "need": "authentication",
+        "slug": "lucia",
+        "name": "Lucia",
+        "tagline": "Lightweight authentication library for TypeScript",
+        "category": "Embeddable",
+        "sub_category": "Auth Library",
+        "license": "MIT",
+        "license_type": "permissive",
+        "min_ram_mb": 16,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "npm"
+        ],
+        "github_stars": 10000,
+        "score": 1.777,
+        "alternatives": [
+          "SuperTokens",
+          "Passport.js",
+          "Appwrite"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "data-engineering-pipeline",
+    "name": "Data Engineering Pipeline",
+    "description": "Workflow orchestration, columnar storage, data transformation, and BI dashboard.",
+    "audience": "Data engineers and analytics teams",
+    "use_case": "Build reliable ELT pipelines feeding a self-hosted analytics layer",
+    "max_ram_mb": 16384,
+    "team_size": "medium",
+    "max_complexity": "advanced",
+    "total_ram_mb": 4864,
+    "cohesion_pct": 0.0,
+    "tools": [
+      {
+        "need": "workflow-orchestration",
+        "slug": "ansible",
+        "name": "Ansible",
+        "tagline": "Agentless IT automation and configuration management",
+        "category": "DevOps & Infra",
+        "sub_category": "IaC",
+        "license": "GPL-3.0",
+        "license_type": "copyleft",
+        "min_ram_mb": 256,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "docker",
+          "binary"
+        ],
+        "github_stars": 64000,
+        "score": 1.3311,
+        "alternatives": [
+          "Prefect",
+          "Apache Airflow",
+          "CrewAI"
+        ]
+      },
+      {
+        "need": "data-warehouse",
+        "slug": "metasfresh",
+        "name": "metasfresh",
+        "tagline": "ERP for distribution and warehouse management",
+        "category": "CRM & ERP",
+        "sub_category": "ERP",
+        "license": "GPL-2.0",
+        "license_type": "copyleft",
+        "min_ram_mb": 2048,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 1500,
+        "score": 0.5013,
+        "alternatives": [
+          "Saleor",
+          "Kedro",
+          "Directus"
+        ]
+      },
+      {
+        "need": "data-transformation",
+        "slug": "kedro",
+        "name": "Kedro",
+        "tagline": "Framework for production-quality, reproducible data science code",
+        "category": "AI / ML",
+        "sub_category": "ML Pipeline",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 512,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "pip"
+        ],
+        "github_stars": 10000,
+        "score": 0.2556,
+        "alternatives": [
+          "Directus",
+          "Apache Superset",
+          "Corteza"
+        ]
+      },
+      {
+        "need": "business-intelligence",
+        "slug": "superset",
+        "name": "Apache Superset",
+        "tagline": "Data exploration and visualization platform",
+        "category": "Analytics",
+        "sub_category": "BI / Dashboard",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 2048,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 65000,
+        "score": 1.3468,
+        "alternatives": [
+          "ClickHouse",
+          "Metabase",
+          "Activepieces"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "monitoring-observability",
+    "name": "Monitoring & Observability Stack",
+    "description": "Metrics, logs, distributed traces, and alerting \u2014 the full three-pillars observability setup.",
+    "audience": "SRE teams and platform engineers",
+    "use_case": "Full-stack observability with unified dashboards and on-call alerts",
+    "max_ram_mb": 8192,
+    "team_size": "medium",
+    "max_complexity": "advanced",
+    "total_ram_mb": 2560,
+    "cohesion_pct": 33.3,
+    "tools": [
+      {
+        "need": "metrics-monitoring",
+        "slug": "prometheus",
+        "name": "Prometheus",
+        "tagline": "Monitoring and alerting toolkit",
+        "category": "Monitoring",
+        "sub_category": "Metrics",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 512,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker",
+          "binary"
+        ],
+        "github_stars": 57000,
+        "score": 0.5145,
+        "alternatives": [
+          "SigNoz",
+          "Cachet",
+          "OpenTelemetry"
+        ]
+      },
+      {
+        "need": "log-management",
+        "slug": "kedro",
+        "name": "Kedro",
+        "tagline": "Framework for production-quality, reproducible data science code",
+        "category": "AI / ML",
+        "sub_category": "ML Pipeline",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 512,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "pip"
+        ],
+        "github_stars": 10000,
+        "score": 0.67,
+        "alternatives": [
+          "Loki",
+          "Kibana",
+          "Apache Kafka"
+        ]
+      },
+      {
+        "need": "distributed-tracing",
+        "slug": "jaeger",
+        "name": "Jaeger",
+        "tagline": "Distributed tracing system",
+        "category": "Monitoring",
+        "sub_category": "APM / Tracing",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 1024,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker",
+          "binary"
+        ],
+        "github_stars": 21000,
+        "score": 1.4368,
+        "alternatives": [
+          "SigNoz",
+          "Celery",
+          "Apache Cassandra"
+        ]
+      },
+      {
+        "need": "alerting",
+        "slug": "grafana",
+        "name": "Grafana",
+        "tagline": "Analytics and visualization dashboard platform",
+        "category": "Monitoring",
+        "sub_category": "Visualization",
+        "license": "AGPL-3.0",
+        "license_type": "copyleft",
+        "min_ram_mb": 512,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker",
+          "binary"
+        ],
+        "github_stars": 66000,
+        "score": 1.6509,
+        "alternatives": [
+          "OpenSearch",
+          "Zabbix",
+          "Nagios Core"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "internal-tools-platform",
+    "name": "Internal Tools Platform",
+    "description": "Low-code UI builder, automation engine, database, and authentication for internal apps.",
+    "audience": "Engineering and operations teams building internal tools",
+    "use_case": "Ship admin dashboards, approval workflows, and CRUD apps in days",
+    "max_ram_mb": 4096,
+    "team_size": "small",
+    "max_complexity": "intermediate",
+    "total_ram_mb": 3088,
+    "cohesion_pct": 0.0,
+    "tools": [
+      {
+        "need": "low-code",
+        "slug": "corteza",
+        "name": "Corteza",
+        "tagline": "Privacy-first low-code CRM with data sovereignty",
+        "category": "CRM & ERP",
+        "sub_category": "CRM",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 1024,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 1500,
+        "score": 1.8133,
+        "alternatives": [
+          "Axelor",
+          "ToolJet",
+          "Budibase"
+        ]
+      },
+      {
+        "need": "workflow-automation",
+        "slug": "tooljet",
+        "name": "ToolJet",
+        "tagline": "Low-code platform for building business applications",
+        "category": "Low-Code",
+        "sub_category": "Internal Tools",
+        "license": "AGPL-3.0",
+        "license_type": "copyleft",
+        "min_ram_mb": 1024,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 34000,
+        "score": 1.2895,
+        "alternatives": [
+          "YetiForce",
+          "Activepieces",
+          "n8n"
+        ]
+      },
+      {
+        "need": "database",
+        "slug": "baserow",
+        "name": "Baserow",
+        "tagline": "No-code database and Airtable alternative",
+        "category": "Low-Code",
+        "sub_category": "Database UI",
+        "license": "MIT",
+        "license_type": "permissive",
+        "min_ram_mb": 1024,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 14000,
+        "score": 1.9724,
+        "alternatives": [
+          "NocoDB",
+          "SQLite",
+          "Neo4j Community"
+        ]
+      },
+      {
+        "need": "authentication",
+        "slug": "lucia",
+        "name": "Lucia",
+        "tagline": "Lightweight authentication library for TypeScript",
+        "category": "Embeddable",
+        "sub_category": "Auth Library",
+        "license": "MIT",
+        "license_type": "permissive",
+        "min_ram_mb": 16,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "npm"
+        ],
+        "github_stars": 10000,
+        "score": 1.777,
+        "alternatives": [
+          "SuperTokens",
+          "Passport.js",
+          "Appwrite"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "self-hosted-communication",
+    "name": "Self-Hosted Communication Hub",
+    "description": "Team messaging, video calls, and transactional email \u2014 no data leaving your servers.",
+    "audience": "Privacy-first teams and regulated industries",
+    "use_case": "Replace Slack, Zoom, and SendGrid with owned communication infrastructure",
+    "max_ram_mb": 6144,
+    "team_size": "small",
+    "max_complexity": "intermediate",
+    "total_ram_mb": 5136,
+    "cohesion_pct": 0.0,
+    "tools": [
+      {
+        "need": "team-chat",
+        "slug": "rocket-chat",
+        "name": "Rocket.Chat",
+        "tagline": "Open-source team-chat platform",
+        "category": "Communication",
+        "sub_category": "Team Chat",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 2048,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 42000,
+        "score": 1.3845,
+        "alternatives": [
+          "Mattermost",
+          "Huly",
+          "Zulip"
+        ]
+      },
+      {
+        "need": "video-conferencing",
+        "slug": "jitsi-meet",
+        "name": "Jitsi Meet",
+        "tagline": "Open-source video-conferencing platform",
+        "category": "Communication",
+        "sub_category": "Video / Meeting",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 2048,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 24000,
+        "score": 1.3519,
+        "alternatives": [
+          "Nextcloud",
+          "Video.js",
+          "Shotcut"
+        ]
+      },
+      {
+        "need": "transactional-email",
+        "slug": "postal",
+        "name": "Postal",
+        "tagline": "Open-source mail delivery platform",
+        "category": "Email Marketing",
+        "sub_category": "Transactional",
+        "license": "MIT",
+        "license_type": "permissive",
+        "min_ram_mb": 1024,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 15000,
+        "score": 1.8545,
+        "alternatives": [
+          "Listmonk",
+          "Keila",
+          "Zammad"
+        ]
+      },
+      {
+        "need": "authentication",
+        "slug": "lucia",
+        "name": "Lucia",
+        "tagline": "Lightweight authentication library for TypeScript",
+        "category": "Embeddable",
+        "sub_category": "Auth Library",
+        "license": "MIT",
+        "license_type": "permissive",
+        "min_ram_mb": 16,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "npm"
+        ],
+        "github_stars": 10000,
+        "score": 1.777,
+        "alternatives": [
+          "SuperTokens",
+          "Passport.js",
+          "Appwrite"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "knowledge-management",
+    "name": "Knowledge Management System",
+    "description": "Wiki, search, AI-powered Q&A, and document storage for team knowledge.",
+    "audience": "Engineering teams and knowledge-intensive organisations",
+    "use_case": "Centralise institutional knowledge with semantic search and AI retrieval",
+    "max_ram_mb": 4096,
+    "team_size": "small",
+    "max_complexity": "intermediate",
+    "total_ram_mb": 1552,
+    "cohesion_pct": 0.0,
+    "tools": [
+      {
+        "need": "wiki",
+        "slug": "outline",
+        "name": "Outline",
+        "tagline": "Beautiful wiki and knowledge base",
+        "category": "Knowledge & Docs",
+        "sub_category": "Wiki / Notes",
+        "license": "BSL",
+        "license_type": "copyleft",
+        "min_ram_mb": 512,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 30000,
+        "score": 1.8817,
+        "alternatives": [
+          "Wiki.js",
+          "Docmost",
+          "BookStack"
+        ]
+      },
+      {
+        "need": "search",
+        "slug": "typesense",
+        "name": "Typesense",
+        "tagline": "Fast typo-tolerant search engine with simple API",
+        "category": "Databases",
+        "sub_category": "Search",
+        "license": "GPL-3.0",
+        "license_type": "copyleft",
+        "min_ram_mb": 512,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "docker",
+          "apt",
+          "binary"
+        ],
+        "github_stars": 22000,
+        "score": 3.9934,
+        "alternatives": [
+          "Meilisearch",
+          "Sonic",
+          "Weaviate"
+        ]
+      },
+      {
+        "need": "document-storage",
+        "slug": "ferretdb",
+        "name": "FerretDB",
+        "tagline": "MongoDB-compatible proxy using PostgreSQL backend",
+        "category": "Databases",
+        "sub_category": "Document",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 512,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker",
+          "apt",
+          "binary"
+        ],
+        "github_stars": 10000,
+        "score": 0.8499,
+        "alternatives": [
+          "Appwrite",
+          "Supabase",
+          "Haystack"
+        ]
+      },
+      {
+        "need": "authentication",
+        "slug": "lucia",
+        "name": "Lucia",
+        "tagline": "Lightweight authentication library for TypeScript",
+        "category": "Embeddable",
+        "sub_category": "Auth Library",
+        "license": "MIT",
+        "license_type": "permissive",
+        "min_ram_mb": 16,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "npm"
+        ],
+        "github_stars": 10000,
+        "score": 1.777,
+        "alternatives": [
+          "SuperTokens",
+          "Passport.js",
+          "Appwrite"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "iot-platform",
+    "name": "IoT Data Platform",
+    "description": "Message broker, time-series database, dashboards, and automation rules for IoT fleets.",
+    "audience": "IoT developers and industrial engineers",
+    "use_case": "Collect, store, visualise, and act on sensor data streams",
+    "max_ram_mb": 4096,
+    "team_size": "small",
+    "max_complexity": "intermediate",
+    "total_ram_mb": 3584,
+    "cohesion_pct": 0.0,
+    "tools": [
+      {
+        "need": "message-broker",
+        "slug": "rabbitmq",
+        "name": "RabbitMQ",
+        "tagline": "Message broker with multiple protocol support",
+        "category": "DNS & Networking",
+        "sub_category": "Message Queue",
+        "license": "MPL-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 512,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker",
+          "binary"
+        ],
+        "github_stars": 13000,
+        "score": 1.3525,
+        "alternatives": [
+          "Redis",
+          "Sonic",
+          "NATS"
+        ]
+      },
+      {
+        "need": "time-series-database",
+        "slug": "influxdb",
+        "name": "InfluxDB",
+        "tagline": "Purpose-built time-series database",
+        "category": "Databases",
+        "sub_category": "Time-Series",
+        "license": "MIT",
+        "license_type": "permissive",
+        "min_ram_mb": 1024,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker",
+          "apt",
+          "binary"
+        ],
+        "github_stars": 30000,
+        "score": 0.4127,
+        "alternatives": [
+          "Prometheus",
+          "TimescaleDB",
+          "PostgreSQL"
+        ]
+      },
+      {
+        "need": "dashboard",
+        "slug": "kibana",
+        "name": "Kibana",
+        "tagline": "Visualization and exploration for Elasticsearch data",
+        "category": "Monitoring",
+        "sub_category": "Visualization",
+        "license": "SSPL",
+        "license_type": "source-available",
+        "min_ram_mb": 1024,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 20000,
+        "score": 1.7966,
+        "alternatives": [
+          "Streamlit",
+          "Grafana",
+          "Metabase"
+        ]
+      },
+      {
+        "need": "automation",
+        "slug": "home-assistant",
+        "name": "Home Assistant",
+        "tagline": "Open-source home automation platform",
+        "category": "Embeddable",
+        "sub_category": "IoT Platform",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 1024,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker",
+          "binary"
+        ],
+        "github_stars": 76000,
+        "score": 2.3057,
+        "alternatives": [
+          "Mailtrain",
+          "Activepieces",
+          "Node-RED"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "security-platform",
+    "name": "Security & Identity Platform",
+    "description": "Identity provider, secrets vault, vulnerability scanning, and audit logging.",
+    "audience": "Security teams and compliance-driven organisations",
+    "use_case": "Centralise identity, secrets, and security posture management",
+    "max_ram_mb": 4096,
+    "team_size": "medium",
+    "max_complexity": "advanced",
+    "total_ram_mb": 2688,
+    "cohesion_pct": 0.0,
+    "tools": [
+      {
+        "need": "identity-provider",
+        "slug": "authentik",
+        "name": "authentik",
+        "tagline": "Modern self-hosted identity provider",
+        "category": "Security & Auth",
+        "sub_category": "Identity Provider",
+        "license": "MIT",
+        "license_type": "permissive",
+        "min_ram_mb": 1024,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 15000,
+        "score": 1.4088,
+        "alternatives": [
+          "Keycloak",
+          "Neo4j Community",
+          "TensorFlow"
+        ]
+      },
+      {
+        "need": "secrets-management",
+        "slug": "vault",
+        "name": "Vault",
+        "tagline": "Secrets management and data encryption platform",
+        "category": "DevOps & Infra",
+        "sub_category": "Secrets",
+        "license": "BSL",
+        "license_type": "source-available",
+        "min_ram_mb": 512,
+        "complexity_level": "advanced",
+        "deployment_methods": [
+          "docker",
+          "binary"
+        ],
+        "github_stars": 31000,
+        "score": 1.4049,
+        "alternatives": [
+          "Infisical",
+          "ERPNext",
+          "AppFlowy"
+        ]
+      },
+      {
+        "need": "vulnerability-scanning",
+        "slug": "tesseractjs",
+        "name": "Tesseract.js",
+        "tagline": "Pure JavaScript OCR engine running in browser and Node.js",
+        "category": "Embeddable",
+        "sub_category": "OCR",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 128,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "npm"
+        ],
+        "github_stars": 36000,
+        "score": 0.2059,
+        "alternatives": [
+          "Tesseract OCR",
+          "spaCy",
+          "Metabase"
+        ]
+      },
+      {
+        "need": "audit-logging",
+        "slug": "loki",
+        "name": "Loki",
+        "tagline": "Log aggregation system by Grafana Labs",
+        "category": "Monitoring",
+        "sub_category": "Logging",
+        "license": "AGPL-3.0",
+        "license_type": "copyleft",
+        "min_ram_mb": 1024,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker",
+          "binary"
+        ],
+        "github_stars": 24000,
+        "score": 0.3939,
+        "alternatives": [
+          "YetiForce",
+          "Pi-hole",
+          "TensorFlow"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "llm-app-stack",
+    "name": "LLM Application Stack",
+    "description": "Local LLM inference, vector store, orchestration layer, and embedding pipeline.",
+    "audience": "AI application developers",
+    "use_case": "Build RAG pipelines and LLM-powered apps fully on-premise",
+    "max_ram_mb": 32768,
+    "team_size": "small",
+    "max_complexity": "advanced",
+    "total_ram_mb": 5632,
+    "cohesion_pct": 0.0,
+    "tools": [
+      {
+        "need": "llm-inference",
+        "slug": "llama-cpp",
+        "name": "llama.cpp",
+        "tagline": "LLM inference in C/C++ for CPU and GPU",
+        "category": "Embeddable",
+        "sub_category": "LLM Runtime",
+        "license": "MIT",
+        "license_type": "permissive",
+        "min_ram_mb": 2048,
+        "complexity_level": "advanced",
+        "deployment_methods": [
+          "source",
+          "binary"
+        ],
+        "github_stars": 72000,
+        "score": 1.7956,
+        "alternatives": [
+          "Text Generation Inference",
+          "Ollama",
+          "LocalAI"
+        ]
+      },
+      {
+        "need": "vector-database",
+        "slug": "qdrant",
+        "name": "Qdrant",
+        "tagline": "High-performance vector similarity search engine",
+        "category": "LLMs & AI Infra",
+        "sub_category": "Vector DB",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 2048,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker",
+          "binary"
+        ],
+        "github_stars": 22000,
+        "score": 1.2559,
+        "alternatives": [
+          "Weaviate",
+          "Chroma",
+          "Milvus"
+        ]
+      },
+      {
+        "need": "embedding",
+        "slug": "metabase",
+        "name": "Metabase",
+        "tagline": "Business intelligence anyone can use",
+        "category": "Low-Code",
+        "sub_category": "BI / Dashboard",
+        "license": "AGPL-3.0",
+        "license_type": "copyleft",
+        "min_ram_mb": 1024,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 40000,
+        "score": 1.2171,
+        "alternatives": [
+          "Chroma",
+          "Weaviate",
+          "Milvus"
+        ]
+      },
+      {
+        "need": "api-gateway",
+        "slug": "kong",
+        "name": "Kong",
+        "tagline": "Cloud-native API gateway and service mesh",
+        "category": "Dev Tools",
+        "sub_category": "API Gateway",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 512,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "binary"
+        ],
+        "github_stars": 40000,
+        "score": 1.4106,
+        "alternatives": [
+          "Corteza",
+          "NocoDB",
+          "Cal.com"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "startup-saas-backend",
+    "name": "Startup SaaS Backend",
+    "description": "PostgreSQL, authentication, object storage, and background job queue \u2014 the standard SaaS foundation.",
+    "audience": "Early-stage startups and indie hackers",
+    "use_case": "Ship a production-ready SaaS backend in a weekend",
+    "max_ram_mb": 2048,
+    "team_size": "solo",
+    "max_complexity": "intermediate",
+    "total_ram_mb": 1360,
+    "cohesion_pct": 0.0,
+    "tools": [
+      {
+        "need": "relational-database",
+        "slug": "mysql",
+        "name": "MySQL",
+        "tagline": "World's most popular open-source relational database",
+        "category": "Databases",
+        "sub_category": "Relational",
+        "license": "GPL-2.0",
+        "license_type": "copyleft",
+        "min_ram_mb": 256,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "apt",
+          "docker",
+          "binary"
+        ],
+        "github_stars": 0,
+        "score": 0.4349,
+        "alternatives": [
+          "PostgreSQL",
+          "MariaDB",
+          "SQLite"
+        ]
+      },
+      {
+        "need": "authentication",
+        "slug": "lucia",
+        "name": "Lucia",
+        "tagline": "Lightweight authentication library for TypeScript",
+        "category": "Embeddable",
+        "sub_category": "Auth Library",
+        "license": "MIT",
+        "license_type": "permissive",
+        "min_ram_mb": 16,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "npm"
+        ],
+        "github_stars": 10000,
+        "score": 1.777,
+        "alternatives": [
+          "Passport.js",
+          "Appwrite",
+          "Supabase"
+        ]
+      },
+      {
+        "need": "object-storage",
+        "slug": "minio",
+        "name": "MinIO",
+        "tagline": "S3-compatible high-performance object storage",
+        "category": "Databases",
+        "sub_category": "Object Storage",
+        "license": "AGPL-3.0",
+        "license_type": "copyleft",
+        "min_ram_mb": 1024,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker",
+          "apt",
+          "binary"
+        ],
+        "github_stars": 50000,
+        "score": 1.3313,
+        "alternatives": [
+          "Appwrite",
+          "Supabase",
+          "Redis"
+        ]
+      },
+      {
+        "need": "job-queue",
+        "slug": "bullmq",
+        "name": "BullMQ",
+        "tagline": "Premium job queue for Node.js based on Redis",
+        "category": "Embeddable",
+        "sub_category": "Job Queue",
+        "license": "MIT",
+        "license_type": "permissive",
+        "min_ram_mb": 64,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "npm"
+        ],
+        "github_stars": 7000,
+        "score": 1.3674,
+        "alternatives": [
+          "Redis",
+          "Celery",
+          "Outline"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "api-platform",
+    "name": "API Platform",
+    "description": "API gateway, rate limiting, documentation, and analytics for internal or public APIs.",
+    "audience": "Platform teams and API-first companies",
+    "use_case": "Manage and monetise APIs with observability and developer portal",
+    "max_ram_mb": 4096,
+    "team_size": "medium",
+    "max_complexity": "advanced",
+    "total_ram_mb": 1856,
+    "cohesion_pct": 0.0,
+    "tools": [
+      {
+        "need": "api-gateway",
+        "slug": "kong",
+        "name": "Kong",
+        "tagline": "Cloud-native API gateway and service mesh",
+        "category": "Dev Tools",
+        "sub_category": "API Gateway",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 512,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "binary"
+        ],
+        "github_stars": 40000,
+        "score": 1.4106,
+        "alternatives": [
+          "Corteza",
+          "NocoDB",
+          "Cal.com"
+        ]
+      },
+      {
+        "need": "rate-limiting",
+        "slug": "bullmq",
+        "name": "BullMQ",
+        "tagline": "Premium job queue for Node.js based on Redis",
+        "category": "Embeddable",
+        "sub_category": "Job Queue",
+        "license": "MIT",
+        "license_type": "permissive",
+        "min_ram_mb": 64,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "npm"
+        ],
+        "github_stars": 7000,
+        "score": 1.2377,
+        "alternatives": [
+          "Redis",
+          "TensorFlow",
+          "PyTorch"
+        ]
+      },
+      {
+        "need": "api-documentation",
+        "slug": "bookstack",
+        "name": "BookStack",
+        "tagline": "Simple self-hosted wiki with books/chapters/pages",
+        "category": "Knowledge & Docs",
+        "sub_category": "Wiki / Notes",
+        "license": "MIT",
+        "license_type": "permissive",
+        "min_ram_mb": 256,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 16000,
+        "score": 0.3658,
+        "alternatives": [
+          "Wiki.js",
+          "Huly",
+          "Corteza"
+        ]
+      },
+      {
+        "need": "analytics",
+        "slug": "metabase",
+        "name": "Metabase",
+        "tagline": "Business intelligence anyone can use",
+        "category": "Low-Code",
+        "sub_category": "BI / Dashboard",
+        "license": "AGPL-3.0",
+        "license_type": "copyleft",
+        "min_ram_mb": 1024,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 40000,
+        "score": 2.195,
+        "alternatives": [
+          "ClickHouse",
+          "Plausible",
+          "Umami"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "feature-flag-platform",
+    "name": "Feature Flag & Experimentation Platform",
+    "description": "Feature flags, A/B testing, product analytics, and session replay for growth teams.",
+    "audience": "Growth engineering and product teams",
+    "use_case": "Ship features safely with gradual rollouts and data-driven decisions",
+    "max_ram_mb": 4096,
+    "team_size": "medium",
+    "max_complexity": "intermediate",
+    "total_ram_mb": 6272,
+    "cohesion_pct": 8.3,
+    "tools": [
+      {
+        "need": "feature-flags",
+        "slug": "posthog",
+        "name": "PostHog",
+        "tagline": "All-in-one product analytics platform",
+        "category": "Analytics",
+        "sub_category": "Product Analytics",
+        "license": "MIT",
+        "license_type": "permissive",
+        "min_ram_mb": 4096,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 24000,
+        "score": 1.3541,
+        "alternatives": [
+          "scikit-learn",
+          "H2O.ai",
+          "OpenCV"
+        ]
+      },
+      {
+        "need": "a-b-testing",
+        "slug": "matomo",
+        "name": "Matomo",
+        "tagline": "Privacy-friendly full-featured web analytics",
+        "category": "Analytics",
+        "sub_category": "Web Analytics",
+        "license": "GPL-3.0",
+        "license_type": "copyleft",
+        "min_ram_mb": 1024,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 20000,
+        "score": 0.8992,
+        "alternatives": [
+          "SQLite",
+          "Bun",
+          "Shadcn/ui"
+        ]
+      },
+      {
+        "need": "product-analytics",
+        "slug": "plane",
+        "name": "Plane",
+        "tagline": "Modern open-source project management",
+        "category": "Project Mgmt",
+        "sub_category": "Project Tracker",
+        "license": "AGPL-3.0",
+        "license_type": "copyleft",
+        "min_ram_mb": 1024,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 32000,
+        "score": -0.0265,
+        "alternatives": [
+          "OpenSearch",
+          "Elasticsearch",
+          "Metabase"
+        ]
+      },
+      {
+        "need": "session-replay",
+        "slug": "redis",
+        "name": "Redis",
+        "tagline": "In-memory data structure store for sub-millisecond latency",
+        "category": "Databases",
+        "sub_category": "Key-Value / Cache",
+        "license": "RSALv2",
+        "license_type": "source-available",
+        "min_ram_mb": 128,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "apt",
+          "docker",
+          "binary"
+        ],
+        "github_stars": 68000,
+        "score": -0.0281,
+        "alternatives": [
+          "Lucia",
+          "Keycloak",
+          "MicroPython"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "headless-ecommerce-enterprise",
+    "name": "Enterprise Headless Commerce",
+    "description": "High-performance commerce API, PIM, CDN, and recommendation engine for large catalogues.",
+    "audience": "Enterprise e-commerce teams",
+    "use_case": "Power multi-channel commerce experiences with a composable architecture",
+    "max_ram_mb": 16384,
+    "team_size": "enterprise",
+    "max_complexity": "expert",
+    "total_ram_mb": 10240,
+    "cohesion_pct": 0.0,
+    "tools": [
+      {
+        "need": "headless-commerce",
+        "slug": "medusa",
+        "name": "Medusa",
+        "tagline": "Open-source headless commerce engine",
+        "category": "Web & CMS",
+        "sub_category": "E-Commerce",
+        "license": "MIT",
+        "license_type": "permissive",
+        "min_ram_mb": 1024,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker",
+          "npm"
+        ],
+        "github_stars": 28000,
+        "score": 1.3999,
+        "alternatives": [
+          "Saleor",
+          "Tiptap",
+          "Payload CMS"
+        ]
+      },
+      {
+        "need": "product-information-management",
+        "slug": "spacy",
+        "name": "spaCy",
+        "tagline": "Industrial-strength NLP with pre-trained pipelines",
+        "category": "AI / ML",
+        "sub_category": "NLP",
+        "license": "MIT",
+        "license_type": "permissive",
+        "min_ram_mb": 512,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "pip",
+          "docker"
+        ],
+        "github_stars": 30000,
+        "score": 0.1586,
+        "alternatives": [
+          "PostHog",
+          "Formbricks",
+          "OpenCart"
+        ]
+      },
+      {
+        "need": "search",
+        "slug": "typesense",
+        "name": "Typesense",
+        "tagline": "Fast typo-tolerant search engine with simple API",
+        "category": "Databases",
+        "sub_category": "Search",
+        "license": "GPL-3.0",
+        "license_type": "copyleft",
+        "min_ram_mb": 512,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "docker",
+          "apt",
+          "binary"
+        ],
+        "github_stars": 22000,
+        "score": 3.9934,
+        "alternatives": [
+          "Meilisearch",
+          "Sonic",
+          "Tantivy"
+        ]
+      },
+      {
+        "need": "recommendation-engine",
+        "slug": "milvus",
+        "name": "Milvus",
+        "tagline": "Cloud-native vector DB for billion-scale AI search",
+        "category": "LLMs & AI Infra",
+        "sub_category": "Vector DB",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 8192,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker",
+          "binary"
+        ],
+        "github_stars": 32000,
+        "score": 1.244,
+        "alternatives": [
+          "Neo4j Community",
+          "Qdrant",
+          "Weaviate"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "financial-data-stack",
+    "name": "Financial Data & Reporting Stack",
+    "description": "Time-series database, data warehouse, BI, and workflow orchestration for financial data.",
+    "audience": "Fintech teams and financial analysts",
+    "use_case": "Ingest, store, and analyse financial metrics and trading data",
+    "max_ram_mb": 16384,
+    "team_size": "medium",
+    "max_complexity": "advanced",
+    "total_ram_mb": 5376,
+    "cohesion_pct": 0.0,
+    "tools": [
+      {
+        "need": "time-series-database",
+        "slug": "influxdb",
+        "name": "InfluxDB",
+        "tagline": "Purpose-built time-series database",
+        "category": "Databases",
+        "sub_category": "Time-Series",
+        "license": "MIT",
+        "license_type": "permissive",
+        "min_ram_mb": 1024,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker",
+          "apt",
+          "binary"
+        ],
+        "github_stars": 30000,
+        "score": 0.4127,
+        "alternatives": [
+          "Prometheus",
+          "TimescaleDB",
+          "PostgreSQL"
+        ]
+      },
+      {
+        "need": "data-warehouse",
+        "slug": "metasfresh",
+        "name": "metasfresh",
+        "tagline": "ERP for distribution and warehouse management",
+        "category": "CRM & ERP",
+        "sub_category": "ERP",
+        "license": "GPL-2.0",
+        "license_type": "copyleft",
+        "min_ram_mb": 2048,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 1500,
+        "score": 0.5013,
+        "alternatives": [
+          "Saleor",
+          "Grafana",
+          "Kedro"
+        ]
+      },
+      {
+        "need": "business-intelligence",
+        "slug": "superset",
+        "name": "Apache Superset",
+        "tagline": "Data exploration and visualization platform",
+        "category": "Analytics",
+        "sub_category": "BI / Dashboard",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 2048,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 65000,
+        "score": 1.3468,
+        "alternatives": [
+          "ClickHouse",
+          "Metabase",
+          "Grafana"
+        ]
+      },
+      {
+        "need": "workflow-orchestration",
+        "slug": "ansible",
+        "name": "Ansible",
+        "tagline": "Agentless IT automation and configuration management",
+        "category": "DevOps & Infra",
+        "sub_category": "IaC",
+        "license": "GPL-3.0",
+        "license_type": "copyleft",
+        "min_ram_mb": 256,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "docker",
+          "binary"
+        ],
+        "github_stars": 64000,
+        "score": 1.3311,
+        "alternatives": [
+          "Prefect",
+          "Apache Airflow",
+          "CrewAI"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "self-hosted-analytics",
+    "name": "Self-Hosted Web Analytics",
+    "description": "Privacy-first web analytics, event tracking, and A/B testing \u2014 no third-party cookies.",
+    "audience": "Privacy-conscious businesses and GDPR-regulated companies",
+    "use_case": "Understand user behaviour without sending data to Google",
+    "max_ram_mb": 2048,
+    "team_size": "solo",
+    "max_complexity": "beginner",
+    "total_ram_mb": 2592,
+    "cohesion_pct": 0.0,
+    "tools": [
+      {
+        "need": "web-analytics",
+        "slug": "metabase",
+        "name": "Metabase",
+        "tagline": "Business intelligence anyone can use",
+        "category": "Low-Code",
+        "sub_category": "BI / Dashboard",
+        "license": "AGPL-3.0",
+        "license_type": "copyleft",
+        "min_ram_mb": 1024,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 40000,
+        "score": 0.3027,
+        "alternatives": [
+          "Heyform",
+          "DuckDB",
+          "Redis"
+        ]
+      },
+      {
+        "need": "event-tracking",
+        "slug": "baserow",
+        "name": "Baserow",
+        "tagline": "No-code database and Airtable alternative",
+        "category": "Low-Code",
+        "sub_category": "Database UI",
+        "license": "MIT",
+        "license_type": "permissive",
+        "min_ram_mb": 1024,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 14000,
+        "score": 0.0888,
+        "alternatives": [
+          "NocoDB",
+          "Dolibarr",
+          "Leantime"
+        ]
+      },
+      {
+        "need": "a-b-testing",
+        "slug": "sqlite",
+        "name": "SQLite",
+        "tagline": "Embedded serverless database in a single file",
+        "category": "Databases",
+        "sub_category": "Relational",
+        "license": "Public Domain",
+        "license_type": "permissive",
+        "min_ram_mb": 32,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "docker",
+          "apt",
+          "binary"
+        ],
+        "github_stars": 0,
+        "score": 0.0854,
+        "alternatives": [
+          "Bun",
+          "Shadcn/ui",
+          "Cron / node-cron"
+        ]
+      },
+      {
+        "need": "dashboard",
+        "slug": "streamlit",
+        "name": "Streamlit",
+        "tagline": "Build data apps in Python with minimal code",
+        "category": "AI / ML",
+        "sub_category": "ML Demo",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 512,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "pip",
+          "docker"
+        ],
+        "github_stars": 40000,
+        "score": 1.3694,
+        "alternatives": [
+          "Appsmith",
+          "Directus",
+          "ToolJet"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "video-platform",
+    "name": "Self-Hosted Video Platform",
+    "description": "Video hosting, transcoding, live streaming, and CDN integration.",
+    "audience": "Media companies and education platforms",
+    "use_case": "Host and stream video content without YouTube or Vimeo lock-in",
+    "max_ram_mb": 8192,
+    "team_size": "small",
+    "max_complexity": "advanced",
+    "total_ram_mb": 1536,
+    "cohesion_pct": 8.3,
+    "tools": [
+      {
+        "need": "video-hosting",
+        "slug": "gitea",
+        "name": "Gitea",
+        "tagline": "Lightweight self-hosted Git service",
+        "category": "DevOps & Infra",
+        "sub_category": "CI/CD",
+        "license": "MIT",
+        "license_type": "permissive",
+        "min_ram_mb": 256,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "docker",
+          "binary"
+        ],
+        "github_stars": 47000,
+        "score": 0.2346,
+        "alternatives": [
+          "GitLab CE",
+          "Video.js",
+          "Rocket.Chat"
+        ]
+      },
+      {
+        "need": "media-transcoding",
+        "slug": "ffmpeg",
+        "name": "FFmpeg",
+        "tagline": "Universal multimedia processing engine",
+        "category": "Embeddable",
+        "sub_category": "Media Processing",
+        "license": "LGPL-2.1/GPL-2.0",
+        "license_type": "copyleft",
+        "min_ram_mb": 128,
+        "complexity_level": "advanced",
+        "deployment_methods": [
+          "apt",
+          "binary",
+          "source"
+        ],
+        "github_stars": 47000,
+        "score": 0.468,
+        "alternatives": [
+          "Jellyfin",
+          "Docker (Moby)",
+          "Plane"
+        ]
+      },
+      {
+        "need": "live-streaming",
+        "slug": "jellyfin",
+        "name": "Jellyfin",
+        "tagline": "Free media streaming system",
+        "category": "Media & Files",
+        "sub_category": "Media Server",
+        "license": "GPL-2.0",
+        "license_type": "copyleft",
+        "min_ram_mb": 1024,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 38000,
+        "score": 0.4603,
+        "alternatives": [
+          "Nginx",
+          "Apache Kafka",
+          "Tiledesk"
+        ]
+      },
+      {
+        "need": "cdn",
+        "slug": "docker",
+        "name": "Docker (Moby)",
+        "tagline": "Container platform for building and running applications",
+        "category": "DevOps & Infra",
+        "sub_category": "Container Runtime",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 128,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "docker",
+          "binary"
+        ],
+        "github_stars": 70000,
+        "score": 0.15,
+        "alternatives": [
+          "Plane",
+          "n8n",
+          "TensorFlow"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "developer-portal",
+    "name": "Developer Portal",
+    "description": "API docs, changelog, status page, and support for external developers.",
+    "audience": "Developer-relations and platform teams",
+    "use_case": "Create a world-class developer experience for external API consumers",
+    "max_ram_mb": 2048,
+    "team_size": "small",
+    "max_complexity": "beginner",
+    "total_ram_mb": 1792,
+    "cohesion_pct": 8.3,
+    "tools": [
+      {
+        "need": "api-documentation",
+        "slug": "bookstack",
+        "name": "BookStack",
+        "tagline": "Simple self-hosted wiki with books/chapters/pages",
+        "category": "Knowledge & Docs",
+        "sub_category": "Wiki / Notes",
+        "license": "MIT",
+        "license_type": "permissive",
+        "min_ram_mb": 256,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 16000,
+        "score": 0.3658,
+        "alternatives": [
+          "Wiki.js",
+          "Huly",
+          "NocoDB"
+        ]
+      },
+      {
+        "need": "changelog",
+        "slug": "scikit-learn",
+        "name": "scikit-learn",
+        "tagline": "Simple and efficient tools for classical ML in Python",
+        "category": "AI / ML",
+        "sub_category": "ML Framework",
+        "license": "BSD-3-Clause",
+        "license_type": "permissive",
+        "min_ram_mb": 512,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "pip"
+        ],
+        "github_stars": 62000,
+        "score": 0.0,
+        "alternatives": [
+          "spaCy",
+          "Gradio",
+          "Streamlit"
+        ]
+      },
+      {
+        "need": "status-page",
+        "slug": "streamlit",
+        "name": "Streamlit",
+        "tagline": "Build data apps in Python with minimal code",
+        "category": "AI / ML",
+        "sub_category": "ML Demo",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 512,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "pip",
+          "docker"
+        ],
+        "github_stars": 40000,
+        "score": 0.15,
+        "alternatives": [
+          "Docmost",
+          "ToolJet",
+          "spaCy"
+        ]
+      },
+      {
+        "need": "support-desk",
+        "slug": "espocrm",
+        "name": "EspoCRM",
+        "tagline": "Lightweight self-hosted CRM for teams",
+        "category": "CRM & ERP",
+        "sub_category": "CRM",
+        "license": "AGPL-3.0",
+        "license_type": "copyleft",
+        "min_ram_mb": 512,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 1800,
+        "score": 0.1857,
+        "alternatives": [
+          "spaCy",
+          "Gradio",
+          "Continue"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "data-science-notebook",
+    "name": "Data Science Notebook Environment",
+    "description": "Interactive notebooks, versioned datasets, experiment tracking, and collaborative review.",
+    "audience": "Data scientists and research teams",
+    "use_case": "Run, track, and share data science experiments in a reproducible environment",
+    "max_ram_mb": 8192,
+    "team_size": "small",
+    "max_complexity": "intermediate",
+    "total_ram_mb": 2816,
+    "cohesion_pct": 0.0,
+    "tools": [
+      {
+        "need": "notebook",
+        "slug": "duckdb",
+        "name": "DuckDB",
+        "tagline": "In-process analytical database (SQLite for analytics)",
+        "category": "Databases",
+        "sub_category": "Analytics DB",
+        "license": "MIT",
+        "license_type": "permissive",
+        "min_ram_mb": 256,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "docker",
+          "apt",
+          "binary"
+        ],
+        "github_stars": 28000,
+        "score": 0.8535,
+        "alternatives": [
+          "Metaflow",
+          "PyTorch",
+          "scikit-learn"
+        ]
+      },
+      {
+        "need": "experiment-tracking",
+        "slug": "mlflow",
+        "name": "MLflow",
+        "tagline": "Open-source AI platform for agents, LLMs & ML models",
+        "category": "AI / ML",
+        "sub_category": "ML Pipeline",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 1024,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "pip",
+          "docker"
+        ],
+        "github_stars": 20000,
+        "score": 1.2518,
+        "alternatives": [
+          "Postal",
+          "Metaflow",
+          "OpenProject"
+        ]
+      },
+      {
+        "need": "data-versioning",
+        "slug": "metaflow",
+        "name": "Metaflow",
+        "tagline": "Human-friendly ML lifecycle framework from Netflix",
+        "category": "AI / ML",
+        "sub_category": "ML Pipeline",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 512,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "pip"
+        ],
+        "github_stars": 8000,
+        "score": 0.3617,
+        "alternatives": [
+          "Kedro",
+          "PyTorch",
+          "scikit-learn"
+        ]
+      },
+      {
+        "need": "collaboration",
+        "slug": "nextcloud",
+        "name": "Nextcloud",
+        "tagline": "Self-hosted productivity platform",
+        "category": "Media & Files",
+        "sub_category": "File Storage",
+        "license": "AGPL-3.0",
+        "license_type": "copyleft",
+        "min_ram_mb": 1024,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "docker"
+        ],
+        "github_stars": 28000,
+        "score": 1.2559,
+        "alternatives": [
+          "CrewAI",
+          "Hoppscotch",
+          "Redash"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gitops-platform",
+    "name": "GitOps Platform",
+    "description": "Git hosting, CI runner, container registry, and deployment operator for GitOps workflows.",
+    "audience": "Platform engineering teams adopting GitOps",
+    "use_case": "Self-host the full GitOps toolchain \u2014 no GitHub dependency",
+    "max_ram_mb": 8192,
+    "team_size": "medium",
+    "max_complexity": "advanced",
+    "total_ram_mb": 4992,
+    "cohesion_pct": 16.7,
+    "tools": [
+      {
+        "need": "git-hosting",
+        "slug": "gitea",
+        "name": "Gitea",
+        "tagline": "Lightweight self-hosted Git service",
+        "category": "DevOps & Infra",
+        "sub_category": "CI/CD",
+        "license": "MIT",
+        "license_type": "permissive",
+        "min_ram_mb": 256,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "docker",
+          "binary"
+        ],
+        "github_stars": 47000,
+        "score": 1.9033,
+        "alternatives": [
+          "GitLab CE",
+          "VS Code (Code-OSS)",
+          "Wiki.js"
+        ]
+      },
+      {
+        "need": "ci-runner",
+        "slug": "docker",
+        "name": "Docker (Moby)",
+        "tagline": "Container platform for building and running applications",
+        "category": "DevOps & Infra",
+        "sub_category": "Container Runtime",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 128,
+        "complexity_level": "beginner",
+        "deployment_methods": [
+          "docker",
+          "binary"
+        ],
+        "github_stars": 70000,
+        "score": 0.3155,
+        "alternatives": [
+          "Woodpecker CI",
+          "Ollama",
+          "Bun"
+        ]
+      },
+      {
+        "need": "container-registry",
+        "slug": "gitlab-ce",
+        "name": "GitLab CE",
+        "tagline": "Complete DevOps platform with built-in CI/CD",
+        "category": "DevOps & Infra",
+        "sub_category": "CI/CD",
+        "license": "MIT",
+        "license_type": "permissive",
+        "min_ram_mb": 4096,
+        "complexity_level": "intermediate",
+        "deployment_methods": [
+          "docker",
+          "binary"
+        ],
+        "github_stars": 24000,
+        "score": 1.3157,
+        "alternatives": [
+          "Kubernetes",
+          "Woodpecker CI",
+          "TensorFlow"
+        ]
+      },
+      {
+        "need": "gitops-operator",
+        "slug": "argocd",
+        "name": "ArgoCD",
+        "tagline": "Declarative GitOps continuous delivery for Kubernetes",
+        "category": "DevOps & Infra",
+        "sub_category": "CI/CD",
+        "license": "Apache-2.0",
+        "license_type": "permissive",
+        "min_ram_mb": 512,
+        "complexity_level": "advanced",
+        "deployment_methods": [
+          "docker",
+          "binary"
+        ],
+        "github_stars": 18000,
+        "score": 0.4697,
+        "alternatives": [
+          "OpenTofu",
+          "Plane",
+          "n8n"
+        ]
+      }
+    ]
+  }
+]

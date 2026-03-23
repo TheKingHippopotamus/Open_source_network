@@ -1,0 +1,62 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCategories, getToolsByCategory, getCategoryColor } from '../../utils/db';
+
+const categories = getCategories();
+
+const CATEGORY_ICONS: Record<string, string> = {
+  'AI / ML': '🤖',
+  'LLMs & AI Infra': '🧠',
+  'Databases': '🗄',
+  'DevOps & Infra': '⚙️',
+  'Monitoring': '📊',
+  'CRM & ERP': '🏢',
+  'Communication': '💬',
+  'Project Mgmt': '📋',
+  'Knowledge & Docs': '📚',
+  'Automation': '⚡',
+  'Low-Code': '🎨',
+  'Analytics': '📈',
+  'Email Marketing': '📧',
+  'Security & Auth': '🔒',
+  'Web & CMS': '🌐',
+  'Media & Files': '📁',
+  'Scheduling': '📅',
+  'Dev Tools': '🛠',
+  'DNS & Networking': '🔌',
+  'Embeddable': '🧩',
+};
+---
+
+<Base
+  title="Categories — OSS Neural Match"
+  description="Browse open-source tools by category. 20 categories covering AI/ML, databases, DevOps, monitoring, security, and more."
+>
+  <div class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
+    <div style="margin-bottom: 2.5rem;">
+      <h1 style="margin-bottom: 0.5rem;">Categories</h1>
+      <p style="margin: 0; color: var(--text-secondary);">{categories.length} categories spanning the full open-source stack.</p>
+    </div>
+
+    <div class="categories-grid">
+      {categories.map((cat) => {
+        const tools = getToolsByCategory(cat);
+        const subCats = [...new Set(tools.map(t => t.sub_category))];
+        const color = getCategoryColor(cat);
+        const icon = CATEGORY_ICONS[cat] ?? '📦';
+        const slug = cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+        return (
+          <a href={`/categories/${slug}`} class="category-card">
+            <div class="category-card-icon" style={`background: ${color}20; color: ${color};`}>
+              {icon}
+            </div>
+            <div>
+              <div class="category-card-name">{cat}</div>
+              <p class="category-card-count">{tools.length} tool{tools.length !== 1 ? 's' : ''} &middot; {subCats.length} sub-categor{subCats.length !== 1 ? 'ies' : 'y'}</p>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+</Base>

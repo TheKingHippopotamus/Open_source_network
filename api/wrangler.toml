@@ -1,0 +1,17 @@
+name = "oss-neural-match-api"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "oss-neural-match"
+database_id = "placeholder-replace-after-creation"
+
+[vars]
+RATE_LIMIT_FREE = "100"
+RATE_LIMIT_PRO = "1000"
+
+# Cron trigger: purge stale rate-limit windows every hour
+# Prevents unbounded growth of the rate_limits D1 table.
+[triggers]
+crons = ["0 * * * *"]

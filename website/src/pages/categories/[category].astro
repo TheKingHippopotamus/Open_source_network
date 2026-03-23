@@ -1,0 +1,118 @@
+---
+import Base from '../../layouts/Base.astro';
+import {
+  getCategories,
+  getToolsByCategory,
+  getSubCategories,
+  getCategoryColor,
+  formatNumber,
+} from '../../utils/db';
+
+export function getStaticPaths() {
+  return getCategories().map((cat) => ({
+    params: {
+      category: cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''),
+    },
+    props: { category: cat },
+  }));
+}
+
+const { category } = Astro.props as { category: string };
+const categoryTools = getToolsByCategory(category);
+const subCategories = getSubCategories(category);
+const color = getCategoryColor(category);
+
+// Group by sub-category
+const bySubCat: Record<string, typeof categoryTools> = {};
+for (const tool of categoryTools) {
+  if (!bySubCat[tool.sub_category]) bySubCat[tool.sub_category] = [];
+  bySubCat[tool.sub_category].push(tool);
+}
+
+// Sort each sub-category by stars
+for (const key of Object.keys(bySubCat)) {
+  bySubCat[key].sort((a, b) => b.github_stars - a.github_stars);
+}
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": `${category} open-source tools`,
+  "description": `Browse ${categoryTools.length} open-source tools in the ${category} category.`,
+  "url": `https://ossneuralmatch.com/categories/${Astro.params.category}`,
+};
+---
+
+<Base
+  title={`${category} Tools — OSS Neural Match`}
+  description={`Browse ${categoryTools.length} open-source tools in the ${category} category. Compare alternatives, explore integrations, and find the right fit.`}
+  schema={schema}
+>
+  <div class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="breadcrumb-sep" aria-hidden="true">/</span>
+      <a href="/categories">Categories</a>
+      <span class="breadcrumb-sep" aria-hidden="true">/</span>
+      <span aria-current="page">{category}</span>
+    </nav>
+
+    <!-- Header -->
+    <div style="margin-bottom: 2.5rem;">
+      <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+        <span class="badge" style={`background: ${color}20; color: ${color}; border-color: ${color}40; font-size: 0.875rem; padding: 0.3em 0.7em;`}>
+          {categoryTools.length} tools
+        </span>
+        <span style="font-size: 0.8rem; color: var(--text-tertiary);">{subCategories.length} sub-categories</span>
+      </div>
+      <h1 style="margin-bottom: 0.5rem;">{category}</h1>
+      <p style="margin: 0; color: var(--text-secondary);">
+        Open-source tools in the {category} space.
+      </p>
+    </div>
+
+    <!-- Sub-category nav -->
+    {subCategories.length > 1 && (
+      <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border);">
+        {subCategories.map(sub => (
+          <a href={`#${sub.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} class="badge badge-sub" style="text-decoration: none; padding: 0.3em 0.65em;">
+            {sub} ({bySubCat[sub]?.length ?? 0})
+          </a>
+        ))}
+      </div>
+    )}
+
+    <!-- Tools by sub-category -->
+    {subCategories.map(sub => (
+      <section id={sub.toLowerCase().replace(/[^a-z0-9]+/g, '-')} style="margin-bottom: 3rem;">
+        <h2 style="font-size: 1.125rem; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.75rem;">
+          {sub}
+          <span style="font-size: 0.8rem; font-weight: 400; color: var(--text-tertiary);">{bySubCat[sub]?.length ?? 0} tools</span>
+        </h2>
+        <div class="tools-grid">
+          {(bySubCat[sub] ?? []).map((tool) => (
+            <a href={`/tools/${tool.slug}`} class="card card-link tool-card">
+              <div class="tool-card-header">
+                <div>
+                  <div class="tool-card-title">{tool.name}</div>
+                  <p class="tool-card-tagline">{tool.tagline}</p>
+                </div>
+              </div>
+              <div class="tool-card-meta">
+                <span class="badge badge-sub">{tool.maturity}</span>
+                {tool.github_stars > 0 && (
+                  <span class="stars-badge">
+                    <span aria-hidden="true">★</span>
+                    {formatNumber(tool.github_stars)}
+                  </span>
+                )}
+                <span style="font-size: 0.75rem; color: var(--text-tertiary);">{tool.complexity_level}</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+</Base>

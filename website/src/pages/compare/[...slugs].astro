@@ -1,0 +1,193 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getComparisons, getToolBySlug, formatNumber, formatRam, getCategoryColor } from '../../utils/db';
+import type { Tool } from '../../utils/db';
+
+export function getStaticPaths() {
+  return getComparisons().map(({ slugA, slugB }) => ({
+    params: { slugs: `${slugA}--vs--${slugB}` },
+    props: { slugA, slugB },
+  }));
+}
+
+const { slugA, slugB } = Astro.props as { slugA: string; slugB: string };
+
+const toolA = getToolBySlug(slugA) as Tool;
+const toolB = getToolBySlug(slugB) as Tool;
+
+if (!toolA || !toolB) return Astro.redirect('/compare');
+
+const colorA = getCategoryColor(toolA.category);
+const colorB = getCategoryColor(toolB.category);
+
+type Row = { label: string; a: string | number | boolean; b: string | number | boolean; format?: 'bool' | 'stars' | 'ram' | 'list' };
+
+function fmtBool(v: boolean) { return v ? 'Yes' : 'No'; }
+function fmtList(v: string[]) { return v.join(', ') || '—'; }
+
+const rows: Row[] = [
+  { label: 'Category', a: toolA.category, b: toolB.category },
+  { label: 'Sub-category', a: toolA.sub_category, b: toolB.sub_category },
+  { label: 'Maturity', a: toolA.maturity, b: toolB.maturity },
+  { label: 'Complexity', a: toolA.complexity_level, b: toolB.complexity_level },
+  { label: 'Performance tier', a: toolA.performance_tier.replace(/_/g,' '), b: toolB.performance_tier.replace(/_/g,' ') },
+  { label: 'License', a: toolA.license, b: toolB.license },
+  { label: 'License type', a: toolA.license_type, b: toolB.license_type },
+  { label: 'Pricing', a: toolA.pricing_model.replace(/_/g,' '), b: toolB.pricing_model.replace(/_/g,' ') },
+  { label: 'GitHub stars', a: formatNumber(toolA.github_stars), b: formatNumber(toolB.github_stars) },
+  { label: 'Contributors', a: formatNumber(toolA.contributors_count), b: formatNumber(toolB.contributors_count) },
+  { label: 'Commit frequency', a: toolA.commit_frequency, b: toolB.commit_frequency },
+  { label: 'Plugin ecosystem', a: toolA.plugin_ecosystem, b: toolB.plugin_ecosystem },
+  { label: 'Docs quality', a: toolA.docs_quality, b: toolB.docs_quality },
+  { label: 'Backing org', a: toolA.backing_org || '—', b: toolB.backing_org || '—' },
+  { label: 'Funding model', a: toolA.funding_model, b: toolB.funding_model },
+  { label: 'Min RAM', a: formatRam(toolA.min_ram_mb), b: formatRam(toolB.min_ram_mb) },
+  { label: 'Min CPU cores', a: toolA.min_cpu_cores, b: toolB.min_cpu_cores },
+  { label: 'Scaling pattern', a: toolA.scaling_pattern, b: toolB.scaling_pattern },
+  { label: 'Self-hostable', a: fmtBool(toolA.self_hostable), b: fmtBool(toolB.self_hostable) },
+  { label: 'K8s native', a: fmtBool(toolA.k8s_native), b: fmtBool(toolB.k8s_native) },
+  { label: 'Offline capable', a: fmtBool(toolA.offline_capable), b: fmtBool(toolB.offline_capable) },
+  { label: 'Vendor lock-in', a: toolA.vendor_lockin_risk, b: toolB.vendor_lockin_risk },
+  { label: 'Languages', a: fmtList(toolA.language), b: fmtList(toolB.language) },
+  { label: 'API type', a: fmtList(toolA.api_type), b: fmtList(toolB.api_type) },
+  { label: 'Protocols', a: fmtList(toolA.protocols), b: fmtList(toolB.protocols) },
+  { label: 'Deployment', a: fmtList(toolA.deployment_methods), b: fmtList(toolB.deployment_methods) },
+  { label: 'SDK languages', a: fmtList(toolA.sdk_languages), b: fmtList(toolB.sdk_languages) },
+  { label: 'Team size fit', a: fmtList(toolA.team_size_fit), b: fmtList(toolB.team_size_fit) },
+  { label: 'First release', a: toolA.first_release_year, b: toolB.first_release_year },
+  { label: 'Latest version', a: toolA.latest_version || '—', b: toolB.latest_version || '—' },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": `${toolA.name} vs ${toolB.name} — OSS Neural Match`,
+  "description": `Compare ${toolA.name} and ${toolB.name} side by side. Features, performance, community, and ecosystem.`,
+  "url": `https://ossneuralmatch.com/compare/${slugA}--vs--${slugB}`,
+};
+---
+
+<Base
+  title={`${toolA.name} vs ${toolB.name} — OSS Neural Match`}
+  description={`${toolA.name} vs ${toolB.name}: compare features, RAM requirements, scaling, ecosystem, community, and more. Find the right tool for your stack.`}
+  schema={schema}
+>
+  <div class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="breadcrumb-sep" aria-hidden="true">/</span>
+      <a href="/compare">Compare</a>
+      <span class="breadcrumb-sep" aria-hidden="true">/</span>
+      <span aria-current="page">{toolA.name} vs {toolB.name}</span>
+    </nav>
+
+    <!-- Header -->
+    <div style="margin-bottom: 3rem;">
+      <h1 style="margin-bottom: 1rem;">{toolA.name} vs {toolB.name}</h1>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 800px;">
+        <div class="card" style="border-top: 3px solid {colorA};">
+          <div style={`border-top: 3px solid ${colorA}; border-radius: var(--radius-lg) var(--radius-lg) 0 0; margin: calc(-1 * var(--space-6)) calc(-1 * var(--space-6)) var(--space-4); padding: var(--space-3) var(--space-6);`}></div>
+          <a href={`/tools/${toolA.slug}`} style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); text-decoration: none; display: block; margin-bottom: 0.25rem;">{toolA.name}</a>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); margin: 0;">{toolA.tagline}</p>
+        </div>
+        <div class="card">
+          <div style={`border-top: 3px solid ${colorB}; border-radius: var(--radius-lg) var(--radius-lg) 0 0; margin: calc(-1 * var(--space-6)) calc(-1 * var(--space-6)) var(--space-4); padding: var(--space-3) var(--space-6);`}></div>
+          <a href={`/tools/${toolB.slug}`} style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); text-decoration: none; display: block; margin-bottom: 0.25rem;">{toolB.name}</a>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); margin: 0;">{toolB.tagline}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comparison table -->
+    <div class="compare-table-wrap" style="margin-bottom: 3rem;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th style="width: 200px;">Feature</th>
+            <th style={`color: ${colorA};`}>{toolA.name}</th>
+            <th style={`color: ${colorB};`}>{toolB.name}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map(({ label, a, b }) => (
+            <tr>
+              <td>{label}</td>
+              <td style="color: var(--text-primary);">{String(a)}</td>
+              <td style="color: var(--text-primary);">{String(b)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Use cases side by side -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem;">
+      <div>
+        <h2 style="font-size: 1rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 1rem;">
+          When to use {toolA.name}
+        </h2>
+        <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.5rem;">
+          {toolA.use_cases_detailed.map(uc => (
+            <li style="font-size: 0.875rem; color: var(--text-secondary); display: flex; gap: 0.5rem; align-items: flex-start;">
+              <span style={`color: ${colorA}; flex-shrink: 0;`}>✓</span>
+              {uc}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h2 style="font-size: 1rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 1rem;">
+          When to use {toolB.name}
+        </h2>
+        <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.5rem;">
+          {toolB.use_cases_detailed.map(uc => (
+            <li style="font-size: 0.875rem; color: var(--text-secondary); display: flex; gap: 0.5rem; align-items: flex-start;">
+              <span style={`color: ${colorB}; flex-shrink: 0;`}>✓</span>
+              {uc}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <!-- Anti-patterns side by side -->
+    {(toolA.anti_patterns.length > 0 || toolB.anti_patterns.length > 0) && (
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem;">
+        <div>
+          <h2 style="font-size: 1rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 1rem;">
+            {toolA.name} anti-patterns
+          </h2>
+          <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.5rem;">
+            {toolA.anti_patterns.map(ap => (
+              <li style="font-size: 0.875rem; color: var(--text-secondary); display: flex; gap: 0.5rem; align-items: flex-start;">
+                <span style="color: var(--danger); flex-shrink: 0;">✕</span>
+                {ap}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h2 style="font-size: 1rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 1rem;">
+            {toolB.name} anti-patterns
+          </h2>
+          <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.5rem;">
+            {toolB.anti_patterns.map(ap => (
+              <li style="font-size: 0.875rem; color: var(--text-secondary); display: flex; gap: 0.5rem; align-items: flex-start;">
+                <span style="color: var(--danger); flex-shrink: 0;">✕</span>
+                {ap}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    )}
+
+    <!-- Links to individual tool pages -->
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap; padding-top: 2rem; border-top: 1px solid var(--border);">
+      <a href={`/tools/${toolA.slug}`} class="btn btn-secondary">Full {toolA.name} profile &rarr;</a>
+      <a href={`/tools/${toolB.slug}`} class="btn btn-secondary">Full {toolB.name} profile &rarr;</a>
+      <a href="/compare" class="btn btn-ghost">All comparisons</a>
+    </div>
+  </div>
+</Base>
